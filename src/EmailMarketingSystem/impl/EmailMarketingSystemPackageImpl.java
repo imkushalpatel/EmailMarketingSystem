@@ -53,28 +53,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass emailCampaignEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass campaignAnalyticsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass subscriberEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass preferenceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -95,6 +74,27 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass subscriberEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass preferenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass emailCampaignEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass emailTemplateEClass = null;
 
 	/**
@@ -109,7 +109,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum emailCampaignStatusEEnum = null;
+	private EEnum campaignStatusEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,7 +123,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum campaignStatusEEnum = null;
+	private EEnum emailCampaignStatusEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -321,126 +321,6 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EClass getEmailCampaign() {
-		return emailCampaignEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmailCampaign_EmailCampaignId() {
-		return (EAttribute)emailCampaignEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmailCampaign_SendDate() {
-		return (EAttribute)emailCampaignEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEmailCampaign_Recipients() {
-		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEmailCampaign_Template() {
-		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEmailCampaign_EmailResponses() {
-		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmailCampaign__SendEmail() {
-		return emailCampaignEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmailCampaign__TrackCampaign() {
-		return emailCampaignEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmailCampaign__PauseCampaign() {
-		return emailCampaignEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmailCampaign__CancelCampaign() {
-		return emailCampaignEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmailCampaign__AddEmailCampaign() {
-		return emailCampaignEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmailCampaign__RemoveEmailCampaign() {
-		return emailCampaignEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getCampaignAnalytics() {
 		return campaignAnalyticsEClass;
 	}
@@ -503,6 +383,116 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	@Override
 	public EOperation getCampaignAnalytics__TrackConversion() {
 		return campaignAnalyticsEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSegment() {
+		return segmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSegment_SegmentId() {
+		return (EAttribute)segmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSegment_Name() {
+		return (EAttribute)segmentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSegment_Conditions() {
+		return (EReference)segmentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSegment__AddCondition() {
+		return segmentEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSegment__RemoveCondition() {
+		return segmentEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSegment__ViewConditions() {
+		return segmentEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSegmentCondition() {
+		return segmentConditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSegmentCondition_Attribute() {
+		return (EAttribute)segmentConditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSegmentCondition_Operator() {
+		return (EAttribute)segmentConditionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSegmentCondition_Value() {
+		return (EAttribute)segmentConditionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -711,8 +701,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EClass getSegment() {
-		return segmentEClass;
+	public EClass getEmailCampaign() {
+		return emailCampaignEClass;
 	}
 
 	/**
@@ -721,8 +711,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSegment_SegmentId() {
-		return (EAttribute)segmentEClass.getEStructuralFeatures().get(0);
+	public EAttribute getEmailCampaign_EmailCampaignId() {
+		return (EAttribute)emailCampaignEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -731,8 +721,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSegment_Name() {
-		return (EAttribute)segmentEClass.getEStructuralFeatures().get(1);
+	public EAttribute getEmailCampaign_SendDate() {
+		return (EAttribute)emailCampaignEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -741,8 +731,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EReference getSegment_Conditions() {
-		return (EReference)segmentEClass.getEStructuralFeatures().get(2);
+	public EReference getEmailCampaign_Template() {
+		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -751,8 +741,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSegment__AddCondition() {
-		return segmentEClass.getEOperations().get(0);
+	public EReference getEmailCampaign_EmailResponses() {
+		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -761,8 +751,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSegment__RemoveCondition() {
-		return segmentEClass.getEOperations().get(1);
+	public EReference getEmailCampaign_Recipients() {
+		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -771,8 +761,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSegment__ViewConditions() {
-		return segmentEClass.getEOperations().get(2);
+	public EOperation getEmailCampaign__SendEmail() {
+		return emailCampaignEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -781,8 +771,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EClass getSegmentCondition() {
-		return segmentConditionEClass;
+	public EOperation getEmailCampaign__TrackCampaign() {
+		return emailCampaignEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -791,8 +781,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSegmentCondition_Attribute() {
-		return (EAttribute)segmentConditionEClass.getEStructuralFeatures().get(0);
+	public EOperation getEmailCampaign__PauseCampaign() {
+		return emailCampaignEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -801,8 +791,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSegmentCondition_Operator() {
-		return (EAttribute)segmentConditionEClass.getEStructuralFeatures().get(1);
+	public EOperation getEmailCampaign__CancelCampaign() {
+		return emailCampaignEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -811,8 +801,18 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSegmentCondition_Value() {
-		return (EAttribute)segmentConditionEClass.getEStructuralFeatures().get(2);
+	public EOperation getEmailCampaign__AddEmailCampaign() {
+		return emailCampaignEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getEmailCampaign__RemoveEmailCampaign() {
+		return emailCampaignEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -971,8 +971,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EEnum getEmailCampaignStatus() {
-		return emailCampaignStatusEEnum;
+	public EEnum getCampaignStatus() {
+		return campaignStatusEEnum;
 	}
 
 	/**
@@ -991,8 +991,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EEnum getCampaignStatus() {
-		return campaignStatusEEnum;
+	public EEnum getEmailCampaignStatus() {
+		return emailCampaignStatusEEnum;
 	}
 
 	/**
@@ -1261,7 +1261,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		initEReference(getEmailResponse_Subscriber(), this.getSubscriber(), null, "subscriber", null, 1, 1, EmailResponse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEmailResponse_Campaign(), this.getEmailCampaign(), this.getEmailCampaign_EmailResponses(), "campaign", null, 1, 1, EmailResponse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getEmailResponse__GetResponseTypeDetail(), null, "getResponseTypeDetail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getEmailResponse__GetResponseTypeDetail(), this.getResponseType(), "getResponseTypeDetail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(campaignStatusEEnum, CampaignStatus.class, "CampaignStatus");

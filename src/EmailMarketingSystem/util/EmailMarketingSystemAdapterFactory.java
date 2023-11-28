@@ -156,20 +156,6 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.EmailCampaign <em>Email Campaign</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see EmailMarketingSystem.EmailCampaign
-	 * @generated
-	 */
-	public Adapter createEmailCampaignAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.CampaignAnalytics <em>Campaign Analytics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -180,6 +166,34 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCampaignAnalyticsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.Segment <em>Segment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EmailMarketingSystem.Segment
+	 * @generated
+	 */
+	public Adapter createSegmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.SegmentCondition <em>Segment Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EmailMarketingSystem.SegmentCondition
+	 * @generated
+	 */
+	public Adapter createSegmentConditionAdapter() {
 		return null;
 	}
 
@@ -212,30 +226,16 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.Segment <em>Segment</em>}'.
+	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.EmailCampaign <em>Email Campaign</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see EmailMarketingSystem.Segment
+	 * @see EmailMarketingSystem.EmailCampaign
 	 * @generated
 	 */
-	public Adapter createSegmentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.SegmentCondition <em>Segment Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see EmailMarketingSystem.SegmentCondition
-	 * @generated
-	 */
-	public Adapter createSegmentConditionAdapter() {
+	public Adapter createEmailCampaignAdapter() {
 		return null;
 	}
 

@@ -40,15 +40,6 @@ public interface EmailMarketingSystemFactory extends EFactory {
 	Campaign createCampaign();
 
 	/**
-	 * Returns a new object of class '<em>Email Campaign</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Email Campaign</em>'.
-	 * @generated
-	 */
-	EmailCampaign createEmailCampaign();
-
-	/**
 	 * Returns a new object of class '<em>Campaign Analytics</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,6 +47,24 @@ public interface EmailMarketingSystemFactory extends EFactory {
 	 * @generated
 	 */
 	CampaignAnalytics createCampaignAnalytics();
+
+	/**
+	 * Returns a new object of class '<em>Segment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Segment</em>'.
+	 * @generated
+	 */
+	Segment createSegment();
+
+	/**
+	 * Returns a new object of class '<em>Segment Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Segment Condition</em>'.
+	 * @generated
+	 */
+	SegmentCondition createSegmentCondition();
 
 	/**
 	 * Returns a new object of class '<em>Subscriber</em>'.
@@ -76,22 +85,13 @@ public interface EmailMarketingSystemFactory extends EFactory {
 	Preference createPreference();
 
 	/**
-	 * Returns a new object of class '<em>Segment</em>'.
+	 * Returns a new object of class '<em>Email Campaign</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Segment</em>'.
+	 * @return a new object of class '<em>Email Campaign</em>'.
 	 * @generated
 	 */
-	Segment createSegment();
-
-	/**
-	 * Returns a new object of class '<em>Segment Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Segment Condition</em>'.
-	 * @generated
-	 */
-	SegmentCondition createSegmentCondition();
+	EmailCampaign createEmailCampaign();
 
 	/**
 	 * Returns a new object of class '<em>Email Template</em>'.

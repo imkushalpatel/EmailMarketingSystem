@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -184,19 +185,6 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	 * @generated
 	 */
 	@Override
-	public EList<Subscriber> getRecipients() {
-		if (recipients == null) {
-			recipients = new EObjectWithInverseResolvingEList.ManyInverse<Subscriber>(Subscriber.class, this, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS, EmailMarketingSystemPackage.SUBSCRIBER__EMAIL_CAMPAIGNS);
-		}
-		return recipients;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EmailTemplate getTemplate() {
 		if (template != null && template.eIsProxy()) {
 			InternalEObject oldTemplate = (InternalEObject)template;
@@ -264,6 +252,19 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 			emailResponses = new EObjectWithInverseResolvingEList<EmailResponse>(EmailResponse.class, this, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_RESPONSES, EmailMarketingSystemPackage.EMAIL_RESPONSE__CAMPAIGN);
 		}
 		return emailResponses;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Subscriber> getRecipients() {
+		if (recipients == null) {
+			recipients = new EObjectWithInverseResolvingEList.ManyInverse<Subscriber>(Subscriber.class, this, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS, EmailMarketingSystemPackage.SUBSCRIBER__EMAIL_CAMPAIGNS);
+		}
+		return recipients;
 	}
 
 	/**

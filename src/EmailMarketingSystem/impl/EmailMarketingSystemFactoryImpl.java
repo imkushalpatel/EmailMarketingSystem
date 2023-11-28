@@ -138,42 +138,9 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EmailCampaign createEmailCampaign() {
-		EmailCampaignImpl emailCampaign = new EmailCampaignImpl();
-		return emailCampaign;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public CampaignAnalytics createCampaignAnalytics() {
 		CampaignAnalyticsImpl campaignAnalytics = new CampaignAnalyticsImpl();
 		return campaignAnalytics;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Subscriber createSubscriber() {
-		SubscriberImpl subscriber = new SubscriberImpl();
-		return subscriber;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Preference createPreference() {
-		PreferenceImpl preference = new PreferenceImpl();
-		return preference;
 	}
 
 	/**
@@ -204,6 +171,39 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	 * @generated
 	 */
 	@Override
+	public Subscriber createSubscriber() {
+		SubscriberImpl subscriber = new SubscriberImpl();
+		return subscriber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Preference createPreference() {
+		PreferenceImpl preference = new PreferenceImpl();
+		return preference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EmailCampaign createEmailCampaign() {
+		EmailCampaignImpl emailCampaign = new EmailCampaignImpl();
+		return emailCampaign;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EmailTemplate createEmailTemplate() {
 		EmailTemplateImpl emailTemplate = new EmailTemplateImpl();
 		return emailTemplate;
@@ -225,8 +225,8 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EmailCampaignStatus createEmailCampaignStatusFromString(EDataType eDataType, String initialValue) {
-		EmailCampaignStatus result = EmailCampaignStatus.get(initialValue);
+	public CampaignStatus createCampaignStatusFromString(EDataType eDataType, String initialValue) {
+		CampaignStatus result = CampaignStatus.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -236,7 +236,7 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEmailCampaignStatusToString(EDataType eDataType, Object instanceValue) {
+	public String convertCampaignStatusToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -265,8 +265,8 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CampaignStatus createCampaignStatusFromString(EDataType eDataType, String initialValue) {
-		CampaignStatus result = CampaignStatus.get(initialValue);
+	public EmailCampaignStatus createEmailCampaignStatusFromString(EDataType eDataType, String initialValue) {
+		EmailCampaignStatus result = EmailCampaignStatus.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -276,7 +276,7 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertCampaignStatusToString(EDataType eDataType, Object instanceValue) {
+	public String convertEmailCampaignStatusToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

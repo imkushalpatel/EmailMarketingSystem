@@ -214,16 +214,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int CAMPAIGN_OPERATION_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link EmailMarketingSystem.impl.EmailCampaignImpl <em>Email Campaign</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see EmailMarketingSystem.impl.EmailCampaignImpl
-	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaign()
-	 * @generated
-	 */
-	int EMAIL_CAMPAIGN = 7;
-
-	/**
 	 * The meta object id for the '{@link EmailMarketingSystem.impl.CampaignAnalyticsImpl <em>Campaign Analytics</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -304,26 +294,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int CAMPAIGN_ANALYTICS_OPERATION_COUNT = 3;
-
-	/**
-	 * The meta object id for the '{@link EmailMarketingSystem.impl.SubscriberImpl <em>Subscriber</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see EmailMarketingSystem.impl.SubscriberImpl
-	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getSubscriber()
-	 * @generated
-	 */
-	int SUBSCRIBER = 5;
-
-	/**
-	 * The meta object id for the '{@link EmailMarketingSystem.impl.PreferenceImpl <em>Preference</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see EmailMarketingSystem.impl.PreferenceImpl
-	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getPreference()
-	 * @generated
-	 */
-	int PREFERENCE = 6;
 
 	/**
 	 * The meta object id for the '{@link EmailMarketingSystem.impl.SegmentImpl <em>Segment</em>}' class.
@@ -461,6 +431,16 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEGMENT_CONDITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link EmailMarketingSystem.impl.SubscriberImpl <em>Subscriber</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EmailMarketingSystem.impl.SubscriberImpl
+	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getSubscriber()
+	 * @generated
+	 */
+	int SUBSCRIBER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Subscriber Id</b></em>' attribute.
@@ -607,6 +587,16 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int SUBSCRIBER_OPERATION_COUNT = 6;
 
 	/**
+	 * The meta object id for the '{@link EmailMarketingSystem.impl.PreferenceImpl <em>Preference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EmailMarketingSystem.impl.PreferenceImpl
+	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getPreference()
+	 * @generated
+	 */
+	int PREFERENCE = 6;
+
+	/**
 	 * The feature id for the '<em><b>Preference Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -659,6 +649,16 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int PREFERENCE_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link EmailMarketingSystem.impl.EmailCampaignImpl <em>Email Campaign</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EmailMarketingSystem.impl.EmailCampaignImpl
+	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaign()
+	 * @generated
+	 */
+	int EMAIL_CAMPAIGN = 7;
 
 	/**
 	 * The feature id for the '<em><b>Campaign Id</b></em>' attribute.
@@ -1050,14 +1050,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int EMAIL_RESPONSE_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link EmailMarketingSystem.EmailCampaignStatus <em>Email Campaign Status</em>}' enum.
+	 * The meta object id for the '{@link EmailMarketingSystem.CampaignStatus <em>Campaign Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see EmailMarketingSystem.EmailCampaignStatus
-	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaignStatus()
+	 * @see EmailMarketingSystem.CampaignStatus
+	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getCampaignStatus()
 	 * @generated
 	 */
-	int EMAIL_CAMPAIGN_STATUS = 12;
+	int CAMPAIGN_STATUS = 10;
 
 	/**
 	 * The meta object id for the '{@link EmailMarketingSystem.ResponseType <em>Response Type</em>}' enum.
@@ -1070,14 +1070,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int RESPONSE_TYPE = 11;
 
 	/**
-	 * The meta object id for the '{@link EmailMarketingSystem.CampaignStatus <em>Campaign Status</em>}' enum.
+	 * The meta object id for the '{@link EmailMarketingSystem.EmailCampaignStatus <em>Email Campaign Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see EmailMarketingSystem.CampaignStatus
-	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getCampaignStatus()
+	 * @see EmailMarketingSystem.EmailCampaignStatus
+	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaignStatus()
 	 * @generated
 	 */
-	int CAMPAIGN_STATUS = 10;
+	int EMAIL_CAMPAIGN_STATUS = 12;
 
 
 	/**
@@ -1218,131 +1218,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EOperation getCampaign__ViewSegmentDetails();
 
 	/**
-	 * Returns the meta object for class '{@link EmailMarketingSystem.EmailCampaign <em>Email Campaign</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Email Campaign</em>'.
-	 * @see EmailMarketingSystem.EmailCampaign
-	 * @generated
-	 */
-	EClass getEmailCampaign();
-
-	/**
-	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.EmailCampaign#getEmailCampaignId <em>Email Campaign Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Email Campaign Id</em>'.
-	 * @see EmailMarketingSystem.EmailCampaign#getEmailCampaignId()
-	 * @see #getEmailCampaign()
-	 * @generated
-	 */
-	EAttribute getEmailCampaign_EmailCampaignId();
-
-	/**
-	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.EmailCampaign#getSendDate <em>Send Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Send Date</em>'.
-	 * @see EmailMarketingSystem.EmailCampaign#getSendDate()
-	 * @see #getEmailCampaign()
-	 * @generated
-	 */
-	EAttribute getEmailCampaign_SendDate();
-
-	/**
-	 * Returns the meta object for the reference list '{@link EmailMarketingSystem.EmailCampaign#getRecipients <em>Recipients</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Recipients</em>'.
-	 * @see EmailMarketingSystem.EmailCampaign#getRecipients()
-	 * @see #getEmailCampaign()
-	 * @generated
-	 */
-	EReference getEmailCampaign_Recipients();
-
-	/**
-	 * Returns the meta object for the reference '{@link EmailMarketingSystem.EmailCampaign#getTemplate <em>Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Template</em>'.
-	 * @see EmailMarketingSystem.EmailCampaign#getTemplate()
-	 * @see #getEmailCampaign()
-	 * @generated
-	 */
-	EReference getEmailCampaign_Template();
-
-	/**
-	 * Returns the meta object for the reference list '{@link EmailMarketingSystem.EmailCampaign#getEmailResponses <em>Email Responses</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Email Responses</em>'.
-	 * @see EmailMarketingSystem.EmailCampaign#getEmailResponses()
-	 * @see #getEmailCampaign()
-	 * @generated
-	 */
-	EReference getEmailCampaign_EmailResponses();
-
-	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#sendEmail() <em>Send Email</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Send Email</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#sendEmail()
-	 * @generated
-	 */
-	EOperation getEmailCampaign__SendEmail();
-
-	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#trackCampaign() <em>Track Campaign</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Track Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#trackCampaign()
-	 * @generated
-	 */
-	EOperation getEmailCampaign__TrackCampaign();
-
-	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#pauseCampaign() <em>Pause Campaign</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Pause Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#pauseCampaign()
-	 * @generated
-	 */
-	EOperation getEmailCampaign__PauseCampaign();
-
-	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#cancelCampaign() <em>Cancel Campaign</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cancel Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#cancelCampaign()
-	 * @generated
-	 */
-	EOperation getEmailCampaign__CancelCampaign();
-
-	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#addEmailCampaign() <em>Add Email Campaign</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Email Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#addEmailCampaign()
-	 * @generated
-	 */
-	EOperation getEmailCampaign__AddEmailCampaign();
-
-	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#removeEmailCampaign() <em>Remove Email Campaign</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Email Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#removeEmailCampaign()
-	 * @generated
-	 */
-	EOperation getEmailCampaign__RemoveEmailCampaign();
-
-	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.CampaignAnalytics <em>Campaign Analytics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1414,6 +1289,122 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCampaignAnalytics__TrackConversion();
+
+	/**
+	 * Returns the meta object for class '{@link EmailMarketingSystem.Segment <em>Segment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Segment</em>'.
+	 * @see EmailMarketingSystem.Segment
+	 * @generated
+	 */
+	EClass getSegment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.Segment#getSegmentId <em>Segment Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Segment Id</em>'.
+	 * @see EmailMarketingSystem.Segment#getSegmentId()
+	 * @see #getSegment()
+	 * @generated
+	 */
+	EAttribute getSegment_SegmentId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.Segment#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see EmailMarketingSystem.Segment#getName()
+	 * @see #getSegment()
+	 * @generated
+	 */
+	EAttribute getSegment_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link EmailMarketingSystem.Segment#getConditions <em>Conditions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Conditions</em>'.
+	 * @see EmailMarketingSystem.Segment#getConditions()
+	 * @see #getSegment()
+	 * @generated
+	 */
+	EReference getSegment_Conditions();
+
+	/**
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#addCondition() <em>Add Condition</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Condition</em>' operation.
+	 * @see EmailMarketingSystem.Segment#addCondition()
+	 * @generated
+	 */
+	EOperation getSegment__AddCondition();
+
+	/**
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#removeCondition() <em>Remove Condition</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Condition</em>' operation.
+	 * @see EmailMarketingSystem.Segment#removeCondition()
+	 * @generated
+	 */
+	EOperation getSegment__RemoveCondition();
+
+	/**
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#viewConditions() <em>View Conditions</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>View Conditions</em>' operation.
+	 * @see EmailMarketingSystem.Segment#viewConditions()
+	 * @generated
+	 */
+	EOperation getSegment__ViewConditions();
+
+	/**
+	 * Returns the meta object for class '{@link EmailMarketingSystem.SegmentCondition <em>Segment Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Segment Condition</em>'.
+	 * @see EmailMarketingSystem.SegmentCondition
+	 * @generated
+	 */
+	EClass getSegmentCondition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.SegmentCondition#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute</em>'.
+	 * @see EmailMarketingSystem.SegmentCondition#getAttribute()
+	 * @see #getSegmentCondition()
+	 * @generated
+	 */
+	EAttribute getSegmentCondition_Attribute();
+
+	/**
+	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.SegmentCondition#getOperator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Operator</em>'.
+	 * @see EmailMarketingSystem.SegmentCondition#getOperator()
+	 * @see #getSegmentCondition()
+	 * @generated
+	 */
+	EAttribute getSegmentCondition_Operator();
+
+	/**
+	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.SegmentCondition#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see EmailMarketingSystem.SegmentCondition#getValue()
+	 * @see #getSegmentCondition()
+	 * @generated
+	 */
+	EAttribute getSegmentCondition_Value();
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.Subscriber <em>Subscriber</em>}'.
@@ -1627,120 +1618,129 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EOperation getPreference__UpdatePreference();
 
 	/**
-	 * Returns the meta object for class '{@link EmailMarketingSystem.Segment <em>Segment</em>}'.
+	 * Returns the meta object for class '{@link EmailMarketingSystem.EmailCampaign <em>Email Campaign</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Segment</em>'.
-	 * @see EmailMarketingSystem.Segment
+	 * @return the meta object for class '<em>Email Campaign</em>'.
+	 * @see EmailMarketingSystem.EmailCampaign
 	 * @generated
 	 */
-	EClass getSegment();
+	EClass getEmailCampaign();
 
 	/**
-	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.Segment#getSegmentId <em>Segment Id</em>}'.
+	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.EmailCampaign#getEmailCampaignId <em>Email Campaign Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Segment Id</em>'.
-	 * @see EmailMarketingSystem.Segment#getSegmentId()
-	 * @see #getSegment()
+	 * @return the meta object for the attribute '<em>Email Campaign Id</em>'.
+	 * @see EmailMarketingSystem.EmailCampaign#getEmailCampaignId()
+	 * @see #getEmailCampaign()
 	 * @generated
 	 */
-	EAttribute getSegment_SegmentId();
+	EAttribute getEmailCampaign_EmailCampaignId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.Segment#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.EmailCampaign#getSendDate <em>Send Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see EmailMarketingSystem.Segment#getName()
-	 * @see #getSegment()
+	 * @return the meta object for the attribute '<em>Send Date</em>'.
+	 * @see EmailMarketingSystem.EmailCampaign#getSendDate()
+	 * @see #getEmailCampaign()
 	 * @generated
 	 */
-	EAttribute getSegment_Name();
+	EAttribute getEmailCampaign_SendDate();
 
 	/**
-	 * Returns the meta object for the reference list '{@link EmailMarketingSystem.Segment#getConditions <em>Conditions</em>}'.
+	 * Returns the meta object for the reference '{@link EmailMarketingSystem.EmailCampaign#getTemplate <em>Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Conditions</em>'.
-	 * @see EmailMarketingSystem.Segment#getConditions()
-	 * @see #getSegment()
+	 * @return the meta object for the reference '<em>Template</em>'.
+	 * @see EmailMarketingSystem.EmailCampaign#getTemplate()
+	 * @see #getEmailCampaign()
 	 * @generated
 	 */
-	EReference getSegment_Conditions();
+	EReference getEmailCampaign_Template();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#addCondition() <em>Add Condition</em>}' operation.
+	 * Returns the meta object for the reference list '{@link EmailMarketingSystem.EmailCampaign#getEmailResponses <em>Email Responses</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Condition</em>' operation.
-	 * @see EmailMarketingSystem.Segment#addCondition()
+	 * @return the meta object for the reference list '<em>Email Responses</em>'.
+	 * @see EmailMarketingSystem.EmailCampaign#getEmailResponses()
+	 * @see #getEmailCampaign()
 	 * @generated
 	 */
-	EOperation getSegment__AddCondition();
+	EReference getEmailCampaign_EmailResponses();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#removeCondition() <em>Remove Condition</em>}' operation.
+	 * Returns the meta object for the reference list '{@link EmailMarketingSystem.EmailCampaign#getRecipients <em>Recipients</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Condition</em>' operation.
-	 * @see EmailMarketingSystem.Segment#removeCondition()
+	 * @return the meta object for the reference list '<em>Recipients</em>'.
+	 * @see EmailMarketingSystem.EmailCampaign#getRecipients()
+	 * @see #getEmailCampaign()
 	 * @generated
 	 */
-	EOperation getSegment__RemoveCondition();
+	EReference getEmailCampaign_Recipients();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#viewConditions() <em>View Conditions</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#sendEmail() <em>Send Email</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>View Conditions</em>' operation.
-	 * @see EmailMarketingSystem.Segment#viewConditions()
+	 * @return the meta object for the '<em>Send Email</em>' operation.
+	 * @see EmailMarketingSystem.EmailCampaign#sendEmail()
 	 * @generated
 	 */
-	EOperation getSegment__ViewConditions();
+	EOperation getEmailCampaign__SendEmail();
 
 	/**
-	 * Returns the meta object for class '{@link EmailMarketingSystem.SegmentCondition <em>Segment Condition</em>}'.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#trackCampaign() <em>Track Campaign</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Segment Condition</em>'.
-	 * @see EmailMarketingSystem.SegmentCondition
+	 * @return the meta object for the '<em>Track Campaign</em>' operation.
+	 * @see EmailMarketingSystem.EmailCampaign#trackCampaign()
 	 * @generated
 	 */
-	EClass getSegmentCondition();
+	EOperation getEmailCampaign__TrackCampaign();
 
 	/**
-	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.SegmentCondition#getAttribute <em>Attribute</em>}'.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#pauseCampaign() <em>Pause Campaign</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Attribute</em>'.
-	 * @see EmailMarketingSystem.SegmentCondition#getAttribute()
-	 * @see #getSegmentCondition()
+	 * @return the meta object for the '<em>Pause Campaign</em>' operation.
+	 * @see EmailMarketingSystem.EmailCampaign#pauseCampaign()
 	 * @generated
 	 */
-	EAttribute getSegmentCondition_Attribute();
+	EOperation getEmailCampaign__PauseCampaign();
 
 	/**
-	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.SegmentCondition#getOperator <em>Operator</em>}'.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#cancelCampaign() <em>Cancel Campaign</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Operator</em>'.
-	 * @see EmailMarketingSystem.SegmentCondition#getOperator()
-	 * @see #getSegmentCondition()
+	 * @return the meta object for the '<em>Cancel Campaign</em>' operation.
+	 * @see EmailMarketingSystem.EmailCampaign#cancelCampaign()
 	 * @generated
 	 */
-	EAttribute getSegmentCondition_Operator();
+	EOperation getEmailCampaign__CancelCampaign();
 
 	/**
-	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.SegmentCondition#getValue <em>Value</em>}'.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#addEmailCampaign() <em>Add Email Campaign</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see EmailMarketingSystem.SegmentCondition#getValue()
-	 * @see #getSegmentCondition()
+	 * @return the meta object for the '<em>Add Email Campaign</em>' operation.
+	 * @see EmailMarketingSystem.EmailCampaign#addEmailCampaign()
 	 * @generated
 	 */
-	EAttribute getSegmentCondition_Value();
+	EOperation getEmailCampaign__AddEmailCampaign();
+
+	/**
+	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#removeEmailCampaign() <em>Remove Email Campaign</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Email Campaign</em>' operation.
+	 * @see EmailMarketingSystem.EmailCampaign#removeEmailCampaign()
+	 * @generated
+	 */
+	EOperation getEmailCampaign__RemoveEmailCampaign();
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.EmailTemplate <em>Email Template</em>}'.
@@ -1903,14 +1903,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EOperation getEmailResponse__GetResponseTypeDetail();
 
 	/**
-	 * Returns the meta object for enum '{@link EmailMarketingSystem.EmailCampaignStatus <em>Email Campaign Status</em>}'.
+	 * Returns the meta object for enum '{@link EmailMarketingSystem.CampaignStatus <em>Campaign Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Email Campaign Status</em>'.
-	 * @see EmailMarketingSystem.EmailCampaignStatus
+	 * @return the meta object for enum '<em>Campaign Status</em>'.
+	 * @see EmailMarketingSystem.CampaignStatus
 	 * @generated
 	 */
-	EEnum getEmailCampaignStatus();
+	EEnum getCampaignStatus();
 
 	/**
 	 * Returns the meta object for enum '{@link EmailMarketingSystem.ResponseType <em>Response Type</em>}'.
@@ -1923,14 +1923,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EEnum getResponseType();
 
 	/**
-	 * Returns the meta object for enum '{@link EmailMarketingSystem.CampaignStatus <em>Campaign Status</em>}'.
+	 * Returns the meta object for enum '{@link EmailMarketingSystem.EmailCampaignStatus <em>Email Campaign Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Campaign Status</em>'.
-	 * @see EmailMarketingSystem.CampaignStatus
+	 * @return the meta object for enum '<em>Email Campaign Status</em>'.
+	 * @see EmailMarketingSystem.EmailCampaignStatus
 	 * @generated
 	 */
-	EEnum getCampaignStatus();
+	EEnum getEmailCampaignStatus();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2064,104 +2064,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		EOperation CAMPAIGN___VIEW_SEGMENT_DETAILS = eINSTANCE.getCampaign__ViewSegmentDetails();
 
 		/**
-		 * The meta object literal for the '{@link EmailMarketingSystem.impl.EmailCampaignImpl <em>Email Campaign</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see EmailMarketingSystem.impl.EmailCampaignImpl
-		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaign()
-		 * @generated
-		 */
-		EClass EMAIL_CAMPAIGN = eINSTANCE.getEmailCampaign();
-
-		/**
-		 * The meta object literal for the '<em><b>Email Campaign Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID = eINSTANCE.getEmailCampaign_EmailCampaignId();
-
-		/**
-		 * The meta object literal for the '<em><b>Send Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMAIL_CAMPAIGN__SEND_DATE = eINSTANCE.getEmailCampaign_SendDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Recipients</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EMAIL_CAMPAIGN__RECIPIENTS = eINSTANCE.getEmailCampaign_Recipients();
-
-		/**
-		 * The meta object literal for the '<em><b>Template</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EMAIL_CAMPAIGN__TEMPLATE = eINSTANCE.getEmailCampaign_Template();
-
-		/**
-		 * The meta object literal for the '<em><b>Email Responses</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EMAIL_CAMPAIGN__EMAIL_RESPONSES = eINSTANCE.getEmailCampaign_EmailResponses();
-
-		/**
-		 * The meta object literal for the '<em><b>Send Email</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMAIL_CAMPAIGN___SEND_EMAIL = eINSTANCE.getEmailCampaign__SendEmail();
-
-		/**
-		 * The meta object literal for the '<em><b>Track Campaign</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMAIL_CAMPAIGN___TRACK_CAMPAIGN = eINSTANCE.getEmailCampaign__TrackCampaign();
-
-		/**
-		 * The meta object literal for the '<em><b>Pause Campaign</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMAIL_CAMPAIGN___PAUSE_CAMPAIGN = eINSTANCE.getEmailCampaign__PauseCampaign();
-
-		/**
-		 * The meta object literal for the '<em><b>Cancel Campaign</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMAIL_CAMPAIGN___CANCEL_CAMPAIGN = eINSTANCE.getEmailCampaign__CancelCampaign();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Email Campaign</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMAIL_CAMPAIGN___ADD_EMAIL_CAMPAIGN = eINSTANCE.getEmailCampaign__AddEmailCampaign();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Email Campaign</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMAIL_CAMPAIGN___REMOVE_EMAIL_CAMPAIGN = eINSTANCE.getEmailCampaign__RemoveEmailCampaign();
-
-		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.CampaignAnalyticsImpl <em>Campaign Analytics</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2218,6 +2120,98 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CAMPAIGN_ANALYTICS___TRACK_CONVERSION = eINSTANCE.getCampaignAnalytics__TrackConversion();
+
+		/**
+		 * The meta object literal for the '{@link EmailMarketingSystem.impl.SegmentImpl <em>Segment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see EmailMarketingSystem.impl.SegmentImpl
+		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getSegment()
+		 * @generated
+		 */
+		EClass SEGMENT = eINSTANCE.getSegment();
+
+		/**
+		 * The meta object literal for the '<em><b>Segment Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEGMENT__SEGMENT_ID = eINSTANCE.getSegment_SegmentId();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEGMENT__NAME = eINSTANCE.getSegment_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SEGMENT__CONDITIONS = eINSTANCE.getSegment_Conditions();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Condition</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SEGMENT___ADD_CONDITION = eINSTANCE.getSegment__AddCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Condition</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SEGMENT___REMOVE_CONDITION = eINSTANCE.getSegment__RemoveCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>View Conditions</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SEGMENT___VIEW_CONDITIONS = eINSTANCE.getSegment__ViewConditions();
+
+		/**
+		 * The meta object literal for the '{@link EmailMarketingSystem.impl.SegmentConditionImpl <em>Segment Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see EmailMarketingSystem.impl.SegmentConditionImpl
+		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getSegmentCondition()
+		 * @generated
+		 */
+		EClass SEGMENT_CONDITION = eINSTANCE.getSegmentCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEGMENT_CONDITION__ATTRIBUTE = eINSTANCE.getSegmentCondition_Attribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEGMENT_CONDITION__OPERATOR = eINSTANCE.getSegmentCondition_Operator();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEGMENT_CONDITION__VALUE = eINSTANCE.getSegmentCondition_Value();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.SubscriberImpl <em>Subscriber</em>}' class.
@@ -2384,96 +2378,102 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		EOperation PREFERENCE___UPDATE_PREFERENCE = eINSTANCE.getPreference__UpdatePreference();
 
 		/**
-		 * The meta object literal for the '{@link EmailMarketingSystem.impl.SegmentImpl <em>Segment</em>}' class.
+		 * The meta object literal for the '{@link EmailMarketingSystem.impl.EmailCampaignImpl <em>Email Campaign</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see EmailMarketingSystem.impl.SegmentImpl
-		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getSegment()
+		 * @see EmailMarketingSystem.impl.EmailCampaignImpl
+		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaign()
 		 * @generated
 		 */
-		EClass SEGMENT = eINSTANCE.getSegment();
+		EClass EMAIL_CAMPAIGN = eINSTANCE.getEmailCampaign();
 
 		/**
-		 * The meta object literal for the '<em><b>Segment Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Email Campaign Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEGMENT__SEGMENT_ID = eINSTANCE.getSegment_SegmentId();
+		EAttribute EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID = eINSTANCE.getEmailCampaign_EmailCampaignId();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Send Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEGMENT__NAME = eINSTANCE.getSegment_Name();
+		EAttribute EMAIL_CAMPAIGN__SEND_DATE = eINSTANCE.getEmailCampaign_SendDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Template</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SEGMENT__CONDITIONS = eINSTANCE.getSegment_Conditions();
+		EReference EMAIL_CAMPAIGN__TEMPLATE = eINSTANCE.getEmailCampaign_Template();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Condition</b></em>' operation.
+		 * The meta object literal for the '<em><b>Email Responses</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SEGMENT___ADD_CONDITION = eINSTANCE.getSegment__AddCondition();
+		EReference EMAIL_CAMPAIGN__EMAIL_RESPONSES = eINSTANCE.getEmailCampaign_EmailResponses();
 
 		/**
-		 * The meta object literal for the '<em><b>Remove Condition</b></em>' operation.
+		 * The meta object literal for the '<em><b>Recipients</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SEGMENT___REMOVE_CONDITION = eINSTANCE.getSegment__RemoveCondition();
+		EReference EMAIL_CAMPAIGN__RECIPIENTS = eINSTANCE.getEmailCampaign_Recipients();
 
 		/**
-		 * The meta object literal for the '<em><b>View Conditions</b></em>' operation.
+		 * The meta object literal for the '<em><b>Send Email</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SEGMENT___VIEW_CONDITIONS = eINSTANCE.getSegment__ViewConditions();
+		EOperation EMAIL_CAMPAIGN___SEND_EMAIL = eINSTANCE.getEmailCampaign__SendEmail();
 
 		/**
-		 * The meta object literal for the '{@link EmailMarketingSystem.impl.SegmentConditionImpl <em>Segment Condition</em>}' class.
+		 * The meta object literal for the '<em><b>Track Campaign</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see EmailMarketingSystem.impl.SegmentConditionImpl
-		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getSegmentCondition()
 		 * @generated
 		 */
-		EClass SEGMENT_CONDITION = eINSTANCE.getSegmentCondition();
+		EOperation EMAIL_CAMPAIGN___TRACK_CAMPAIGN = eINSTANCE.getEmailCampaign__TrackCampaign();
 
 		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Pause Campaign</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEGMENT_CONDITION__ATTRIBUTE = eINSTANCE.getSegmentCondition_Attribute();
+		EOperation EMAIL_CAMPAIGN___PAUSE_CAMPAIGN = eINSTANCE.getEmailCampaign__PauseCampaign();
 
 		/**
-		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cancel Campaign</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEGMENT_CONDITION__OPERATOR = eINSTANCE.getSegmentCondition_Operator();
+		EOperation EMAIL_CAMPAIGN___CANCEL_CAMPAIGN = eINSTANCE.getEmailCampaign__CancelCampaign();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Add Email Campaign</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEGMENT_CONDITION__VALUE = eINSTANCE.getSegmentCondition_Value();
+		EOperation EMAIL_CAMPAIGN___ADD_EMAIL_CAMPAIGN = eINSTANCE.getEmailCampaign__AddEmailCampaign();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Email Campaign</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EMAIL_CAMPAIGN___REMOVE_EMAIL_CAMPAIGN = eINSTANCE.getEmailCampaign__RemoveEmailCampaign();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.EmailTemplateImpl <em>Email Template</em>}' class.
@@ -2600,14 +2600,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		EOperation EMAIL_RESPONSE___GET_RESPONSE_TYPE_DETAIL = eINSTANCE.getEmailResponse__GetResponseTypeDetail();
 
 		/**
-		 * The meta object literal for the '{@link EmailMarketingSystem.EmailCampaignStatus <em>Email Campaign Status</em>}' enum.
+		 * The meta object literal for the '{@link EmailMarketingSystem.CampaignStatus <em>Campaign Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see EmailMarketingSystem.EmailCampaignStatus
-		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaignStatus()
+		 * @see EmailMarketingSystem.CampaignStatus
+		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getCampaignStatus()
 		 * @generated
 		 */
-		EEnum EMAIL_CAMPAIGN_STATUS = eINSTANCE.getEmailCampaignStatus();
+		EEnum CAMPAIGN_STATUS = eINSTANCE.getCampaignStatus();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.ResponseType <em>Response Type</em>}' enum.
@@ -2620,14 +2620,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		EEnum RESPONSE_TYPE = eINSTANCE.getResponseType();
 
 		/**
-		 * The meta object literal for the '{@link EmailMarketingSystem.CampaignStatus <em>Campaign Status</em>}' enum.
+		 * The meta object literal for the '{@link EmailMarketingSystem.EmailCampaignStatus <em>Email Campaign Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see EmailMarketingSystem.CampaignStatus
-		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getCampaignStatus()
+		 * @see EmailMarketingSystem.EmailCampaignStatus
+		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaignStatus()
 		 * @generated
 		 */
-		EEnum CAMPAIGN_STATUS = eINSTANCE.getCampaignStatus();
+		EEnum EMAIL_CAMPAIGN_STATUS = eINSTANCE.getEmailCampaignStatus();
 
 	}
 

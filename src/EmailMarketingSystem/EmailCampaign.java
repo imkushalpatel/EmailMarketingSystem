@@ -80,24 +80,6 @@ public interface EmailCampaign extends Campaign {
 	void setSendDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Recipients</b></em>' reference list.
-	 * The list contents are of type {@link EmailMarketingSystem.Subscriber}.
-	 * It is bidirectional and its opposite is '{@link EmailMarketingSystem.Subscriber#getEmailCampaigns <em>Email Campaigns</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Recipients</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Recipients</em>' reference list.
-	 * @see EmailMarketingSystem.EmailMarketingSystemPackage#getEmailCampaign_Recipients()
-	 * @see EmailMarketingSystem.Subscriber#getEmailCampaigns
-	 * @model opposite="emailCampaigns" ordered="false"
-	 * @generated
-	 */
-	EList<Subscriber> getRecipients();
-
-	/**
 	 * Returns the value of the '<em><b>Template</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link EmailMarketingSystem.EmailTemplate#getEmailCampaigns <em>Email Campaigns</em>}'.
 	 * <!-- begin-user-doc -->
@@ -142,6 +124,24 @@ public interface EmailCampaign extends Campaign {
 	 * @generated
 	 */
 	EList<EmailResponse> getEmailResponses();
+
+	/**
+	 * Returns the value of the '<em><b>Recipients</b></em>' reference list.
+	 * The list contents are of type {@link EmailMarketingSystem.Subscriber}.
+	 * It is bidirectional and its opposite is '{@link EmailMarketingSystem.Subscriber#getEmailCampaigns <em>Email Campaigns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Recipients</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Recipients</em>' reference list.
+	 * @see EmailMarketingSystem.EmailMarketingSystemPackage#getEmailCampaign_Recipients()
+	 * @see EmailMarketingSystem.Subscriber#getEmailCampaigns
+	 * @model opposite="emailCampaigns" ordered="false"
+	 * @generated
+	 */
+	EList<Subscriber> getRecipients();
 
 	/**
 	 * <!-- begin-user-doc -->

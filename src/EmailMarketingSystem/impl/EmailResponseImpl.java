@@ -316,7 +316,7 @@ public class EmailResponseImpl extends MinimalEObjectImpl.Container implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getResponseTypeDetail() {
+	public ResponseType getResponseTypeDetail() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -461,8 +461,7 @@ public class EmailResponseImpl extends MinimalEObjectImpl.Container implements E
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case EmailMarketingSystemPackage.EMAIL_RESPONSE___GET_RESPONSE_TYPE_DETAIL:
-				getResponseTypeDetail();
-				return null;
+				return getResponseTypeDetail();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
