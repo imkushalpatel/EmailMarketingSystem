@@ -78,27 +78,9 @@ public class EmailMarketingSystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN: {
-				EmailCampaign emailCampaign = (EmailCampaign)theEObject;
-				T result = caseEmailCampaign(emailCampaign);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case EmailMarketingSystemPackage.CAMPAIGN_ANALYTICS: {
 				CampaignAnalytics campaignAnalytics = (CampaignAnalytics)theEObject;
 				T result = caseCampaignAnalytics(campaignAnalytics);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EmailMarketingSystemPackage.SUBSCRIBER: {
-				Subscriber subscriber = (Subscriber)theEObject;
-				T result = caseSubscriber(subscriber);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EmailMarketingSystemPackage.PREFERENCE: {
-				Preference preference = (Preference)theEObject;
-				T result = casePreference(preference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -114,6 +96,25 @@ public class EmailMarketingSystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case EmailMarketingSystemPackage.SUBSCRIBER: {
+				Subscriber subscriber = (Subscriber)theEObject;
+				T result = caseSubscriber(subscriber);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EmailMarketingSystemPackage.PREFERENCE: {
+				Preference preference = (Preference)theEObject;
+				T result = casePreference(preference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN: {
+				EmailCampaign emailCampaign = (EmailCampaign)theEObject;
+				T result = caseEmailCampaign(emailCampaign);
+				if (result == null) result = caseCampaign(emailCampaign);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE: {
 				EmailTemplate emailTemplate = (EmailTemplate)theEObject;
 				T result = caseEmailTemplate(emailTemplate);
@@ -123,12 +124,6 @@ public class EmailMarketingSystemSwitch<T> extends Switch<T> {
 			case EmailMarketingSystemPackage.EMAIL_RESPONSE: {
 				EmailResponse emailResponse = (EmailResponse)theEObject;
 				T result = caseEmailResponse(emailResponse);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EmailMarketingSystemPackage.MARKETING_SYSTEM: {
-				MarketingSystem marketingSystem = (MarketingSystem)theEObject;
-				T result = caseMarketingSystem(marketingSystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -283,21 +278,6 @@ public class EmailMarketingSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEmailResponse(EmailResponse object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marketing System</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marketing System</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarketingSystem(MarketingSystem object) {
 		return null;
 	}
 

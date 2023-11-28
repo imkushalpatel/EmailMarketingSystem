@@ -59,15 +59,14 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 		switch (eClass.getClassifierID()) {
 			case EmailMarketingSystemPackage.STATE_MACHINE1: return createStateMachine1();
 			case EmailMarketingSystemPackage.CAMPAIGN: return createCampaign();
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN: return createEmailCampaign();
 			case EmailMarketingSystemPackage.CAMPAIGN_ANALYTICS: return createCampaignAnalytics();
-			case EmailMarketingSystemPackage.SUBSCRIBER: return createSubscriber();
-			case EmailMarketingSystemPackage.PREFERENCE: return createPreference();
 			case EmailMarketingSystemPackage.SEGMENT: return createSegment();
 			case EmailMarketingSystemPackage.SEGMENT_CONDITION: return createSegmentCondition();
+			case EmailMarketingSystemPackage.SUBSCRIBER: return createSubscriber();
+			case EmailMarketingSystemPackage.PREFERENCE: return createPreference();
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN: return createEmailCampaign();
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE: return createEmailTemplate();
 			case EmailMarketingSystemPackage.EMAIL_RESPONSE: return createEmailResponse();
-			case EmailMarketingSystemPackage.MARKETING_SYSTEM: return createMarketingSystem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -81,12 +80,12 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN_STATUS:
-				return createEmailCampaignStatusFromString(eDataType, initialValue);
-			case EmailMarketingSystemPackage.RESPONSE_TYPE:
-				return createResponseTypeFromString(eDataType, initialValue);
 			case EmailMarketingSystemPackage.CAMPAIGN_STATUS:
 				return createCampaignStatusFromString(eDataType, initialValue);
+			case EmailMarketingSystemPackage.RESPONSE_TYPE:
+				return createResponseTypeFromString(eDataType, initialValue);
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN_STATUS:
+				return createEmailCampaignStatusFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -100,12 +99,12 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN_STATUS:
-				return convertEmailCampaignStatusToString(eDataType, instanceValue);
-			case EmailMarketingSystemPackage.RESPONSE_TYPE:
-				return convertResponseTypeToString(eDataType, instanceValue);
 			case EmailMarketingSystemPackage.CAMPAIGN_STATUS:
 				return convertCampaignStatusToString(eDataType, instanceValue);
+			case EmailMarketingSystemPackage.RESPONSE_TYPE:
+				return convertResponseTypeToString(eDataType, instanceValue);
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN_STATUS:
+				return convertEmailCampaignStatusToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -219,17 +218,6 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	public EmailResponse createEmailResponse() {
 		EmailResponseImpl emailResponse = new EmailResponseImpl();
 		return emailResponse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarketingSystem createMarketingSystem() {
-		MarketingSystemImpl marketingSystem = new MarketingSystemImpl();
-		return marketingSystem;
 	}
 
 	/**

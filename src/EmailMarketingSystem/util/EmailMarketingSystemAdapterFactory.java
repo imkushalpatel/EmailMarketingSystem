@@ -76,20 +76,8 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 				return createCampaignAdapter();
 			}
 			@Override
-			public Adapter caseEmailCampaign(EmailCampaign object) {
-				return createEmailCampaignAdapter();
-			}
-			@Override
 			public Adapter caseCampaignAnalytics(CampaignAnalytics object) {
 				return createCampaignAnalyticsAdapter();
-			}
-			@Override
-			public Adapter caseSubscriber(Subscriber object) {
-				return createSubscriberAdapter();
-			}
-			@Override
-			public Adapter casePreference(Preference object) {
-				return createPreferenceAdapter();
 			}
 			@Override
 			public Adapter caseSegment(Segment object) {
@@ -100,16 +88,24 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 				return createSegmentConditionAdapter();
 			}
 			@Override
+			public Adapter caseSubscriber(Subscriber object) {
+				return createSubscriberAdapter();
+			}
+			@Override
+			public Adapter casePreference(Preference object) {
+				return createPreferenceAdapter();
+			}
+			@Override
+			public Adapter caseEmailCampaign(EmailCampaign object) {
+				return createEmailCampaignAdapter();
+			}
+			@Override
 			public Adapter caseEmailTemplate(EmailTemplate object) {
 				return createEmailTemplateAdapter();
 			}
 			@Override
 			public Adapter caseEmailResponse(EmailResponse object) {
 				return createEmailResponseAdapter();
-			}
-			@Override
-			public Adapter caseMarketingSystem(MarketingSystem object) {
-				return createMarketingSystemAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -268,20 +264,6 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEmailResponseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.MarketingSystem <em>Marketing System</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see EmailMarketingSystem.MarketingSystem
-	 * @generated
-	 */
-	public Adapter createMarketingSystemAdapter() {
 		return null;
 	}
 

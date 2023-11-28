@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see EmailMarketingSystem.EmailMarketingSystemPackage#getEmailCampaignStatus()
- * @model
+ * @model extendedMetaData="baseType='CampaignStatus'"
  * @generated
  */
 public enum EmailCampaignStatus implements Enumerator {

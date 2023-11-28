@@ -11,7 +11,6 @@ import EmailMarketingSystem.EmailMarketingSystemFactory;
 import EmailMarketingSystem.EmailMarketingSystemPackage;
 import EmailMarketingSystem.EmailResponse;
 import EmailMarketingSystem.EmailTemplate;
-import EmailMarketingSystem.MarketingSystem;
 import EmailMarketingSystem.Preference;
 import EmailMarketingSystem.ResponseType;
 import EmailMarketingSystem.Segment;
@@ -104,13 +103,6 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	private EClass emailResponseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass marketingSystemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -259,18 +251,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EReference getCampaign_EmailCampaigns() {
-		return (EReference)campaignEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getCampaign_Status() {
-		return (EAttribute)campaignEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)campaignEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -280,7 +262,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 */
 	@Override
 	public EReference getCampaign_Analytics() {
-		return (EReference)campaignEClass.getEStructuralFeatures().get(6);
+		return (EReference)campaignEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -290,27 +272,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 */
 	@Override
 	public EReference getCampaign_Segments() {
-		return (EReference)campaignEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getCampaign__AddEmailCampaign() {
-		return campaignEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getCampaign__RemoveEmailCampaign() {
-		return campaignEClass.getEOperations().get(1);
+		return (EReference)campaignEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -320,7 +282,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 */
 	@Override
 	public EOperation getCampaign__GetAnalyticsDetails() {
-		return campaignEClass.getEOperations().get(2);
+		return campaignEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -330,7 +292,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 */
 	@Override
 	public EOperation getCampaign__AddSegment() {
-		return campaignEClass.getEOperations().get(3);
+		return campaignEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -340,7 +302,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 */
 	@Override
 	public EOperation getCampaign__RemoveSegment() {
-		return campaignEClass.getEOperations().get(4);
+		return campaignEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -350,7 +312,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 */
 	@Override
 	public EOperation getCampaign__ViewSegmentDetails() {
-		return campaignEClass.getEOperations().get(5);
+		return campaignEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -389,26 +351,6 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEmailCampaign_Status() {
-		return (EAttribute)emailCampaignEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEmailCampaign_Analytics() {
-		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getEmailCampaign_Recipients() {
 		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(4);
 	}
@@ -420,7 +362,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 */
 	@Override
 	public EReference getEmailCampaign_Template() {
-		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(5);
+		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -430,7 +372,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 */
 	@Override
 	public EReference getEmailCampaign_EmailResponses() {
-		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(6);
+		return (EReference)emailCampaignEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -471,6 +413,26 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	@Override
 	public EOperation getEmailCampaign__CancelCampaign() {
 		return emailCampaignEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getEmailCampaign__AddEmailCampaign() {
+		return emailCampaignEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getEmailCampaign__RemoveEmailCampaign() {
+		return emailCampaignEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1009,276 +971,6 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EClass getMarketingSystem() {
-		return marketingSystemEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarketingSystem_Campaigns() {
-		return (EReference)marketingSystemEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarketingSystem_Templates() {
-		return (EReference)marketingSystemEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarketingSystem_Subscribers() {
-		return (EReference)marketingSystemEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarketingSystem_EmailCampaigns() {
-		return (EReference)marketingSystemEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarketingSystem_EmailResponses() {
-		return (EReference)marketingSystemEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__CreateCampaign() {
-		return marketingSystemEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__UpdateCampaign() {
-		return marketingSystemEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__DeleteCampaign() {
-		return marketingSystemEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__ViewCampaignDetails() {
-		return marketingSystemEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__CreateTemplate() {
-		return marketingSystemEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__UpdateTemplate() {
-		return marketingSystemEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__DeleteTemplate() {
-		return marketingSystemEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__ViewTemplateDetails() {
-		return marketingSystemEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__Subscribe() {
-		return marketingSystemEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__Unsubscribe() {
-		return marketingSystemEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__UpdateSubscription() {
-		return marketingSystemEClass.getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__ViewSubscriberDetails() {
-		return marketingSystemEClass.getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__SendEmail() {
-		return marketingSystemEClass.getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__TrackCampaign() {
-		return marketingSystemEClass.getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__PauseCampaign() {
-		return marketingSystemEClass.getEOperations().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__CancelCampaign() {
-		return marketingSystemEClass.getEOperations().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__AnalyzeCampaign() {
-		return marketingSystemEClass.getEOperations().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__CreateSegment() {
-		return marketingSystemEClass.getEOperations().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__ViewSegmentDetails() {
-		return marketingSystemEClass.getEOperations().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__SendEmailToSegment() {
-		return marketingSystemEClass.getEOperations().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getMarketingSystem__RecordEmailResponse() {
-		return marketingSystemEClass.getEOperations().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getEmailCampaignStatus() {
 		return emailCampaignStatusEEnum;
 	}
@@ -1339,29 +1031,13 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		createEAttribute(campaignEClass, CAMPAIGN__NAME);
 		createEAttribute(campaignEClass, CAMPAIGN__START_DATE);
 		createEAttribute(campaignEClass, CAMPAIGN__END_DATE);
-		createEReference(campaignEClass, CAMPAIGN__EMAIL_CAMPAIGNS);
 		createEAttribute(campaignEClass, CAMPAIGN__STATUS);
 		createEReference(campaignEClass, CAMPAIGN__ANALYTICS);
 		createEReference(campaignEClass, CAMPAIGN__SEGMENTS);
-		createEOperation(campaignEClass, CAMPAIGN___ADD_EMAIL_CAMPAIGN);
-		createEOperation(campaignEClass, CAMPAIGN___REMOVE_EMAIL_CAMPAIGN);
 		createEOperation(campaignEClass, CAMPAIGN___GET_ANALYTICS_DETAILS);
 		createEOperation(campaignEClass, CAMPAIGN___ADD_SEGMENT);
 		createEOperation(campaignEClass, CAMPAIGN___REMOVE_SEGMENT);
 		createEOperation(campaignEClass, CAMPAIGN___VIEW_SEGMENT_DETAILS);
-
-		emailCampaignEClass = createEClass(EMAIL_CAMPAIGN);
-		createEAttribute(emailCampaignEClass, EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID);
-		createEAttribute(emailCampaignEClass, EMAIL_CAMPAIGN__SEND_DATE);
-		createEAttribute(emailCampaignEClass, EMAIL_CAMPAIGN__STATUS);
-		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__ANALYTICS);
-		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__RECIPIENTS);
-		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__TEMPLATE);
-		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__EMAIL_RESPONSES);
-		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___SEND_EMAIL);
-		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___TRACK_CAMPAIGN);
-		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___PAUSE_CAMPAIGN);
-		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___CANCEL_CAMPAIGN);
 
 		campaignAnalyticsEClass = createEClass(CAMPAIGN_ANALYTICS);
 		createEAttribute(campaignAnalyticsEClass, CAMPAIGN_ANALYTICS__CLICKS);
@@ -1370,6 +1046,19 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		createEOperation(campaignAnalyticsEClass, CAMPAIGN_ANALYTICS___TRACK_CLICK);
 		createEOperation(campaignAnalyticsEClass, CAMPAIGN_ANALYTICS___TRACK_OPEN);
 		createEOperation(campaignAnalyticsEClass, CAMPAIGN_ANALYTICS___TRACK_CONVERSION);
+
+		segmentEClass = createEClass(SEGMENT);
+		createEAttribute(segmentEClass, SEGMENT__SEGMENT_ID);
+		createEAttribute(segmentEClass, SEGMENT__NAME);
+		createEReference(segmentEClass, SEGMENT__CONDITIONS);
+		createEOperation(segmentEClass, SEGMENT___ADD_CONDITION);
+		createEOperation(segmentEClass, SEGMENT___REMOVE_CONDITION);
+		createEOperation(segmentEClass, SEGMENT___VIEW_CONDITIONS);
+
+		segmentConditionEClass = createEClass(SEGMENT_CONDITION);
+		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__ATTRIBUTE);
+		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__OPERATOR);
+		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__VALUE);
 
 		subscriberEClass = createEClass(SUBSCRIBER);
 		createEAttribute(subscriberEClass, SUBSCRIBER__SUBSCRIBER_ID);
@@ -1393,18 +1082,18 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		createEAttribute(preferenceEClass, PREFERENCE__VALUE);
 		createEOperation(preferenceEClass, PREFERENCE___UPDATE_PREFERENCE);
 
-		segmentEClass = createEClass(SEGMENT);
-		createEAttribute(segmentEClass, SEGMENT__SEGMENT_ID);
-		createEAttribute(segmentEClass, SEGMENT__NAME);
-		createEReference(segmentEClass, SEGMENT__CONDITIONS);
-		createEOperation(segmentEClass, SEGMENT___ADD_CONDITION);
-		createEOperation(segmentEClass, SEGMENT___REMOVE_CONDITION);
-		createEOperation(segmentEClass, SEGMENT___VIEW_CONDITIONS);
-
-		segmentConditionEClass = createEClass(SEGMENT_CONDITION);
-		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__ATTRIBUTE);
-		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__OPERATOR);
-		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__VALUE);
+		emailCampaignEClass = createEClass(EMAIL_CAMPAIGN);
+		createEAttribute(emailCampaignEClass, EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID);
+		createEAttribute(emailCampaignEClass, EMAIL_CAMPAIGN__SEND_DATE);
+		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__TEMPLATE);
+		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__EMAIL_RESPONSES);
+		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__RECIPIENTS);
+		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___SEND_EMAIL);
+		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___TRACK_CAMPAIGN);
+		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___PAUSE_CAMPAIGN);
+		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___CANCEL_CAMPAIGN);
+		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___ADD_EMAIL_CAMPAIGN);
+		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___REMOVE_EMAIL_CAMPAIGN);
 
 		emailTemplateEClass = createEClass(EMAIL_TEMPLATE);
 		createEAttribute(emailTemplateEClass, EMAIL_TEMPLATE__TEMPLATE_ID);
@@ -1423,38 +1112,10 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		createEReference(emailResponseEClass, EMAIL_RESPONSE__CAMPAIGN);
 		createEOperation(emailResponseEClass, EMAIL_RESPONSE___GET_RESPONSE_TYPE_DETAIL);
 
-		marketingSystemEClass = createEClass(MARKETING_SYSTEM);
-		createEReference(marketingSystemEClass, MARKETING_SYSTEM__CAMPAIGNS);
-		createEReference(marketingSystemEClass, MARKETING_SYSTEM__TEMPLATES);
-		createEReference(marketingSystemEClass, MARKETING_SYSTEM__SUBSCRIBERS);
-		createEReference(marketingSystemEClass, MARKETING_SYSTEM__EMAIL_CAMPAIGNS);
-		createEReference(marketingSystemEClass, MARKETING_SYSTEM__EMAIL_RESPONSES);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___CREATE_CAMPAIGN);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___UPDATE_CAMPAIGN);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___DELETE_CAMPAIGN);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___VIEW_CAMPAIGN_DETAILS);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___CREATE_TEMPLATE);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___UPDATE_TEMPLATE);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___DELETE_TEMPLATE);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___VIEW_TEMPLATE_DETAILS);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___SUBSCRIBE);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___UNSUBSCRIBE);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___UPDATE_SUBSCRIPTION);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___VIEW_SUBSCRIBER_DETAILS);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___SEND_EMAIL);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___TRACK_CAMPAIGN);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___PAUSE_CAMPAIGN);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___CANCEL_CAMPAIGN);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___ANALYZE_CAMPAIGN);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___CREATE_SEGMENT);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___VIEW_SEGMENT_DETAILS);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___SEND_EMAIL_TO_SEGMENT);
-		createEOperation(marketingSystemEClass, MARKETING_SYSTEM___RECORD_EMAIL_RESPONSE);
-
 		// Create enums
-		emailCampaignStatusEEnum = createEEnum(EMAIL_CAMPAIGN_STATUS);
-		responseTypeEEnum = createEEnum(RESPONSE_TYPE);
 		campaignStatusEEnum = createEEnum(CAMPAIGN_STATUS);
+		responseTypeEEnum = createEEnum(RESPONSE_TYPE);
+		emailCampaignStatusEEnum = createEEnum(EMAIL_CAMPAIGN_STATUS);
 	}
 
 	/**
@@ -1485,6 +1146,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		emailCampaignEClass.getESuperTypes().add(this.getCampaign());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(stateMachine1EClass, StateMachine1.class, "StateMachine1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1494,14 +1156,9 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		initEAttribute(getCampaign_Name(), ecorePackage.getEString(), "name", null, 1, 1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCampaign_StartDate(), ecorePackage.getEDate(), "startDate", null, 1, 1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCampaign_EndDate(), ecorePackage.getEDate(), "endDate", null, 1, 1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCampaign_EmailCampaigns(), this.getEmailCampaign(), null, "emailCampaigns", null, 0, -1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCampaign_Status(), this.getCampaignStatus(), "status", null, 1, 1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCampaign_Analytics(), this.getCampaignAnalytics(), null, "analytics", null, 0, 1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCampaign_Segments(), this.getSegment(), null, "segments", null, 0, -1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getCampaign__AddEmailCampaign(), null, "addEmailCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCampaign__RemoveEmailCampaign(), null, "removeEmailCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getCampaign__GetAnalyticsDetails(), null, "getAnalyticsDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1510,23 +1167,6 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		initEOperation(getCampaign__RemoveSegment(), null, "removeSegment", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getCampaign__ViewSegmentDetails(), null, "viewSegmentDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(emailCampaignEClass, EmailCampaign.class, "EmailCampaign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEmailCampaign_EmailCampaignId(), ecorePackage.getEString(), "emailCampaignId", null, 1, 1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEmailCampaign_SendDate(), ecorePackage.getEDate(), "sendDate", null, 1, 1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEmailCampaign_Status(), this.getEmailCampaignStatus(), "status", null, 1, 1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEmailCampaign_Analytics(), this.getCampaignAnalytics(), null, "analytics", null, 0, 1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEmailCampaign_Recipients(), this.getSubscriber(), this.getSubscriber_EmailCampaigns(), "recipients", null, 0, -1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEmailCampaign_Template(), this.getEmailTemplate(), this.getEmailTemplate_EmailCampaigns(), "template", null, 1, 1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEmailCampaign_EmailResponses(), this.getEmailResponse(), this.getEmailResponse_Campaign(), "emailResponses", null, 0, -1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getEmailCampaign__SendEmail(), null, "sendEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmailCampaign__TrackCampaign(), null, "trackCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmailCampaign__PauseCampaign(), null, "pauseCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmailCampaign__CancelCampaign(), null, "cancelCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(campaignAnalyticsEClass, CampaignAnalytics.class, "CampaignAnalytics", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCampaignAnalytics_Clicks(), ecorePackage.getEInt(), "clicks", null, 1, 1, CampaignAnalytics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1538,6 +1178,22 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		initEOperation(getCampaignAnalytics__TrackOpen(), null, "trackOpen", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getCampaignAnalytics__TrackConversion(), null, "trackConversion", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(segmentEClass, Segment.class, "Segment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSegment_SegmentId(), ecorePackage.getEString(), "segmentId", null, 1, 1, Segment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getSegment_Name(), ecorePackage.getEString(), "name", null, 1, 1, Segment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSegment_Conditions(), this.getSegmentCondition(), null, "conditions", null, 0, -1, Segment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEOperation(getSegment__AddCondition(), null, "addCondition", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getSegment__RemoveCondition(), null, "removeCondition", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getSegment__ViewConditions(), null, "viewConditions", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(segmentConditionEClass, SegmentCondition.class, "SegmentCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSegmentCondition_Attribute(), ecorePackage.getEString(), "attribute", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getSegmentCondition_Operator(), ecorePackage.getEString(), "operator", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getSegmentCondition_Value(), ecorePackage.getEString(), "value", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(subscriberEClass, Subscriber.class, "Subscriber", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSubscriber_SubscriberId(), ecorePackage.getEString(), "subscriberId", null, 1, 1, Subscriber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1568,21 +1224,24 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 
 		initEOperation(getPreference__UpdatePreference(), null, "updatePreference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(segmentEClass, Segment.class, "Segment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSegment_SegmentId(), ecorePackage.getEString(), "segmentId", null, 1, 1, Segment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSegment_Name(), ecorePackage.getEString(), "name", null, 1, 1, Segment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSegment_Conditions(), this.getSegmentCondition(), null, "conditions", null, 0, -1, Segment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(emailCampaignEClass, EmailCampaign.class, "EmailCampaign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEmailCampaign_EmailCampaignId(), ecorePackage.getEString(), "emailCampaignId", null, 1, 1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getEmailCampaign_SendDate(), ecorePackage.getEDate(), "sendDate", null, 1, 1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEmailCampaign_Template(), this.getEmailTemplate(), this.getEmailTemplate_EmailCampaigns(), "template", null, 1, 1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEmailCampaign_EmailResponses(), this.getEmailResponse(), this.getEmailResponse_Campaign(), "emailResponses", null, 0, -1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEmailCampaign_Recipients(), this.getSubscriber(), this.getSubscriber_EmailCampaigns(), "recipients", null, 0, -1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getSegment__AddCondition(), null, "addCondition", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getEmailCampaign__SendEmail(), null, "sendEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getSegment__RemoveCondition(), null, "removeCondition", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getEmailCampaign__TrackCampaign(), null, "trackCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getSegment__ViewConditions(), null, "viewConditions", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getEmailCampaign__PauseCampaign(), null, "pauseCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(segmentConditionEClass, SegmentCondition.class, "SegmentCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSegmentCondition_Attribute(), ecorePackage.getEString(), "attribute", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSegmentCondition_Operator(), ecorePackage.getEString(), "operator", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSegmentCondition_Value(), ecorePackage.getEString(), "value", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEOperation(getEmailCampaign__CancelCampaign(), null, "cancelCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getEmailCampaign__AddEmailCampaign(), null, "addEmailCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getEmailCampaign__RemoveEmailCampaign(), null, "removeEmailCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(emailTemplateEClass, EmailTemplate.class, "EmailTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEmailTemplate_TemplateId(), ecorePackage.getEString(), "templateId", null, 1, 1, EmailTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1604,61 +1263,12 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 
 		initEOperation(getEmailResponse__GetResponseTypeDetail(), null, "getResponseTypeDetail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(marketingSystemEClass, MarketingSystem.class, "MarketingSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMarketingSystem_Campaigns(), this.getCampaign(), null, "campaigns", null, 0, -1, MarketingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getMarketingSystem_Templates(), this.getEmailTemplate(), null, "templates", null, 0, -1, MarketingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getMarketingSystem_Subscribers(), this.getSubscriber(), null, "subscribers", null, 0, -1, MarketingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getMarketingSystem_EmailCampaigns(), this.getEmailCampaign(), null, "emailCampaigns", null, 0, -1, MarketingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getMarketingSystem_EmailResponses(), this.getEmailResponse(), null, "emailResponses", null, 0, -1, MarketingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__CreateCampaign(), null, "createCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__UpdateCampaign(), null, "updateCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__DeleteCampaign(), null, "deleteCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__ViewCampaignDetails(), null, "viewCampaignDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__CreateTemplate(), null, "createTemplate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__UpdateTemplate(), null, "updateTemplate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__DeleteTemplate(), null, "deleteTemplate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__ViewTemplateDetails(), null, "viewTemplateDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__Subscribe(), null, "subscribe", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__Unsubscribe(), null, "unsubscribe", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__UpdateSubscription(), null, "updateSubscription", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__ViewSubscriberDetails(), null, "viewSubscriberDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__SendEmail(), null, "sendEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__TrackCampaign(), null, "trackCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__PauseCampaign(), null, "pauseCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__CancelCampaign(), null, "cancelCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__AnalyzeCampaign(), null, "analyzeCampaign", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__CreateSegment(), null, "createSegment", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__ViewSegmentDetails(), null, "viewSegmentDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__SendEmailToSegment(), null, "sendEmailToSegment", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getMarketingSystem__RecordEmailResponse(), null, "recordEmailResponse", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		// Initialize enums and add enum literals
-		initEEnum(emailCampaignStatusEEnum, EmailCampaignStatus.class, "EmailCampaignStatus");
-		addEEnumLiteral(emailCampaignStatusEEnum, EmailCampaignStatus.ACTIVE);
-		addEEnumLiteral(emailCampaignStatusEEnum, EmailCampaignStatus.EXPIRED);
-		addEEnumLiteral(emailCampaignStatusEEnum, EmailCampaignStatus.STOPPED);
-		addEEnumLiteral(emailCampaignStatusEEnum, EmailCampaignStatus.INACTIVE);
+		initEEnum(campaignStatusEEnum, CampaignStatus.class, "CampaignStatus");
+		addEEnumLiteral(campaignStatusEEnum, CampaignStatus.ACTIVE);
+		addEEnumLiteral(campaignStatusEEnum, CampaignStatus.INACTIVE);
+		addEEnumLiteral(campaignStatusEEnum, CampaignStatus.STOPPED);
+		addEEnumLiteral(campaignStatusEEnum, CampaignStatus.EXPIRED);
 
 		initEEnum(responseTypeEEnum, ResponseType.class, "ResponseType");
 		addEEnumLiteral(responseTypeEEnum, ResponseType.OPENED);
@@ -1666,11 +1276,11 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		addEEnumLiteral(responseTypeEEnum, ResponseType.UNSUBSCRIBED);
 		addEEnumLiteral(responseTypeEEnum, ResponseType._BOUNCED);
 
-		initEEnum(campaignStatusEEnum, CampaignStatus.class, "CampaignStatus");
-		addEEnumLiteral(campaignStatusEEnum, CampaignStatus.ACTIVE);
-		addEEnumLiteral(campaignStatusEEnum, CampaignStatus.INACTIVE);
-		addEEnumLiteral(campaignStatusEEnum, CampaignStatus.STOPPED);
-		addEEnumLiteral(campaignStatusEEnum, CampaignStatus.EXPIRED);
+		initEEnum(emailCampaignStatusEEnum, EmailCampaignStatus.class, "EmailCampaignStatus");
+		addEEnumLiteral(emailCampaignStatusEEnum, EmailCampaignStatus.ACTIVE);
+		addEEnumLiteral(emailCampaignStatusEEnum, EmailCampaignStatus.EXPIRED);
+		addEEnumLiteral(emailCampaignStatusEEnum, EmailCampaignStatus.STOPPED);
+		addEEnumLiteral(emailCampaignStatusEEnum, EmailCampaignStatus.INACTIVE);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1678,6 +1288,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML
 		createUMLAnnotations();
+		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
+		createExtendedMetaDataAnnotations();
 	}
 
 	/**
@@ -1693,6 +1305,22 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		   source,
 		   new String[] {
 			   "originalName", " BOUNCED"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createExtendedMetaDataAnnotations() {
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
+		addAnnotation
+		  (emailCampaignStatusEEnum,
+		   source,
+		   new String[] {
+			   "baseType", "CampaignStatus"
 		   });
 	}
 

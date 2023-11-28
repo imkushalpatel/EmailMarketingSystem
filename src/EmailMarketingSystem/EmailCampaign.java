@@ -6,8 +6,6 @@ import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Email Campaign</b></em>'.
@@ -19,18 +17,16 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link EmailMarketingSystem.EmailCampaign#getEmailCampaignId <em>Email Campaign Id</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailCampaign#getSendDate <em>Send Date</em>}</li>
- *   <li>{@link EmailMarketingSystem.EmailCampaign#getStatus <em>Status</em>}</li>
- *   <li>{@link EmailMarketingSystem.EmailCampaign#getAnalytics <em>Analytics</em>}</li>
- *   <li>{@link EmailMarketingSystem.EmailCampaign#getRecipients <em>Recipients</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailCampaign#getTemplate <em>Template</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailCampaign#getEmailResponses <em>Email Responses</em>}</li>
+ *   <li>{@link EmailMarketingSystem.EmailCampaign#getRecipients <em>Recipients</em>}</li>
  * </ul>
  *
  * @see EmailMarketingSystem.EmailMarketingSystemPackage#getEmailCampaign()
  * @model
  * @generated
  */
-public interface EmailCampaign extends EObject {
+public interface EmailCampaign extends Campaign {
 	/**
 	 * Returns the value of the '<em><b>Email Campaign Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -82,61 +78,6 @@ public interface EmailCampaign extends EObject {
 	 * @generated
 	 */
 	void setSendDate(Date value);
-
-	/**
-	 * Returns the value of the '<em><b>Status</b></em>' attribute.
-	 * The literals are from the enumeration {@link EmailMarketingSystem.EmailCampaignStatus}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Status</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Status</em>' attribute.
-	 * @see EmailMarketingSystem.EmailCampaignStatus
-	 * @see #setStatus(EmailCampaignStatus)
-	 * @see EmailMarketingSystem.EmailMarketingSystemPackage#getEmailCampaign_Status()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	EmailCampaignStatus getStatus();
-
-	/**
-	 * Sets the value of the '{@link EmailMarketingSystem.EmailCampaign#getStatus <em>Status</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Status</em>' attribute.
-	 * @see EmailMarketingSystem.EmailCampaignStatus
-	 * @see #getStatus()
-	 * @generated
-	 */
-	void setStatus(EmailCampaignStatus value);
-
-	/**
-	 * Returns the value of the '<em><b>Analytics</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Analytics</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Analytics</em>' reference.
-	 * @see #setAnalytics(CampaignAnalytics)
-	 * @see EmailMarketingSystem.EmailMarketingSystemPackage#getEmailCampaign_Analytics()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	CampaignAnalytics getAnalytics();
-
-	/**
-	 * Sets the value of the '{@link EmailMarketingSystem.EmailCampaign#getAnalytics <em>Analytics</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Analytics</em>' reference.
-	 * @see #getAnalytics()
-	 * @generated
-	 */
-	void setAnalytics(CampaignAnalytics value);
 
 	/**
 	 * Returns the value of the '<em><b>Recipients</b></em>' reference list.
@@ -233,5 +174,21 @@ public interface EmailCampaign extends EObject {
 	 * @generated
 	 */
 	void cancelCampaign();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void addEmailCampaign();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void removeEmailCampaign();
 
 } // EmailCampaign

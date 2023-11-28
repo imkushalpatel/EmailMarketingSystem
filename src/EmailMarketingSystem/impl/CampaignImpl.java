@@ -5,7 +5,6 @@ package EmailMarketingSystem.impl;
 import EmailMarketingSystem.Campaign;
 import EmailMarketingSystem.CampaignAnalytics;
 import EmailMarketingSystem.CampaignStatus;
-import EmailMarketingSystem.EmailCampaign;
 import EmailMarketingSystem.EmailMarketingSystemPackage;
 import EmailMarketingSystem.Segment;
 
@@ -38,7 +37,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link EmailMarketingSystem.impl.CampaignImpl#getName <em>Name</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.CampaignImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.CampaignImpl#getEndDate <em>End Date</em>}</li>
- *   <li>{@link EmailMarketingSystem.impl.CampaignImpl#getEmailCampaigns <em>Email Campaigns</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.CampaignImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.CampaignImpl#getAnalytics <em>Analytics</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.CampaignImpl#getSegments <em>Segments</em>}</li>
@@ -126,16 +124,6 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * @ordered
 	 */
 	protected Date endDate = END_DATE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getEmailCampaigns() <em>Email Campaigns</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmailCampaigns()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EmailCampaign> emailCampaigns;
 
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
@@ -294,19 +282,6 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * @generated
 	 */
 	@Override
-	public EList<EmailCampaign> getEmailCampaigns() {
-		if (emailCampaigns == null) {
-			emailCampaigns = new EObjectResolvingEList<EmailCampaign>(EmailCampaign.class, this, EmailMarketingSystemPackage.CAMPAIGN__EMAIL_CAMPAIGNS);
-		}
-		return emailCampaigns;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public CampaignStatus getStatus() {
 		return status;
 	}
@@ -382,28 +357,6 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addEmailCampaign() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeEmailCampaign() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void getAnalyticsDetails() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -459,8 +412,6 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 				return getStartDate();
 			case EmailMarketingSystemPackage.CAMPAIGN__END_DATE:
 				return getEndDate();
-			case EmailMarketingSystemPackage.CAMPAIGN__EMAIL_CAMPAIGNS:
-				return getEmailCampaigns();
 			case EmailMarketingSystemPackage.CAMPAIGN__STATUS:
 				return getStatus();
 			case EmailMarketingSystemPackage.CAMPAIGN__ANALYTICS:
@@ -492,10 +443,6 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 				return;
 			case EmailMarketingSystemPackage.CAMPAIGN__END_DATE:
 				setEndDate((Date)newValue);
-				return;
-			case EmailMarketingSystemPackage.CAMPAIGN__EMAIL_CAMPAIGNS:
-				getEmailCampaigns().clear();
-				getEmailCampaigns().addAll((Collection<? extends EmailCampaign>)newValue);
 				return;
 			case EmailMarketingSystemPackage.CAMPAIGN__STATUS:
 				setStatus((CampaignStatus)newValue);
@@ -531,9 +478,6 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 			case EmailMarketingSystemPackage.CAMPAIGN__END_DATE:
 				setEndDate(END_DATE_EDEFAULT);
 				return;
-			case EmailMarketingSystemPackage.CAMPAIGN__EMAIL_CAMPAIGNS:
-				getEmailCampaigns().clear();
-				return;
 			case EmailMarketingSystemPackage.CAMPAIGN__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
@@ -563,8 +507,6 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 				return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
 			case EmailMarketingSystemPackage.CAMPAIGN__END_DATE:
 				return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
-			case EmailMarketingSystemPackage.CAMPAIGN__EMAIL_CAMPAIGNS:
-				return emailCampaigns != null && !emailCampaigns.isEmpty();
 			case EmailMarketingSystemPackage.CAMPAIGN__STATUS:
 				return status != STATUS_EDEFAULT;
 			case EmailMarketingSystemPackage.CAMPAIGN__ANALYTICS:
@@ -583,12 +525,6 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailMarketingSystemPackage.CAMPAIGN___ADD_EMAIL_CAMPAIGN:
-				addEmailCampaign();
-				return null;
-			case EmailMarketingSystemPackage.CAMPAIGN___REMOVE_EMAIL_CAMPAIGN:
-				removeEmailCampaign();
-				return null;
 			case EmailMarketingSystemPackage.CAMPAIGN___GET_ANALYTICS_DETAILS:
 				getAnalyticsDetails();
 				return null;

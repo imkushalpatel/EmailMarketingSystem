@@ -2,9 +2,7 @@
  */
 package EmailMarketingSystem.impl;
 
-import EmailMarketingSystem.CampaignAnalytics;
 import EmailMarketingSystem.EmailCampaign;
-import EmailMarketingSystem.EmailCampaignStatus;
 import EmailMarketingSystem.EmailMarketingSystemPackage;
 import EmailMarketingSystem.EmailResponse;
 import EmailMarketingSystem.EmailTemplate;
@@ -24,8 +22,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -39,16 +35,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getEmailCampaignId <em>Email Campaign Id</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getSendDate <em>Send Date</em>}</li>
- *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getStatus <em>Status</em>}</li>
- *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getAnalytics <em>Analytics</em>}</li>
- *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getRecipients <em>Recipients</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getTemplate <em>Template</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getEmailResponses <em>Email Responses</em>}</li>
+ *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getRecipients <em>Recipients</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements EmailCampaign {
+public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	/**
 	 * The default value of the '{@link #getEmailCampaignId() <em>Email Campaign Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,46 +84,6 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 	protected Date sendDate = SEND_DATE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatus()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EmailCampaignStatus STATUS_EDEFAULT = EmailCampaignStatus.ACTIVE;
-
-	/**
-	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatus()
-	 * @generated
-	 * @ordered
-	 */
-	protected EmailCampaignStatus status = STATUS_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getAnalytics() <em>Analytics</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAnalytics()
-	 * @generated
-	 * @ordered
-	 */
-	protected CampaignAnalytics analytics;
-
-	/**
-	 * The cached value of the '{@link #getRecipients() <em>Recipients</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRecipients()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Subscriber> recipients;
-
-	/**
 	 * The cached value of the '{@link #getTemplate() <em>Template</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,6 +102,16 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 	 * @ordered
 	 */
 	protected EList<EmailResponse> emailResponses;
+
+	/**
+	 * The cached value of the '{@link #getRecipients() <em>Recipients</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRecipients()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Subscriber> recipients;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -212,69 +176,6 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 		sendDate = newSendDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__SEND_DATE, oldSendDate, sendDate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EmailCampaignStatus getStatus() {
-		return status;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStatus(EmailCampaignStatus newStatus) {
-		EmailCampaignStatus oldStatus = status;
-		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__STATUS, oldStatus, status));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CampaignAnalytics getAnalytics() {
-		if (analytics != null && analytics.eIsProxy()) {
-			InternalEObject oldAnalytics = (InternalEObject)analytics;
-			analytics = (CampaignAnalytics)eResolveProxy(oldAnalytics);
-			if (analytics != oldAnalytics) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__ANALYTICS, oldAnalytics, analytics));
-			}
-		}
-		return analytics;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CampaignAnalytics basicGetAnalytics() {
-		return analytics;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAnalytics(CampaignAnalytics newAnalytics) {
-		CampaignAnalytics oldAnalytics = analytics;
-		analytics = newAnalytics;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__ANALYTICS, oldAnalytics, analytics));
 	}
 
 	/**
@@ -414,18 +315,40 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void addEmailCampaign() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void removeEmailCampaign() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRecipients()).basicAdd(otherEnd, msgs);
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__TEMPLATE:
 				if (template != null)
 					msgs = ((InternalEObject)template).eInverseRemove(this, EmailMarketingSystemPackage.EMAIL_TEMPLATE__EMAIL_CAMPAIGNS, EmailTemplate.class, msgs);
 				return basicSetTemplate((EmailTemplate)otherEnd, msgs);
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_RESPONSES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEmailResponses()).basicAdd(otherEnd, msgs);
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRecipients()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -438,12 +361,12 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
-				return ((InternalEList<?>)getRecipients()).basicRemove(otherEnd, msgs);
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__TEMPLATE:
 				return basicSetTemplate(null, msgs);
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_RESPONSES:
 				return ((InternalEList<?>)getEmailResponses()).basicRemove(otherEnd, msgs);
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
+				return ((InternalEList<?>)getRecipients()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -460,18 +383,13 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 				return getEmailCampaignId();
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__SEND_DATE:
 				return getSendDate();
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__STATUS:
-				return getStatus();
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__ANALYTICS:
-				if (resolve) return getAnalytics();
-				return basicGetAnalytics();
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
-				return getRecipients();
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__TEMPLATE:
 				if (resolve) return getTemplate();
 				return basicGetTemplate();
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_RESPONSES:
 				return getEmailResponses();
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
+				return getRecipients();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -491,22 +409,16 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__SEND_DATE:
 				setSendDate((Date)newValue);
 				return;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__STATUS:
-				setStatus((EmailCampaignStatus)newValue);
-				return;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__ANALYTICS:
-				setAnalytics((CampaignAnalytics)newValue);
-				return;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
-				getRecipients().clear();
-				getRecipients().addAll((Collection<? extends Subscriber>)newValue);
-				return;
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__TEMPLATE:
 				setTemplate((EmailTemplate)newValue);
 				return;
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_RESPONSES:
 				getEmailResponses().clear();
 				getEmailResponses().addAll((Collection<? extends EmailResponse>)newValue);
+				return;
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
+				getRecipients().clear();
+				getRecipients().addAll((Collection<? extends Subscriber>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -526,20 +438,14 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__SEND_DATE:
 				setSendDate(SEND_DATE_EDEFAULT);
 				return;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__STATUS:
-				setStatus(STATUS_EDEFAULT);
-				return;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__ANALYTICS:
-				setAnalytics((CampaignAnalytics)null);
-				return;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
-				getRecipients().clear();
-				return;
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__TEMPLATE:
 				setTemplate((EmailTemplate)null);
 				return;
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_RESPONSES:
 				getEmailResponses().clear();
+				return;
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
+				getRecipients().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -557,16 +463,12 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 				return EMAIL_CAMPAIGN_ID_EDEFAULT == null ? emailCampaignId != null : !EMAIL_CAMPAIGN_ID_EDEFAULT.equals(emailCampaignId);
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__SEND_DATE:
 				return SEND_DATE_EDEFAULT == null ? sendDate != null : !SEND_DATE_EDEFAULT.equals(sendDate);
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__STATUS:
-				return status != STATUS_EDEFAULT;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__ANALYTICS:
-				return analytics != null;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
-				return recipients != null && !recipients.isEmpty();
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__TEMPLATE:
 				return template != null;
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_RESPONSES:
 				return emailResponses != null && !emailResponses.isEmpty();
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS:
+				return recipients != null && !recipients.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -591,6 +493,12 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___CANCEL_CAMPAIGN:
 				cancelCampaign();
 				return null;
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___ADD_EMAIL_CAMPAIGN:
+				addEmailCampaign();
+				return null;
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___REMOVE_EMAIL_CAMPAIGN:
+				removeEmailCampaign();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -609,8 +517,6 @@ public class EmailCampaignImpl extends MinimalEObjectImpl.Container implements E
 		result.append(emailCampaignId);
 		result.append(", sendDate: ");
 		result.append(sendDate);
-		result.append(", status: ");
-		result.append(status);
 		result.append(')');
 		return result.toString();
 	}

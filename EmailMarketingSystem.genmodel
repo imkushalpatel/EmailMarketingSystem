@@ -32,11 +32,11 @@
   <foreignModel>EmailMarketingSystem.uml</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="EmailMarketingSystem" disposableProviderFactory="true"
       ecorePackage="EmailMarketingSystem.ecore#/">
-    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="EmailMarketingSystem.ecore#//EmailCampaignStatus">
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//EmailCampaignStatus/Active"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//EmailCampaignStatus/Expired"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//EmailCampaignStatus/Stopped"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//EmailCampaignStatus/Inactive"/>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="EmailMarketingSystem.ecore#//CampaignStatus">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//CampaignStatus/Active"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//CampaignStatus/Inactive"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//CampaignStatus/Stopped"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//CampaignStatus/Expired"/>
     </genEnums>
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="EmailMarketingSystem.ecore#//ResponseType">
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//ResponseType/OPENED"/>
@@ -44,11 +44,11 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//ResponseType/UNSUBSCRIBED"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//ResponseType/_BOUNCED"/>
     </genEnums>
-    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="EmailMarketingSystem.ecore#//CampaignStatus">
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//CampaignStatus/Active"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//CampaignStatus/Inactive"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//CampaignStatus/Stopped"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//CampaignStatus/Expired"/>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="EmailMarketingSystem.ecore#//EmailCampaignStatus">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//EmailCampaignStatus/Active"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//EmailCampaignStatus/Expired"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//EmailCampaignStatus/Stopped"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//EmailCampaignStatus/Inactive"/>
     </genEnums>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//StateMachine1"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//Campaign">
@@ -56,36 +56,15 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Campaign/name"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Campaign/startDate"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Campaign/endDate"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//Campaign/emailCampaigns"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Campaign/status"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//Campaign/analytics"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//Campaign/segments"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/addEmailCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/removeEmailCampaign"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/getAnalyticsDetails"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/addSegment"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/removeSegment"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/viewSegmentDetails"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//EmailCampaign">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//EmailCampaign/emailCampaignId"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//EmailCampaign/sendDate"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//EmailCampaign/status"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//EmailCampaign/analytics"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//EmailCampaign/recipients"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//EmailCampaign/template"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//EmailCampaign/emailResponses"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/sendEmail"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/trackCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/pauseCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/cancelCampaign"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//CampaignAnalytics">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//CampaignAnalytics/clicks"/>
@@ -94,6 +73,20 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//CampaignAnalytics/trackClick"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//CampaignAnalytics/trackOpen"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//CampaignAnalytics/trackConversion"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//Segment">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Segment/segmentId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Segment/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//Segment/conditions"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Segment/addCondition"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Segment/removeCondition"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Segment/viewConditions"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//SegmentCondition">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//SegmentCondition/attribute"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//SegmentCondition/operator"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//SegmentCondition/value"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//Subscriber">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Subscriber/subscriberId"/>
@@ -120,19 +113,21 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Preference/value"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Preference/updatePreference"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//Segment">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Segment/segmentId"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Segment/name"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//EmailCampaign">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//EmailCampaign/emailCampaignId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//EmailCampaign/sendDate"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//Segment/conditions"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Segment/addCondition"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Segment/removeCondition"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Segment/viewConditions"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//SegmentCondition">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//SegmentCondition/attribute"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//SegmentCondition/operator"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//SegmentCondition/value"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//EmailCampaign/template"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//EmailCampaign/emailResponses"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//EmailCampaign/recipients"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/sendEmail"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/trackCampaign"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/pauseCampaign"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/cancelCampaign"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/addEmailCampaign"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailCampaign/removeEmailCampaign"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//EmailTemplate">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//EmailTemplate/templateId"/>
@@ -153,39 +148,6 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//EmailResponse/campaign"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//EmailResponse/getResponseTypeDetail"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//MarketingSystem">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//MarketingSystem/campaigns"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//MarketingSystem/templates"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//MarketingSystem/subscribers"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//MarketingSystem/emailCampaigns"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//MarketingSystem/emailResponses"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/createCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/updateCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/deleteCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/viewCampaignDetails"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/createTemplate"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/updateTemplate"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/deleteTemplate"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/viewTemplateDetails"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/subscribe"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/unsubscribe"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/updateSubscription"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/viewSubscriberDetails"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/sendEmail"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/trackCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/pauseCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/cancelCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/analyzeCampaign"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/createSegment"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/viewSegmentDetails"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/sendEmailToSegment"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//MarketingSystem/recordEmailResponse"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

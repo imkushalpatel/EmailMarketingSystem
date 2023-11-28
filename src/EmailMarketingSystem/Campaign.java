@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link EmailMarketingSystem.Campaign#getName <em>Name</em>}</li>
  *   <li>{@link EmailMarketingSystem.Campaign#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link EmailMarketingSystem.Campaign#getEndDate <em>End Date</em>}</li>
- *   <li>{@link EmailMarketingSystem.Campaign#getEmailCampaigns <em>Email Campaigns</em>}</li>
  *   <li>{@link EmailMarketingSystem.Campaign#getStatus <em>Status</em>}</li>
  *   <li>{@link EmailMarketingSystem.Campaign#getAnalytics <em>Analytics</em>}</li>
  *   <li>{@link EmailMarketingSystem.Campaign#getSegments <em>Segments</em>}</li>
@@ -137,22 +136,6 @@ public interface Campaign extends EObject {
 	void setEndDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Email Campaigns</b></em>' reference list.
-	 * The list contents are of type {@link EmailMarketingSystem.EmailCampaign}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Email Campaigns</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Email Campaigns</em>' reference list.
-	 * @see EmailMarketingSystem.EmailMarketingSystemPackage#getCampaign_EmailCampaigns()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<EmailCampaign> getEmailCampaigns();
-
-	/**
 	 * Returns the value of the '<em><b>Status</b></em>' attribute.
 	 * The literals are from the enumeration {@link EmailMarketingSystem.CampaignStatus}.
 	 * <!-- begin-user-doc -->
@@ -222,22 +205,6 @@ public interface Campaign extends EObject {
 	 * @generated
 	 */
 	EList<Segment> getSegments();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void addEmailCampaign();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void removeEmailCampaign();
 
 	/**
 	 * <!-- begin-user-doc -->
