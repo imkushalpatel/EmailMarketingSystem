@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3Tc48H8CEe6NmLc2hrX90w" name="EmailMarketingSystem">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3Tc48H8CEe6NmLc2hrX90w" name="EmailMarketingSystem">
   <packagedElement xmi:type="uml:StateMachine" xmi:id="_3Tf8QH8CEe6NmLc2hrX90w" name="StateMachine1">
     <region xmi:type="uml:Region" xmi:id="_3ThKYH8CEe6NmLc2hrX90w" name="Region1"/>
   </packagedElement>
@@ -10,21 +10,24 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_n7vdMH8EEe6NmLc2hrX90w" name="name" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_r_xTUH8EEe6NmLc2hrX90w" name="status" visibility="private" type="_2v4qIH8IEe6NmLc2hrX90w"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_4TkGkH8MEe6NmLc2hrX90w" name="startDate" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_DuHeUH8NEe6NmLc2hrX90w" name="endDate" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZnovUH8NEe6NmLc2hrX90w" name="emailCampaigns" visibility="private" type="_UXWhcH8NEe6NmLc2hrX90w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iZJoQH8NEe6NmLc2hrX90w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cui14H8NEe6NmLc2hrX90w" value="*"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_X_cYIo4kEe6-oaP_z5FOCQ" name="emailCampaigns" type="_UXWhcH8NEe6NmLc2hrX90w" association="_X_ai8I4kEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X_cYI44kEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X_cYJI4kEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_rnauoH8NEe6NmLc2hrX90w" name="analytics" visibility="private" type="_okg-UH8NEe6NmLc2hrX90w"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_00jzoH8NEe6NmLc2hrX90w" name="segments" visibility="private" type="_x5meYH8NEe6NmLc2hrX90w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ohawH8NEe6NmLc2hrX90w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7o6cUH8NEe6NmLc2hrX90w" value="*"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_n77qA44kEe6-oaP_z5FOCQ" name="status" type="_2v4qIH8IEe6NmLc2hrX90w" association="_n77qAI4kEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Iebr444lEe6-oaP_z5FOCQ" name="analytics" type="_okg-UH8NEe6NmLc2hrX90w" association="_Iebr4I4lEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IeiZkI4lEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IejnsI4lEe6-oaP_z5FOCQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qstBI44nEe6-oaP_z5FOCQ" name="segments" type="_x5meYH8NEe6NmLc2hrX90w" association="_qstBII4nEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qstoMI4nEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qstoMY4nEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_BvQIcH8OEe6NmLc2hrX90w" name="addEmailCampaign"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_C2_MkH8OEe6NmLc2hrX90w" name="removeEmailCampaign"/>
@@ -46,20 +49,20 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_eIClIH8dEe6NmLc2hrX90w" name="lastName" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_fKfgoH8dEe6NmLc2hrX90w" name="preferences" visibility="private" type="_a6F44H8REe6NmLc2hrX90w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9wc9UH8dEe6NmLc2hrX90w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9w0JsH8dEe6NmLc2hrX90w" value="*"/>
-    </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_hpSeUH8dEe6NmLc2hrX90w" name="emailCampaigns" visibility="private" type="_UXWhcH8NEe6NmLc2hrX90w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OD6kwH8eEe6NmLc2hrX90w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OERKEH8eEe6NmLc2hrX90w" value="*"/>
-    </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_dwoxwH8dEe6NmLc2hrX90w" name="firstName" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_R2TRQH8eEe6NmLc2hrX90w" name="segments" visibility="private" type="_x5meYH8NEe6NmLc2hrX90w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XuXQ0H8eEe6NmLc2hrX90w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Xut2IH8eEe6NmLc2hrX90w" value="*"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DQbrE44nEe6-oaP_z5FOCQ" name="preferences" type="_a6F44H8REe6NmLc2hrX90w" association="_DQbrEI4nEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DQcSII4nEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DQcSIY4nEe6-oaP_z5FOCQ" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JwOZA44nEe6-oaP_z5FOCQ" name="segments" type="_x5meYH8NEe6NmLc2hrX90w" association="_JwOZAI4nEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JwOZBI4nEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JwOZBY4nEe6-oaP_z5FOCQ" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Vk82Mo4lEe6-oaP_z5FOCQ" name="emailCampaigns" type="_UXWhcH8NEe6NmLc2hrX90w" association="_Vk8PII4lEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HqpsQI4qEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HrOUAI4qEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXkDQH8eEe6NmLc2hrX90w" name="addEmailCampaign"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Zsg_kH8eEe6NmLc2hrX90w" name="removeEmailCampaign"/>
@@ -68,7 +71,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_am5kMH8eEe6NmLc2hrX90w" name="removeSegment"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_by3oEH8eEe6NmLc2hrX90w" name="viewSegmentDetails"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_aPVssH8GEe6NmLc2hrX90w" name="EmailMarketingSystem">
+  <packagedElement xmi:type="uml:Class" xmi:id="_aPVssH8GEe6NmLc2hrX90w" name="MarketingSystem">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_H6irYH8hEe6NmLc2hrX90w" name="campaigns" visibility="private" type="_-BeQIH8CEe6NmLc2hrX90w">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sjBEIH8hEe6NmLc2hrX90w"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sjYQgH8hEe6NmLc2hrX90w" value="*"/>
@@ -121,17 +124,23 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_ZyLV8H8OEe6NmLc2hrX90w" name="emailCampaignId" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_aDd6QH8OEe6NmLc2hrX90w" name="campaign" visibility="private" type="_-BeQIH8CEe6NmLc2hrX90w"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_al2OkH8OEe6NmLc2hrX90w" name="template" visibility="private" type="_zy33sH8OEe6NmLc2hrX90w"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_a7E3sH8OEe6NmLc2hrX90w" name="recipients" visibility="private" type="_YTwmQH8FEe6NmLc2hrX90w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-47mIH8OEe6NmLc2hrX90w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-5QWQH8OEe6NmLc2hrX90w" value="*"/>
-    </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_bKGLIH8OEe6NmLc2hrX90w" name="sendDate" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_bZzbEH8OEe6NmLc2hrX90w" name="status" visibility="private" type="_DoV9wH8eEe6NmLc2hrX90w"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_cpbP4H8OEe6NmLc2hrX90w" name="analytics" visibility="private" type="_okg-UH8NEe6NmLc2hrX90w"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0_Aew44kEe6-oaP_z5FOCQ" name="status" type="_DoV9wH8eEe6NmLc2hrX90w" association="_0_AewI4kEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QZ9_E44lEe6-oaP_z5FOCQ" name="analytics" type="_okg-UH8NEe6NmLc2hrX90w" association="_QZ9_EI4lEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QZ-mII4lEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QZ-mIY4lEe6-oaP_z5FOCQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Vk8PI44lEe6-oaP_z5FOCQ" name="recipients" type="_YTwmQH8FEe6NmLc2hrX90w" association="_Vk8PII4lEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vk82MI4lEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vk82MY4lEe6-oaP_z5FOCQ" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zL0NYY4lEe6-oaP_z5FOCQ" name="template" type="_zy33sH8OEe6NmLc2hrX90w" association="_zLzmUI4lEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tg9KFY4qEe6-oaP_z5FOCQ" name="emailResponses" type="_6iJIEH86Ee6NmLc2hrX90w" association="_tg8jAI4qEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5EQOII4qEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5EpPsI4qEe6-oaP_z5FOCQ" value="*"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_c1m1QH8PEe6NmLc2hrX90w" name="sendEmail"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_c8ti0H8PEe6NmLc2hrX90w" name="trackCampaign"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_dJASYH8PEe6NmLc2hrX90w" name="pauseCampaign"/>
@@ -158,9 +167,9 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_AZGlIH8fEe6NmLc2hrX90w" name="name" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_GwlroH8fEe6NmLc2hrX90w" name="conditions" visibility="private" type="_QJ69EH8gEe6NmLc2hrX90w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V-PFEH8gEe6NmLc2hrX90w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V-nfkH8gEe6NmLc2hrX90w" value="*"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_VZlo0o4nEe6-oaP_z5FOCQ" name="conditions" type="_QJ69EH8gEe6NmLc2hrX90w" association="_VZlBwI4nEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VZneAI4nEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VZosII4nEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_FJaScH8fEe6NmLc2hrX90w" name="addCondition"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Fd7w8H8fEe6NmLc2hrX90w" name="removeCondition"/>
@@ -179,9 +188,9 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_mVnWcH8QEe6NmLc2hrX90w" name="createdDate" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_mqrAcH8QEe6NmLc2hrX90w" name="emailCampaigns" visibility="private" type="_UXWhcH8NEe6NmLc2hrX90w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ebp88H8REe6NmLc2hrX90w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EcBwYH8REe6NmLc2hrX90w" value="*"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zL4e0I4lEe6-oaP_z5FOCQ" name="emailCampaigns" type="_UXWhcH8NEe6NmLc2hrX90w" association="_zLzmUI4lEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PGTQYI4oEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PGePgI4oEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_nxh60H8QEe6NmLc2hrX90w" name="addEmailCampaign"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_oOUkgH8QEe6NmLc2hrX90w" name="removeEmailCampaign"/>
@@ -198,7 +207,12 @@
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Yk6TwH8dEe6NmLc2hrX90w" name="updatePreference"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Enumeration" xmi:id="_DoV9wH8eEe6NmLc2hrX90w" name="EmailCampaignStatus"/>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_DoV9wH8eEe6NmLc2hrX90w" name="EmailCampaignStatus">
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Y2WgEI4mEe6-oaP_z5FOCQ" name="Active"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Y2YVQI4mEe6-oaP_z5FOCQ" name="Expired"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Y2ZjYI4mEe6-oaP_z5FOCQ" name="Stopped"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Y2aKcI4mEe6-oaP_z5FOCQ" name="Inactive"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_QJ69EH8gEe6NmLc2hrX90w" name="SegmentCondition">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_m0c0QH8gEe6NmLc2hrX90w" name="attribute" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
@@ -220,12 +234,96 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="__jm20H86Ee6NmLc2hrX90w" name="responseID" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_AFvTgH87Ee6NmLc2hrX90w" name="campaign" visibility="private" type="_UXWhcH8NEe6NmLc2hrX90w"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_AgbEYH87Ee6NmLc2hrX90w" name="subscriber" visibility="private" type="_YTwmQH8FEe6NmLc2hrX90w"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_BF0QcH87Ee6NmLc2hrX90w" name="responseType" visibility="private" type="_FspuIH86Ee6NmLc2hrX90w"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_wTE2kH87Ee6NmLc2hrX90w" name="timestamp" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_c3blU44lEe6-oaP_z5FOCQ" name="responseType" type="_FspuIH86Ee6NmLc2hrX90w" association="_c3blUI4lEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tg9KEo4qEe6-oaP_z5FOCQ" name="campaign" type="_UXWhcH8NEe6NmLc2hrX90w" association="_tg8jAI4qEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EO0pIo4rEe6-oaP_z5FOCQ" name="subscriber" type="_YTwmQH8FEe6NmLc2hrX90w" association="_EO0CEI4rEe6-oaP_z5FOCQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_QCSPwH87Ee6NmLc2hrX90w" name="getResponseTypeDetail"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_X_ai8I4kEe6-oaP_z5FOCQ" memberEnd="_X_cYIo4kEe6-oaP_z5FOCQ _X_cYJY4kEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X_cYII4kEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_X_cYIY4kEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_X_cYJY4kEe6-oaP_z5FOCQ" name="campaign" type="_-BeQIH8CEe6NmLc2hrX90w" association="_X_ai8I4kEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_n77qAI4kEe6-oaP_z5FOCQ" memberEnd="_n77qA44kEe6-oaP_z5FOCQ _n77qBo4kEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n77qAY4kEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n77qAo4kEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_n77qBo4kEe6-oaP_z5FOCQ" name="campaign" type="_-BeQIH8CEe6NmLc2hrX90w" association="_n77qAI4kEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0_AewI4kEe6-oaP_z5FOCQ" memberEnd="_0_Aew44kEe6-oaP_z5FOCQ _0_BF0o4kEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0_AewY4kEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0_Aewo4kEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0_BF0o4kEe6-oaP_z5FOCQ" name="emailcampaign" type="_UXWhcH8NEe6NmLc2hrX90w" association="_0_AewI4kEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Iebr4I4lEe6-oaP_z5FOCQ" visibility="package" memberEnd="_Iebr444lEe6-oaP_z5FOCQ _Ielc4I4lEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Iebr4Y4lEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Iebr4o4lEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Ielc4I4lEe6-oaP_z5FOCQ" name="campaign" type="_-BeQIH8CEe6NmLc2hrX90w" association="_Iebr4I4lEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QZ9_EI4lEe6-oaP_z5FOCQ" memberEnd="_QZ9_E44lEe6-oaP_z5FOCQ _QZ-mIo4lEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QZ9_EY4lEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QZ9_Eo4lEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QZ-mIo4lEe6-oaP_z5FOCQ" name="emailcampaign" type="_UXWhcH8NEe6NmLc2hrX90w" association="_QZ9_EI4lEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Vk8PII4lEe6-oaP_z5FOCQ" memberEnd="_Vk8PI44lEe6-oaP_z5FOCQ _Vk82Mo4lEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Vk8PIY4lEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Vk8PIo4lEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_c3blUI4lEe6-oaP_z5FOCQ" memberEnd="_c3blU44lEe6-oaP_z5FOCQ _c3fPsI4lEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c3blUY4lEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c3blUo4lEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_c3fPsI4lEe6-oaP_z5FOCQ" name="emailresponse" type="_6iJIEH86Ee6NmLc2hrX90w" association="_c3blUI4lEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zLzmUI4lEe6-oaP_z5FOCQ" memberEnd="_zL0NYY4lEe6-oaP_z5FOCQ _zL4e0I4lEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zLzmUY4lEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zL0NYI4lEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DQbrEI4nEe6-oaP_z5FOCQ" memberEnd="_DQbrE44nEe6-oaP_z5FOCQ _DQcSIo4nEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DQbrEY4nEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DQbrEo4nEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_DQcSIo4nEe6-oaP_z5FOCQ" name="subscriber" type="_YTwmQH8FEe6NmLc2hrX90w" association="_DQbrEI4nEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JwOZAI4nEe6-oaP_z5FOCQ" memberEnd="_JwOZA44nEe6-oaP_z5FOCQ _JwOZBo4nEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JwOZAY4nEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JwOZAo4nEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JwOZBo4nEe6-oaP_z5FOCQ" name="subscriber" type="_YTwmQH8FEe6NmLc2hrX90w" association="_JwOZAI4nEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VZlBwI4nEe6-oaP_z5FOCQ" memberEnd="_VZlo0o4nEe6-oaP_z5FOCQ _VZp6QI4nEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VZlo0I4nEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VZlo0Y4nEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VZp6QI4nEe6-oaP_z5FOCQ" name="segment" type="_x5meYH8NEe6NmLc2hrX90w" association="_VZlBwI4nEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_qstBII4nEe6-oaP_z5FOCQ" memberEnd="_qstBI44nEe6-oaP_z5FOCQ _qstoMo4nEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qstBIY4nEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qstBIo4nEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qstoMo4nEe6-oaP_z5FOCQ" name="campaign" type="_-BeQIH8CEe6NmLc2hrX90w" association="_qstBII4nEe6-oaP_z5FOCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tg8jAI4qEe6-oaP_z5FOCQ" visibility="private" memberEnd="_tg9KEo4qEe6-oaP_z5FOCQ _tg9KFY4qEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tg9KEI4qEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tg9KEY4qEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_EO0CEI4rEe6-oaP_z5FOCQ" visibility="public" memberEnd="_EO0CE44rEe6-oaP_z5FOCQ _EO0pIo4rEe6-oaP_z5FOCQ" navigableOwnedEnd="_EO0CE44rEe6-oaP_z5FOCQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EO0CEY4rEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EO0CEo4rEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_EO0CE44rEe6-oaP_z5FOCQ" name="emailresponse" type="_6iJIEH86Ee6NmLc2hrX90w" association="_EO0CEI4rEe6-oaP_z5FOCQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EO0pII4rEe6-oaP_z5FOCQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EO0pIY4rEe6-oaP_z5FOCQ" value="*"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>

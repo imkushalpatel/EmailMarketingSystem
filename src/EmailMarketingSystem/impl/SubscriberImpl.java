@@ -1,0 +1,636 @@
+/**
+ */
+package EmailMarketingSystem.impl;
+
+import EmailMarketingSystem.EmailCampaign;
+import EmailMarketingSystem.EmailMarketingSystemPackage;
+import EmailMarketingSystem.Preference;
+import EmailMarketingSystem.Segment;
+import EmailMarketingSystem.Subscriber;
+
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Collection;
+import java.util.Date;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Subscriber</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link EmailMarketingSystem.impl.SubscriberImpl#getSubscriberId <em>Subscriber Id</em>}</li>
+ *   <li>{@link EmailMarketingSystem.impl.SubscriberImpl#getSubscriptionDate <em>Subscription Date</em>}</li>
+ *   <li>{@link EmailMarketingSystem.impl.SubscriberImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link EmailMarketingSystem.impl.SubscriberImpl#getLastName <em>Last Name</em>}</li>
+ *   <li>{@link EmailMarketingSystem.impl.SubscriberImpl#getFirstName <em>First Name</em>}</li>
+ *   <li>{@link EmailMarketingSystem.impl.SubscriberImpl#getPreferences <em>Preferences</em>}</li>
+ *   <li>{@link EmailMarketingSystem.impl.SubscriberImpl#getSegments <em>Segments</em>}</li>
+ *   <li>{@link EmailMarketingSystem.impl.SubscriberImpl#getEmailCampaigns <em>Email Campaigns</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subscriber {
+	/**
+	 * The default value of the '{@link #getSubscriberId() <em>Subscriber Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubscriberId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SUBSCRIBER_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSubscriberId() <em>Subscriber Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubscriberId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String subscriberId = SUBSCRIBER_ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSubscriptionDate() <em>Subscription Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubscriptionDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date SUBSCRIPTION_DATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSubscriptionDate() <em>Subscription Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubscriptionDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date subscriptionDate = SUBSCRIPTION_DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEmail() <em>Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMAIL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEmail() <em>Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected String email = EMAIL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LAST_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lastName = LAST_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFirstName() <em>First Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FIRST_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFirstName() <em>First Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String firstName = FIRST_NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPreferences() <em>Preferences</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPreferences()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Preference> preferences;
+
+	/**
+	 * The cached value of the '{@link #getSegments() <em>Segments</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSegments()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Segment> segments;
+
+	/**
+	 * The cached value of the '{@link #getEmailCampaigns() <em>Email Campaigns</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmailCampaigns()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EmailCampaign> emailCampaigns;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubscriberImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return EmailMarketingSystemPackage.Literals.SUBSCRIBER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSubscriberId() {
+		return subscriberId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSubscriberId(String newSubscriberId) {
+		String oldSubscriberId = subscriberId;
+		subscriberId = newSubscriberId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIBER_ID, oldSubscriberId, subscriberId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Date getSubscriptionDate() {
+		return subscriptionDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSubscriptionDate(Date newSubscriptionDate) {
+		Date oldSubscriptionDate = subscriptionDate;
+		subscriptionDate = newSubscriptionDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIPTION_DATE, oldSubscriptionDate, subscriptionDate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEmail(String newEmail) {
+		String oldEmail = email;
+		email = newEmail;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.SUBSCRIBER__EMAIL, oldEmail, email));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getLastName() {
+		return lastName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLastName(String newLastName) {
+		String oldLastName = lastName;
+		lastName = newLastName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.SUBSCRIBER__LAST_NAME, oldLastName, lastName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getFirstName() {
+		return firstName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFirstName(String newFirstName) {
+		String oldFirstName = firstName;
+		firstName = newFirstName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.SUBSCRIBER__FIRST_NAME, oldFirstName, firstName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Preference> getPreferences() {
+		if (preferences == null) {
+			preferences = new EObjectResolvingEList<Preference>(Preference.class, this, EmailMarketingSystemPackage.SUBSCRIBER__PREFERENCES);
+		}
+		return preferences;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Segment> getSegments() {
+		if (segments == null) {
+			segments = new EObjectResolvingEList<Segment>(Segment.class, this, EmailMarketingSystemPackage.SUBSCRIBER__SEGMENTS);
+		}
+		return segments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<EmailCampaign> getEmailCampaigns() {
+		if (emailCampaigns == null) {
+			emailCampaigns = new EObjectWithInverseResolvingEList.ManyInverse<EmailCampaign>(EmailCampaign.class, this, EmailMarketingSystemPackage.SUBSCRIBER__EMAIL_CAMPAIGNS, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__RECIPIENTS);
+		}
+		return emailCampaigns;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addEmailCampaign() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void removeEmailCampaign() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void updatePreferences() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addSegment() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void removeSegment() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void viewSegmentDetails() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL_CAMPAIGNS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEmailCampaigns()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL_CAMPAIGNS:
+				return ((InternalEList<?>)getEmailCampaigns()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIBER_ID:
+				return getSubscriberId();
+			case EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIPTION_DATE:
+				return getSubscriptionDate();
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL:
+				return getEmail();
+			case EmailMarketingSystemPackage.SUBSCRIBER__LAST_NAME:
+				return getLastName();
+			case EmailMarketingSystemPackage.SUBSCRIBER__FIRST_NAME:
+				return getFirstName();
+			case EmailMarketingSystemPackage.SUBSCRIBER__PREFERENCES:
+				return getPreferences();
+			case EmailMarketingSystemPackage.SUBSCRIBER__SEGMENTS:
+				return getSegments();
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL_CAMPAIGNS:
+				return getEmailCampaigns();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIBER_ID:
+				setSubscriberId((String)newValue);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIPTION_DATE:
+				setSubscriptionDate((Date)newValue);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL:
+				setEmail((String)newValue);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__LAST_NAME:
+				setLastName((String)newValue);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__FIRST_NAME:
+				setFirstName((String)newValue);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__PREFERENCES:
+				getPreferences().clear();
+				getPreferences().addAll((Collection<? extends Preference>)newValue);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__SEGMENTS:
+				getSegments().clear();
+				getSegments().addAll((Collection<? extends Segment>)newValue);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL_CAMPAIGNS:
+				getEmailCampaigns().clear();
+				getEmailCampaigns().addAll((Collection<? extends EmailCampaign>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIBER_ID:
+				setSubscriberId(SUBSCRIBER_ID_EDEFAULT);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIPTION_DATE:
+				setSubscriptionDate(SUBSCRIPTION_DATE_EDEFAULT);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL:
+				setEmail(EMAIL_EDEFAULT);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__LAST_NAME:
+				setLastName(LAST_NAME_EDEFAULT);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__FIRST_NAME:
+				setFirstName(FIRST_NAME_EDEFAULT);
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__PREFERENCES:
+				getPreferences().clear();
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__SEGMENTS:
+				getSegments().clear();
+				return;
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL_CAMPAIGNS:
+				getEmailCampaigns().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIBER_ID:
+				return SUBSCRIBER_ID_EDEFAULT == null ? subscriberId != null : !SUBSCRIBER_ID_EDEFAULT.equals(subscriberId);
+			case EmailMarketingSystemPackage.SUBSCRIBER__SUBSCRIPTION_DATE:
+				return SUBSCRIPTION_DATE_EDEFAULT == null ? subscriptionDate != null : !SUBSCRIPTION_DATE_EDEFAULT.equals(subscriptionDate);
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL:
+				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
+			case EmailMarketingSystemPackage.SUBSCRIBER__LAST_NAME:
+				return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
+			case EmailMarketingSystemPackage.SUBSCRIBER__FIRST_NAME:
+				return FIRST_NAME_EDEFAULT == null ? firstName != null : !FIRST_NAME_EDEFAULT.equals(firstName);
+			case EmailMarketingSystemPackage.SUBSCRIBER__PREFERENCES:
+				return preferences != null && !preferences.isEmpty();
+			case EmailMarketingSystemPackage.SUBSCRIBER__SEGMENTS:
+				return segments != null && !segments.isEmpty();
+			case EmailMarketingSystemPackage.SUBSCRIBER__EMAIL_CAMPAIGNS:
+				return emailCampaigns != null && !emailCampaigns.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case EmailMarketingSystemPackage.SUBSCRIBER___ADD_EMAIL_CAMPAIGN:
+				addEmailCampaign();
+				return null;
+			case EmailMarketingSystemPackage.SUBSCRIBER___REMOVE_EMAIL_CAMPAIGN:
+				removeEmailCampaign();
+				return null;
+			case EmailMarketingSystemPackage.SUBSCRIBER___UPDATE_PREFERENCES:
+				updatePreferences();
+				return null;
+			case EmailMarketingSystemPackage.SUBSCRIBER___ADD_SEGMENT:
+				addSegment();
+				return null;
+			case EmailMarketingSystemPackage.SUBSCRIBER___REMOVE_SEGMENT:
+				removeSegment();
+				return null;
+			case EmailMarketingSystemPackage.SUBSCRIBER___VIEW_SEGMENT_DETAILS:
+				viewSegmentDetails();
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (subscriberId: ");
+		result.append(subscriberId);
+		result.append(", subscriptionDate: ");
+		result.append(subscriptionDate);
+		result.append(", email: ");
+		result.append(email);
+		result.append(", lastName: ");
+		result.append(lastName);
+		result.append(", firstName: ");
+		result.append(firstName);
+		result.append(')');
+		return result.toString();
+	}
+
+} //SubscriberImpl

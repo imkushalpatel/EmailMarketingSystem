@@ -14,24 +14,18 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" ordered="false"
-        lowerBound="1" eType="#//CampaignStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="emailCampaigns" ordered="false"
         upperBound="-1" eType="#//EmailCampaign"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" ordered="false"
+        lowerBound="1" eType="#//CampaignStatus"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="analytics" ordered="false"
-        lowerBound="1" eType="#//CampaignAnalytics"/>
+        eType="#//CampaignAnalytics"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="segments" ordered="false"
         upperBound="-1" eType="#//Segment"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="CampaignStatus">
-    <eLiterals name="Active"/>
-    <eLiterals name="Inactive" value="1"/>
-    <eLiterals name="Stopped" value="2"/>
-    <eLiterals name="Expired" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EmailCampaign">
     <eOperations name="sendEmail" ordered="false" lowerBound="1"/>
@@ -40,32 +34,35 @@
     <eOperations name="cancelCampaign" ordered="false" lowerBound="1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emailCampaignId" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="campaign" ordered="false"
-        lowerBound="1" eType="#//Campaign"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="template" ordered="false"
-        lowerBound="1" eType="#//EmailTemplate"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="recipients" ordered="false"
-        upperBound="-1" eType="#//Subscriber"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sendDate" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" ordered="false"
         lowerBound="1" eType="#//EmailCampaignStatus"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="analytics" ordered="false"
-        lowerBound="1" eType="#//CampaignAnalytics"/>
+        eType="#//CampaignAnalytics"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recipients" ordered="false"
+        upperBound="-1" eType="#//Subscriber" eOpposite="#//Subscriber/emailCampaigns"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="template" ordered="false"
+        lowerBound="1" eType="#//EmailTemplate" eOpposite="#//EmailTemplate/emailCampaigns"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emailResponses" ordered="false"
+        upperBound="-1" eType="#//EmailResponse" eOpposite="#//EmailResponse/campaign"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EmailTemplate">
-    <eOperations name="addEmailCampaign" ordered="false" lowerBound="1"/>
-    <eOperations name="removeEmailCampaign" ordered="false" lowerBound="1"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="templateId" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdDate" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="emailCampaigns" ordered="false"
-        upperBound="-1" eType="#//EmailCampaign"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="EmailCampaignStatus">
+    <eLiterals name="Active"/>
+    <eLiterals name="Expired" value="1"/>
+    <eLiterals name="Stopped" value="2"/>
+    <eLiterals name="Inactive" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CampaignAnalytics">
+    <eOperations name="trackClick" ordered="false" lowerBound="1"/>
+    <eOperations name="trackOpen" ordered="false" lowerBound="1"/>
+    <eOperations name="trackConversion" ordered="false" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clicks" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="opens" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conversions" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Subscriber">
     <eOperations name="addEmailCampaign" ordered="false" lowerBound="1"/>
@@ -82,14 +79,14 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preferences" ordered="false"
-        upperBound="-1" eType="#//Preference"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="emailCampaigns" ordered="false"
-        upperBound="-1" eType="#//EmailCampaign"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preferences" ordered="false"
+        upperBound="-1" eType="#//Preference"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="segments" ordered="false"
         upperBound="-1" eType="#//Segment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emailCampaigns" ordered="false"
+        upperBound="-1" eType="#//EmailCampaign" eOpposite="#//EmailCampaign/recipients"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Preference">
     <eOperations name="updatePreference" ordered="false" lowerBound="1"/>
@@ -119,19 +116,50 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EmailCampaignStatus"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CampaignAnalytics">
-    <eOperations name="trackClick" ordered="false" lowerBound="1"/>
-    <eOperations name="trackOpen" ordered="false" lowerBound="1"/>
-    <eOperations name="trackConversion" ordered="false" lowerBound="1"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clicks" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="opens" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conversions" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EmailTemplate">
+    <eOperations name="addEmailCampaign" ordered="false" lowerBound="1"/>
+    <eOperations name="removeEmailCampaign" ordered="false" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="templateId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdDate" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emailCampaigns" ordered="false"
+        upperBound="-1" eType="#//EmailCampaign" eOpposite="#//EmailCampaign/template"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EmailMarketingSystem">
+  <eClassifiers xsi:type="ecore:EClass" name="EmailResponse">
+    <eOperations name="getResponseTypeDetail" ordered="false" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseID" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseType" ordered="false"
+        lowerBound="1" eType="#//ResponseType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subscriber" ordered="false"
+        lowerBound="1" eType="#//Subscriber"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="campaign" ordered="false"
+        lowerBound="1" eType="#//EmailCampaign" eOpposite="#//EmailCampaign/emailResponses"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ResponseType">
+    <eLiterals name="OPENED"/>
+    <eLiterals name="CLICKED" value="1"/>
+    <eLiterals name="UNSUBSCRIBED" value="2"/>
+    <eLiterals name="_BOUNCED" value="3">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value=" BOUNCED"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CampaignStatus">
+    <eLiterals name="Active"/>
+    <eLiterals name="Inactive" value="1"/>
+    <eLiterals name="Stopped" value="2"/>
+    <eLiterals name="Expired" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarketingSystem">
     <eOperations name="createCampaign" ordered="false" lowerBound="1"/>
     <eOperations name="updateCampaign" ordered="false" lowerBound="1"/>
     <eOperations name="deleteCampaign" ordered="false" lowerBound="1"/>
@@ -163,28 +191,5 @@
         upperBound="-1" eType="#//EmailCampaign"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="emailResponses" ordered="false"
         upperBound="-1" eType="#//EmailResponse"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EmailResponse">
-    <eOperations name="getResponseTypeDetail" ordered="false" lowerBound="1"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseID" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="campaign" ordered="false"
-        lowerBound="1" eType="#//EmailCampaign"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subscriber" ordered="false"
-        lowerBound="1" eType="#//Subscriber"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseType" ordered="false"
-        lowerBound="1" eType="#//ResponseType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ResponseType">
-    <eLiterals name="OPENED"/>
-    <eLiterals name="CLICKED" value="1"/>
-    <eLiterals name="UNSUBSCRIBED" value="2"/>
-    <eLiterals name="_BOUNCED" value="3">
-      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <details key="originalName" value=" BOUNCED"/>
-      </eAnnotations>
-    </eLiterals>
   </eClassifiers>
 </ecore:EPackage>
