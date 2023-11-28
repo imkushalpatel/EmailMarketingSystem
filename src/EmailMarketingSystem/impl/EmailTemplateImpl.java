@@ -262,7 +262,7 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addEmailCampaign() {
+	public void addEmailCampaign(String emailCampaignId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -273,7 +273,7 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeEmailCampaign() {
+	public void removeEmailCampaign(String emailCampaignId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -416,11 +416,11 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailMarketingSystemPackage.EMAIL_TEMPLATE___ADD_EMAIL_CAMPAIGN:
-				addEmailCampaign();
+			case EmailMarketingSystemPackage.EMAIL_TEMPLATE___ADD_EMAIL_CAMPAIGN__STRING:
+				addEmailCampaign((String)arguments.get(0));
 				return null;
-			case EmailMarketingSystemPackage.EMAIL_TEMPLATE___REMOVE_EMAIL_CAMPAIGN:
-				removeEmailCampaign();
+			case EmailMarketingSystemPackage.EMAIL_TEMPLATE___REMOVE_EMAIL_CAMPAIGN__STRING:
+				removeEmailCampaign((String)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

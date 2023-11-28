@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link EmailMarketingSystem.EmailCampaign#getEmailCampaignId <em>Email Campaign Id</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailCampaign#getSendDate <em>Send Date</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailCampaign#getTemplate <em>Template</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailCampaign#getEmailResponses <em>Email Responses</em>}</li>
@@ -27,32 +26,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface EmailCampaign extends Campaign {
-	/**
-	 * Returns the value of the '<em><b>Email Campaign Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Email Campaign Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Email Campaign Id</em>' attribute.
-	 * @see #setEmailCampaignId(String)
-	 * @see EmailMarketingSystem.EmailMarketingSystemPackage#getEmailCampaign_EmailCampaignId()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	String getEmailCampaignId();
-
-	/**
-	 * Sets the value of the '{@link EmailMarketingSystem.EmailCampaign#getEmailCampaignId <em>Email Campaign Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Email Campaign Id</em>' attribute.
-	 * @see #getEmailCampaignId()
-	 * @generated
-	 */
-	void setEmailCampaignId(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Send Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -154,41 +127,17 @@ public interface EmailCampaign extends Campaign {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	void trackCampaign();
+	CampaignAnalytics trackCampaign();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model responseRequired="true" responseOrdered="false"
 	 * @generated
 	 */
-	void pauseCampaign();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void cancelCampaign();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void addEmailCampaign();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void removeEmailCampaign();
+	void recordEmailResponse(EmailResponse response);
 
 } // EmailCampaign

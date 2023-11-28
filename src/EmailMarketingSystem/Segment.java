@@ -96,25 +96,25 @@ public interface Segment extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model attributeRequired="true" attributeOrdered="false" operatorRequired="true" operatorOrdered="false" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
-	void addCondition();
+	void addCondition(String attribute, String operator, String value);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model conditionIndexRequired="true" conditionIndexOrdered="false"
 	 * @generated
 	 */
-	void removeCondition();
+	void removeCondition(int conditionIndex);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model ordered="false"
 	 * @generated
 	 */
-	void viewConditions();
+	EList<SegmentCondition> viewConditions();
 
 } // Segment

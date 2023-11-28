@@ -215,49 +215,49 @@ public interface Subscriber extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model emailCampaignIdRequired="true" emailCampaignIdOrdered="false"
 	 * @generated
 	 */
-	void addEmailCampaign();
+	void addEmailCampaign(String emailCampaignId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model emailCampaignIdRequired="true" emailCampaignIdOrdered="false"
 	 * @generated
 	 */
-	void removeEmailCampaign();
+	void removeEmailCampaign(String emailCampaignId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model subscriberIdRequired="true" subscriberIdOrdered="false" preferencesRequired="true" preferencesOrdered="false"
 	 * @generated
 	 */
-	void updatePreferences();
+	void updatePreferences(String subscriberId, Preference preferences);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model required="true" ordered="false" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	void addSegment();
+	Segment addSegment(String name);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model segmentIdRequired="true" segmentIdOrdered="false"
 	 * @generated
 	 */
-	void removeSegment();
+	void removeSegment(String segmentId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model required="true" ordered="false" segmentIdRequired="true" segmentIdOrdered="false"
 	 * @generated
 	 */
-	void viewSegmentDetails();
+	Segment viewSegmentDetails(String segmentId);
 
 } // Subscriber

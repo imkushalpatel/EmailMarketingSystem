@@ -184,7 +184,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___ADD_SEGMENT = 1;
+	int CAMPAIGN___ADD_SEGMENT__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Remove Segment</em>' operation.
@@ -193,7 +193,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___REMOVE_SEGMENT = 2;
+	int CAMPAIGN___REMOVE_SEGMENT__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>View Segment Details</em>' operation.
@@ -202,7 +202,25 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___VIEW_SEGMENT_DETAILS = 3;
+	int CAMPAIGN___VIEW_SEGMENT_DETAILS__STRING = 3;
+
+	/**
+	 * The operation id for the '<em>Pause Campaign</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAMPAIGN___PAUSE_CAMPAIGN = 4;
+
+	/**
+	 * The operation id for the '<em>Cancel Campaign</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAMPAIGN___CANCEL_CAMPAIGN = 5;
 
 	/**
 	 * The number of operations of the '<em>Campaign</em>' class.
@@ -211,7 +229,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN_OPERATION_COUNT = 4;
+	int CAMPAIGN_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link EmailMarketingSystem.impl.CampaignAnalyticsImpl <em>Campaign Analytics</em>}' class.
@@ -348,7 +366,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENT___ADD_CONDITION = 0;
+	int SEGMENT___ADD_CONDITION__STRING_STRING_STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Condition</em>' operation.
@@ -357,7 +375,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENT___REMOVE_CONDITION = 1;
+	int SEGMENT___REMOVE_CONDITION__INT = 1;
 
 	/**
 	 * The operation id for the '<em>View Conditions</em>' operation.
@@ -530,7 +548,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___ADD_EMAIL_CAMPAIGN = 0;
+	int SUBSCRIBER___ADD_EMAIL_CAMPAIGN__STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Email Campaign</em>' operation.
@@ -539,7 +557,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___REMOVE_EMAIL_CAMPAIGN = 1;
+	int SUBSCRIBER___REMOVE_EMAIL_CAMPAIGN__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Update Preferences</em>' operation.
@@ -548,7 +566,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___UPDATE_PREFERENCES = 2;
+	int SUBSCRIBER___UPDATE_PREFERENCES__STRING_PREFERENCE = 2;
 
 	/**
 	 * The operation id for the '<em>Add Segment</em>' operation.
@@ -557,7 +575,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___ADD_SEGMENT = 3;
+	int SUBSCRIBER___ADD_SEGMENT__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Remove Segment</em>' operation.
@@ -566,7 +584,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___REMOVE_SEGMENT = 4;
+	int SUBSCRIBER___REMOVE_SEGMENT__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>View Segment Details</em>' operation.
@@ -575,7 +593,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___VIEW_SEGMENT_DETAILS = 5;
+	int SUBSCRIBER___VIEW_SEGMENT_DETAILS__STRING = 5;
 
 	/**
 	 * The number of operations of the '<em>Subscriber</em>' class.
@@ -639,7 +657,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREFERENCE___UPDATE_PREFERENCE = 0;
+	int PREFERENCE___UPDATE_PREFERENCE__STRING_STRING = 0;
 
 	/**
 	 * The number of operations of the '<em>Preference</em>' class.
@@ -724,22 +742,13 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int EMAIL_CAMPAIGN__SEGMENTS = CAMPAIGN__SEGMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Email Campaign Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID = CAMPAIGN_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Send Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN__SEND_DATE = CAMPAIGN_FEATURE_COUNT + 1;
+	int EMAIL_CAMPAIGN__SEND_DATE = CAMPAIGN_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Template</b></em>' reference.
@@ -748,7 +757,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN__TEMPLATE = CAMPAIGN_FEATURE_COUNT + 2;
+	int EMAIL_CAMPAIGN__TEMPLATE = CAMPAIGN_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Email Responses</b></em>' reference list.
@@ -757,7 +766,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN__EMAIL_RESPONSES = CAMPAIGN_FEATURE_COUNT + 3;
+	int EMAIL_CAMPAIGN__EMAIL_RESPONSES = CAMPAIGN_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Recipients</b></em>' reference list.
@@ -766,7 +775,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN__RECIPIENTS = CAMPAIGN_FEATURE_COUNT + 4;
+	int EMAIL_CAMPAIGN__RECIPIENTS = CAMPAIGN_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Email Campaign</em>' class.
@@ -775,7 +784,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN_FEATURE_COUNT = CAMPAIGN_FEATURE_COUNT + 5;
+	int EMAIL_CAMPAIGN_FEATURE_COUNT = CAMPAIGN_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Analytics Details</em>' operation.
@@ -793,7 +802,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN___ADD_SEGMENT = CAMPAIGN___ADD_SEGMENT;
+	int EMAIL_CAMPAIGN___ADD_SEGMENT__STRING = CAMPAIGN___ADD_SEGMENT__STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Segment</em>' operation.
@@ -802,7 +811,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN___REMOVE_SEGMENT = CAMPAIGN___REMOVE_SEGMENT;
+	int EMAIL_CAMPAIGN___REMOVE_SEGMENT__STRING = CAMPAIGN___REMOVE_SEGMENT__STRING;
 
 	/**
 	 * The operation id for the '<em>View Segment Details</em>' operation.
@@ -811,7 +820,25 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN___VIEW_SEGMENT_DETAILS = CAMPAIGN___VIEW_SEGMENT_DETAILS;
+	int EMAIL_CAMPAIGN___VIEW_SEGMENT_DETAILS__STRING = CAMPAIGN___VIEW_SEGMENT_DETAILS__STRING;
+
+	/**
+	 * The operation id for the '<em>Pause Campaign</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_CAMPAIGN___PAUSE_CAMPAIGN = CAMPAIGN___PAUSE_CAMPAIGN;
+
+	/**
+	 * The operation id for the '<em>Cancel Campaign</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_CAMPAIGN___CANCEL_CAMPAIGN = CAMPAIGN___CANCEL_CAMPAIGN;
 
 	/**
 	 * The operation id for the '<em>Send Email</em>' operation.
@@ -832,40 +859,13 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int EMAIL_CAMPAIGN___TRACK_CAMPAIGN = CAMPAIGN_OPERATION_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Pause Campaign</em>' operation.
+	 * The operation id for the '<em>Record Email Response</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN___PAUSE_CAMPAIGN = CAMPAIGN_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Cancel Campaign</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMAIL_CAMPAIGN___CANCEL_CAMPAIGN = CAMPAIGN_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Add Email Campaign</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMAIL_CAMPAIGN___ADD_EMAIL_CAMPAIGN = CAMPAIGN_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Remove Email Campaign</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMAIL_CAMPAIGN___REMOVE_EMAIL_CAMPAIGN = CAMPAIGN_OPERATION_COUNT + 5;
+	int EMAIL_CAMPAIGN___RECORD_EMAIL_RESPONSE__EMAILRESPONSE = CAMPAIGN_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Email Campaign</em>' class.
@@ -874,7 +874,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN_OPERATION_COUNT = CAMPAIGN_OPERATION_COUNT + 6;
+	int EMAIL_CAMPAIGN_OPERATION_COUNT = CAMPAIGN_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link EmailMarketingSystem.impl.EmailTemplateImpl <em>Email Template</em>}' class.
@@ -947,7 +947,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_TEMPLATE___ADD_EMAIL_CAMPAIGN = 0;
+	int EMAIL_TEMPLATE___ADD_EMAIL_CAMPAIGN__STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Email Campaign</em>' operation.
@@ -956,7 +956,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_TEMPLATE___REMOVE_EMAIL_CAMPAIGN = 1;
+	int EMAIL_TEMPLATE___REMOVE_EMAIL_CAMPAIGN__STRING = 1;
 
 	/**
 	 * The number of operations of the '<em>Email Template</em>' class.
@@ -1069,16 +1069,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 */
 	int RESPONSE_TYPE = 11;
 
-	/**
-	 * The meta object id for the '{@link EmailMarketingSystem.EmailCampaignStatus <em>Email Campaign Status</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see EmailMarketingSystem.EmailCampaignStatus
-	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaignStatus()
-	 * @generated
-	 */
-	int EMAIL_CAMPAIGN_STATUS = 12;
-
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.StateMachine1 <em>State Machine1</em>}'.
@@ -1188,34 +1178,54 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EOperation getCampaign__GetAnalyticsDetails();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#addSegment() <em>Add Segment</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#addSegment(java.lang.String) <em>Add Segment</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Segment</em>' operation.
-	 * @see EmailMarketingSystem.Campaign#addSegment()
+	 * @see EmailMarketingSystem.Campaign#addSegment(java.lang.String)
 	 * @generated
 	 */
-	EOperation getCampaign__AddSegment();
+	EOperation getCampaign__AddSegment__String();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#removeSegment() <em>Remove Segment</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#removeSegment(java.lang.String) <em>Remove Segment</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Segment</em>' operation.
-	 * @see EmailMarketingSystem.Campaign#removeSegment()
+	 * @see EmailMarketingSystem.Campaign#removeSegment(java.lang.String)
 	 * @generated
 	 */
-	EOperation getCampaign__RemoveSegment();
+	EOperation getCampaign__RemoveSegment__String();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#viewSegmentDetails() <em>View Segment Details</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#viewSegmentDetails(java.lang.String) <em>View Segment Details</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>View Segment Details</em>' operation.
-	 * @see EmailMarketingSystem.Campaign#viewSegmentDetails()
+	 * @see EmailMarketingSystem.Campaign#viewSegmentDetails(java.lang.String)
 	 * @generated
 	 */
-	EOperation getCampaign__ViewSegmentDetails();
+	EOperation getCampaign__ViewSegmentDetails__String();
+
+	/**
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#pauseCampaign() <em>Pause Campaign</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Pause Campaign</em>' operation.
+	 * @see EmailMarketingSystem.Campaign#pauseCampaign()
+	 * @generated
+	 */
+	EOperation getCampaign__PauseCampaign();
+
+	/**
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#cancelCampaign() <em>Cancel Campaign</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Cancel Campaign</em>' operation.
+	 * @see EmailMarketingSystem.Campaign#cancelCampaign()
+	 * @generated
+	 */
+	EOperation getCampaign__CancelCampaign();
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.CampaignAnalytics <em>Campaign Analytics</em>}'.
@@ -1334,24 +1344,24 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EReference getSegment_Conditions();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#addCondition() <em>Add Condition</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#addCondition(java.lang.String, java.lang.String, java.lang.String) <em>Add Condition</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Condition</em>' operation.
-	 * @see EmailMarketingSystem.Segment#addCondition()
+	 * @see EmailMarketingSystem.Segment#addCondition(java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getSegment__AddCondition();
+	EOperation getSegment__AddCondition__String_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#removeCondition() <em>Remove Condition</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#removeCondition(int) <em>Remove Condition</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Condition</em>' operation.
-	 * @see EmailMarketingSystem.Segment#removeCondition()
+	 * @see EmailMarketingSystem.Segment#removeCondition(int)
 	 * @generated
 	 */
-	EOperation getSegment__RemoveCondition();
+	EOperation getSegment__RemoveCondition__int();
 
 	/**
 	 * Returns the meta object for the '{@link EmailMarketingSystem.Segment#viewConditions() <em>View Conditions</em>}' operation.
@@ -1505,64 +1515,64 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EReference getSubscriber_EmailCampaigns();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#addEmailCampaign() <em>Add Email Campaign</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#addEmailCampaign(java.lang.String) <em>Add Email Campaign</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Email Campaign</em>' operation.
-	 * @see EmailMarketingSystem.Subscriber#addEmailCampaign()
+	 * @see EmailMarketingSystem.Subscriber#addEmailCampaign(java.lang.String)
 	 * @generated
 	 */
-	EOperation getSubscriber__AddEmailCampaign();
+	EOperation getSubscriber__AddEmailCampaign__String();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#removeEmailCampaign() <em>Remove Email Campaign</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#removeEmailCampaign(java.lang.String) <em>Remove Email Campaign</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Email Campaign</em>' operation.
-	 * @see EmailMarketingSystem.Subscriber#removeEmailCampaign()
+	 * @see EmailMarketingSystem.Subscriber#removeEmailCampaign(java.lang.String)
 	 * @generated
 	 */
-	EOperation getSubscriber__RemoveEmailCampaign();
+	EOperation getSubscriber__RemoveEmailCampaign__String();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#updatePreferences() <em>Update Preferences</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#updatePreferences(java.lang.String, EmailMarketingSystem.Preference) <em>Update Preferences</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Preferences</em>' operation.
-	 * @see EmailMarketingSystem.Subscriber#updatePreferences()
+	 * @see EmailMarketingSystem.Subscriber#updatePreferences(java.lang.String, EmailMarketingSystem.Preference)
 	 * @generated
 	 */
-	EOperation getSubscriber__UpdatePreferences();
+	EOperation getSubscriber__UpdatePreferences__String_Preference();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#addSegment() <em>Add Segment</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#addSegment(java.lang.String) <em>Add Segment</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Segment</em>' operation.
-	 * @see EmailMarketingSystem.Subscriber#addSegment()
+	 * @see EmailMarketingSystem.Subscriber#addSegment(java.lang.String)
 	 * @generated
 	 */
-	EOperation getSubscriber__AddSegment();
+	EOperation getSubscriber__AddSegment__String();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#removeSegment() <em>Remove Segment</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#removeSegment(java.lang.String) <em>Remove Segment</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Segment</em>' operation.
-	 * @see EmailMarketingSystem.Subscriber#removeSegment()
+	 * @see EmailMarketingSystem.Subscriber#removeSegment(java.lang.String)
 	 * @generated
 	 */
-	EOperation getSubscriber__RemoveSegment();
+	EOperation getSubscriber__RemoveSegment__String();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#viewSegmentDetails() <em>View Segment Details</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Subscriber#viewSegmentDetails(java.lang.String) <em>View Segment Details</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>View Segment Details</em>' operation.
-	 * @see EmailMarketingSystem.Subscriber#viewSegmentDetails()
+	 * @see EmailMarketingSystem.Subscriber#viewSegmentDetails(java.lang.String)
 	 * @generated
 	 */
-	EOperation getSubscriber__ViewSegmentDetails();
+	EOperation getSubscriber__ViewSegmentDetails__String();
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.Preference <em>Preference</em>}'.
@@ -1608,14 +1618,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EAttribute getPreference_Value();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Preference#updatePreference() <em>Update Preference</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Preference#updatePreference(java.lang.String, java.lang.String) <em>Update Preference</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Preference</em>' operation.
-	 * @see EmailMarketingSystem.Preference#updatePreference()
+	 * @see EmailMarketingSystem.Preference#updatePreference(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getPreference__UpdatePreference();
+	EOperation getPreference__UpdatePreference__String_String();
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.EmailCampaign <em>Email Campaign</em>}'.
@@ -1626,17 +1636,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEmailCampaign();
-
-	/**
-	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.EmailCampaign#getEmailCampaignId <em>Email Campaign Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Email Campaign Id</em>'.
-	 * @see EmailMarketingSystem.EmailCampaign#getEmailCampaignId()
-	 * @see #getEmailCampaign()
-	 * @generated
-	 */
-	EAttribute getEmailCampaign_EmailCampaignId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link EmailMarketingSystem.EmailCampaign#getSendDate <em>Send Date</em>}'.
@@ -1703,44 +1702,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EOperation getEmailCampaign__TrackCampaign();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#pauseCampaign() <em>Pause Campaign</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#recordEmailResponse(EmailMarketingSystem.EmailResponse) <em>Record Email Response</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Pause Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#pauseCampaign()
+	 * @return the meta object for the '<em>Record Email Response</em>' operation.
+	 * @see EmailMarketingSystem.EmailCampaign#recordEmailResponse(EmailMarketingSystem.EmailResponse)
 	 * @generated
 	 */
-	EOperation getEmailCampaign__PauseCampaign();
-
-	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#cancelCampaign() <em>Cancel Campaign</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cancel Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#cancelCampaign()
-	 * @generated
-	 */
-	EOperation getEmailCampaign__CancelCampaign();
-
-	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#addEmailCampaign() <em>Add Email Campaign</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Email Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#addEmailCampaign()
-	 * @generated
-	 */
-	EOperation getEmailCampaign__AddEmailCampaign();
-
-	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailCampaign#removeEmailCampaign() <em>Remove Email Campaign</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Email Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailCampaign#removeEmailCampaign()
-	 * @generated
-	 */
-	EOperation getEmailCampaign__RemoveEmailCampaign();
+	EOperation getEmailCampaign__RecordEmailResponse__EmailResponse();
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.EmailTemplate <em>Email Template</em>}'.
@@ -1808,24 +1777,24 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EReference getEmailTemplate_EmailCampaigns();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailTemplate#addEmailCampaign() <em>Add Email Campaign</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailTemplate#addEmailCampaign(java.lang.String) <em>Add Email Campaign</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Email Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailTemplate#addEmailCampaign()
+	 * @see EmailMarketingSystem.EmailTemplate#addEmailCampaign(java.lang.String)
 	 * @generated
 	 */
-	EOperation getEmailTemplate__AddEmailCampaign();
+	EOperation getEmailTemplate__AddEmailCampaign__String();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailTemplate#removeEmailCampaign() <em>Remove Email Campaign</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.EmailTemplate#removeEmailCampaign(java.lang.String) <em>Remove Email Campaign</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Email Campaign</em>' operation.
-	 * @see EmailMarketingSystem.EmailTemplate#removeEmailCampaign()
+	 * @see EmailMarketingSystem.EmailTemplate#removeEmailCampaign(java.lang.String)
 	 * @generated
 	 */
-	EOperation getEmailTemplate__RemoveEmailCampaign();
+	EOperation getEmailTemplate__RemoveEmailCampaign__String();
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.EmailResponse <em>Email Response</em>}'.
@@ -1921,16 +1890,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getResponseType();
-
-	/**
-	 * Returns the meta object for enum '{@link EmailMarketingSystem.EmailCampaignStatus <em>Email Campaign Status</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Email Campaign Status</em>'.
-	 * @see EmailMarketingSystem.EmailCampaignStatus
-	 * @generated
-	 */
-	EEnum getEmailCampaignStatus();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2045,7 +2004,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CAMPAIGN___ADD_SEGMENT = eINSTANCE.getCampaign__AddSegment();
+		EOperation CAMPAIGN___ADD_SEGMENT__STRING = eINSTANCE.getCampaign__AddSegment__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Segment</b></em>' operation.
@@ -2053,7 +2012,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CAMPAIGN___REMOVE_SEGMENT = eINSTANCE.getCampaign__RemoveSegment();
+		EOperation CAMPAIGN___REMOVE_SEGMENT__STRING = eINSTANCE.getCampaign__RemoveSegment__String();
 
 		/**
 		 * The meta object literal for the '<em><b>View Segment Details</b></em>' operation.
@@ -2061,7 +2020,23 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CAMPAIGN___VIEW_SEGMENT_DETAILS = eINSTANCE.getCampaign__ViewSegmentDetails();
+		EOperation CAMPAIGN___VIEW_SEGMENT_DETAILS__STRING = eINSTANCE.getCampaign__ViewSegmentDetails__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Pause Campaign</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CAMPAIGN___PAUSE_CAMPAIGN = eINSTANCE.getCampaign__PauseCampaign();
+
+		/**
+		 * The meta object literal for the '<em><b>Cancel Campaign</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CAMPAIGN___CANCEL_CAMPAIGN = eINSTANCE.getCampaign__CancelCampaign();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.CampaignAnalyticsImpl <em>Campaign Analytics</em>}' class.
@@ -2161,7 +2136,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SEGMENT___ADD_CONDITION = eINSTANCE.getSegment__AddCondition();
+		EOperation SEGMENT___ADD_CONDITION__STRING_STRING_STRING = eINSTANCE.getSegment__AddCondition__String_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Condition</b></em>' operation.
@@ -2169,7 +2144,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SEGMENT___REMOVE_CONDITION = eINSTANCE.getSegment__RemoveCondition();
+		EOperation SEGMENT___REMOVE_CONDITION__INT = eINSTANCE.getSegment__RemoveCondition__int();
 
 		/**
 		 * The meta object literal for the '<em><b>View Conditions</b></em>' operation.
@@ -2293,7 +2268,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___ADD_EMAIL_CAMPAIGN = eINSTANCE.getSubscriber__AddEmailCampaign();
+		EOperation SUBSCRIBER___ADD_EMAIL_CAMPAIGN__STRING = eINSTANCE.getSubscriber__AddEmailCampaign__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Email Campaign</b></em>' operation.
@@ -2301,7 +2276,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___REMOVE_EMAIL_CAMPAIGN = eINSTANCE.getSubscriber__RemoveEmailCampaign();
+		EOperation SUBSCRIBER___REMOVE_EMAIL_CAMPAIGN__STRING = eINSTANCE.getSubscriber__RemoveEmailCampaign__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Update Preferences</b></em>' operation.
@@ -2309,7 +2284,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___UPDATE_PREFERENCES = eINSTANCE.getSubscriber__UpdatePreferences();
+		EOperation SUBSCRIBER___UPDATE_PREFERENCES__STRING_PREFERENCE = eINSTANCE.getSubscriber__UpdatePreferences__String_Preference();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Segment</b></em>' operation.
@@ -2317,7 +2292,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___ADD_SEGMENT = eINSTANCE.getSubscriber__AddSegment();
+		EOperation SUBSCRIBER___ADD_SEGMENT__STRING = eINSTANCE.getSubscriber__AddSegment__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Segment</b></em>' operation.
@@ -2325,7 +2300,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___REMOVE_SEGMENT = eINSTANCE.getSubscriber__RemoveSegment();
+		EOperation SUBSCRIBER___REMOVE_SEGMENT__STRING = eINSTANCE.getSubscriber__RemoveSegment__String();
 
 		/**
 		 * The meta object literal for the '<em><b>View Segment Details</b></em>' operation.
@@ -2333,7 +2308,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___VIEW_SEGMENT_DETAILS = eINSTANCE.getSubscriber__ViewSegmentDetails();
+		EOperation SUBSCRIBER___VIEW_SEGMENT_DETAILS__STRING = eINSTANCE.getSubscriber__ViewSegmentDetails__String();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.PreferenceImpl <em>Preference</em>}' class.
@@ -2375,7 +2350,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PREFERENCE___UPDATE_PREFERENCE = eINSTANCE.getPreference__UpdatePreference();
+		EOperation PREFERENCE___UPDATE_PREFERENCE__STRING_STRING = eINSTANCE.getPreference__UpdatePreference__String_String();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.EmailCampaignImpl <em>Email Campaign</em>}' class.
@@ -2386,14 +2361,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EMAIL_CAMPAIGN = eINSTANCE.getEmailCampaign();
-
-		/**
-		 * The meta object literal for the '<em><b>Email Campaign Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID = eINSTANCE.getEmailCampaign_EmailCampaignId();
 
 		/**
 		 * The meta object literal for the '<em><b>Send Date</b></em>' attribute feature.
@@ -2444,36 +2411,12 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		EOperation EMAIL_CAMPAIGN___TRACK_CAMPAIGN = eINSTANCE.getEmailCampaign__TrackCampaign();
 
 		/**
-		 * The meta object literal for the '<em><b>Pause Campaign</b></em>' operation.
+		 * The meta object literal for the '<em><b>Record Email Response</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMAIL_CAMPAIGN___PAUSE_CAMPAIGN = eINSTANCE.getEmailCampaign__PauseCampaign();
-
-		/**
-		 * The meta object literal for the '<em><b>Cancel Campaign</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMAIL_CAMPAIGN___CANCEL_CAMPAIGN = eINSTANCE.getEmailCampaign__CancelCampaign();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Email Campaign</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMAIL_CAMPAIGN___ADD_EMAIL_CAMPAIGN = eINSTANCE.getEmailCampaign__AddEmailCampaign();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Email Campaign</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMAIL_CAMPAIGN___REMOVE_EMAIL_CAMPAIGN = eINSTANCE.getEmailCampaign__RemoveEmailCampaign();
+		EOperation EMAIL_CAMPAIGN___RECORD_EMAIL_RESPONSE__EMAILRESPONSE = eINSTANCE.getEmailCampaign__RecordEmailResponse__EmailResponse();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.EmailTemplateImpl <em>Email Template</em>}' class.
@@ -2531,7 +2474,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMAIL_TEMPLATE___ADD_EMAIL_CAMPAIGN = eINSTANCE.getEmailTemplate__AddEmailCampaign();
+		EOperation EMAIL_TEMPLATE___ADD_EMAIL_CAMPAIGN__STRING = eINSTANCE.getEmailTemplate__AddEmailCampaign__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Email Campaign</b></em>' operation.
@@ -2539,7 +2482,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMAIL_TEMPLATE___REMOVE_EMAIL_CAMPAIGN = eINSTANCE.getEmailTemplate__RemoveEmailCampaign();
+		EOperation EMAIL_TEMPLATE___REMOVE_EMAIL_CAMPAIGN__STRING = eINSTANCE.getEmailTemplate__RemoveEmailCampaign__String();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.EmailResponseImpl <em>Email Response</em>}' class.
@@ -2618,16 +2561,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum RESPONSE_TYPE = eINSTANCE.getResponseType();
-
-		/**
-		 * The meta object literal for the '{@link EmailMarketingSystem.EmailCampaignStatus <em>Email Campaign Status</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see EmailMarketingSystem.EmailCampaignStatus
-		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getEmailCampaignStatus()
-		 * @generated
-		 */
-		EEnum EMAIL_CAMPAIGN_STATUS = eINSTANCE.getEmailCampaignStatus();
 
 	}
 

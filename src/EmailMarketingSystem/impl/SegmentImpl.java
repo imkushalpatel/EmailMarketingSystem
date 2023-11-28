@@ -170,7 +170,7 @@ public class SegmentImpl extends MinimalEObjectImpl.Container implements Segment
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addCondition() {
+	public void addCondition(String attribute, String operator, String value) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -181,7 +181,7 @@ public class SegmentImpl extends MinimalEObjectImpl.Container implements Segment
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeCondition() {
+	public void removeCondition(int conditionIndex) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -192,7 +192,7 @@ public class SegmentImpl extends MinimalEObjectImpl.Container implements Segment
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void viewConditions() {
+	public EList<SegmentCondition> viewConditions() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -286,15 +286,14 @@ public class SegmentImpl extends MinimalEObjectImpl.Container implements Segment
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailMarketingSystemPackage.SEGMENT___ADD_CONDITION:
-				addCondition();
+			case EmailMarketingSystemPackage.SEGMENT___ADD_CONDITION__STRING_STRING_STRING:
+				addCondition((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;
-			case EmailMarketingSystemPackage.SEGMENT___REMOVE_CONDITION:
-				removeCondition();
+			case EmailMarketingSystemPackage.SEGMENT___REMOVE_CONDITION__INT:
+				removeCondition((Integer)arguments.get(0));
 				return null;
 			case EmailMarketingSystemPackage.SEGMENT___VIEW_CONDITIONS:
-				viewConditions();
-				return null;
+				return viewConditions();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

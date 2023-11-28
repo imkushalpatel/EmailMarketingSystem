@@ -154,17 +154,17 @@ public interface EmailTemplate extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model emailCampaignIdRequired="true" emailCampaignIdOrdered="false"
 	 * @generated
 	 */
-	void addEmailCampaign();
+	void addEmailCampaign(String emailCampaignId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model emailCampaignIdRequired="true" emailCampaignIdOrdered="false"
 	 * @generated
 	 */
-	void removeEmailCampaign();
+	void removeEmailCampaign(String emailCampaignId);
 
 } // EmailTemplate

@@ -185,7 +185,7 @@ public class PreferenceImpl extends MinimalEObjectImpl.Container implements Pref
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void updatePreference() {
+	public void updatePreference(String preferenceId, String value) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -277,8 +277,8 @@ public class PreferenceImpl extends MinimalEObjectImpl.Container implements Pref
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailMarketingSystemPackage.PREFERENCE___UPDATE_PREFERENCE:
-				updatePreference();
+			case EmailMarketingSystemPackage.PREFERENCE___UPDATE_PREFERENCE__STRING_STRING:
+				updatePreference((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

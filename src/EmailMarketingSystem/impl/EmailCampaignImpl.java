@@ -2,6 +2,7 @@
  */
 package EmailMarketingSystem.impl;
 
+import EmailMarketingSystem.CampaignAnalytics;
 import EmailMarketingSystem.EmailCampaign;
 import EmailMarketingSystem.EmailMarketingSystemPackage;
 import EmailMarketingSystem.EmailResponse;
@@ -34,7 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getEmailCampaignId <em>Email Campaign Id</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getSendDate <em>Send Date</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getTemplate <em>Template</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailCampaignImpl#getEmailResponses <em>Email Responses</em>}</li>
@@ -44,26 +44,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
-	/**
-	 * The default value of the '{@link #getEmailCampaignId() <em>Email Campaign Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmailCampaignId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EMAIL_CAMPAIGN_ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getEmailCampaignId() <em>Email Campaign Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmailCampaignId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String emailCampaignId = EMAIL_CAMPAIGN_ID_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getSendDate() <em>Send Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -131,29 +111,6 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	@Override
 	protected EClass eStaticClass() {
 		return EmailMarketingSystemPackage.Literals.EMAIL_CAMPAIGN;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getEmailCampaignId() {
-		return emailCampaignId;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setEmailCampaignId(String newEmailCampaignId) {
-		String oldEmailCampaignId = emailCampaignId;
-		emailCampaignId = newEmailCampaignId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID, oldEmailCampaignId, emailCampaignId));
 	}
 
 	/**
@@ -283,7 +240,7 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void trackCampaign() {
+	public CampaignAnalytics trackCampaign() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -294,40 +251,7 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void pauseCampaign() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void cancelCampaign() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addEmailCampaign() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeEmailCampaign() {
+	public void recordEmailResponse(EmailResponse response) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -380,8 +304,6 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID:
-				return getEmailCampaignId();
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__SEND_DATE:
 				return getSendDate();
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__TEMPLATE:
@@ -404,9 +326,6 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID:
-				setEmailCampaignId((String)newValue);
-				return;
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__SEND_DATE:
 				setSendDate((Date)newValue);
 				return;
@@ -433,9 +352,6 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID:
-				setEmailCampaignId(EMAIL_CAMPAIGN_ID_EDEFAULT);
-				return;
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__SEND_DATE:
 				setSendDate(SEND_DATE_EDEFAULT);
 				return;
@@ -460,8 +376,6 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__EMAIL_CAMPAIGN_ID:
-				return EMAIL_CAMPAIGN_ID_EDEFAULT == null ? emailCampaignId != null : !EMAIL_CAMPAIGN_ID_EDEFAULT.equals(emailCampaignId);
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__SEND_DATE:
 				return SEND_DATE_EDEFAULT == null ? sendDate != null : !SEND_DATE_EDEFAULT.equals(sendDate);
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN__TEMPLATE:
@@ -486,19 +400,9 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 				sendEmail();
 				return null;
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___TRACK_CAMPAIGN:
-				trackCampaign();
-				return null;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___PAUSE_CAMPAIGN:
-				pauseCampaign();
-				return null;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___CANCEL_CAMPAIGN:
-				cancelCampaign();
-				return null;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___ADD_EMAIL_CAMPAIGN:
-				addEmailCampaign();
-				return null;
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___REMOVE_EMAIL_CAMPAIGN:
-				removeEmailCampaign();
+				return trackCampaign();
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___RECORD_EMAIL_RESPONSE__EMAILRESPONSE:
+				recordEmailResponse((EmailResponse)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
@@ -514,9 +418,7 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (emailCampaignId: ");
-		result.append(emailCampaignId);
-		result.append(", sendDate: ");
+		result.append(" (sendDate: ");
 		result.append(sendDate);
 		result.append(')');
 		return result.toString();

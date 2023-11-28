@@ -357,7 +357,7 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAnalyticsDetails() {
+	public CampaignAnalytics getAnalyticsDetails() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -368,7 +368,7 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addSegment() {
+	public Segment addSegment(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -379,7 +379,7 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeSegment() {
+	public void removeSegment(String segmentId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -390,7 +390,29 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void viewSegmentDetails() {
+	public Segment viewSegmentDetails(String segmentId) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void pauseCampaign() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void cancelCampaign() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -526,16 +548,19 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case EmailMarketingSystemPackage.CAMPAIGN___GET_ANALYTICS_DETAILS:
-				getAnalyticsDetails();
+				return getAnalyticsDetails();
+			case EmailMarketingSystemPackage.CAMPAIGN___ADD_SEGMENT__STRING:
+				return addSegment((String)arguments.get(0));
+			case EmailMarketingSystemPackage.CAMPAIGN___REMOVE_SEGMENT__STRING:
+				removeSegment((String)arguments.get(0));
 				return null;
-			case EmailMarketingSystemPackage.CAMPAIGN___ADD_SEGMENT:
-				addSegment();
+			case EmailMarketingSystemPackage.CAMPAIGN___VIEW_SEGMENT_DETAILS__STRING:
+				return viewSegmentDetails((String)arguments.get(0));
+			case EmailMarketingSystemPackage.CAMPAIGN___PAUSE_CAMPAIGN:
+				pauseCampaign();
 				return null;
-			case EmailMarketingSystemPackage.CAMPAIGN___REMOVE_SEGMENT:
-				removeSegment();
-				return null;
-			case EmailMarketingSystemPackage.CAMPAIGN___VIEW_SEGMENT_DETAILS:
-				viewSegmentDetails();
+			case EmailMarketingSystemPackage.CAMPAIGN___CANCEL_CAMPAIGN:
+				cancelCampaign();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

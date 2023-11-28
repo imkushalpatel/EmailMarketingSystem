@@ -84,8 +84,6 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 				return createCampaignStatusFromString(eDataType, initialValue);
 			case EmailMarketingSystemPackage.RESPONSE_TYPE:
 				return createResponseTypeFromString(eDataType, initialValue);
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN_STATUS:
-				return createEmailCampaignStatusFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -103,8 +101,6 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 				return convertCampaignStatusToString(eDataType, instanceValue);
 			case EmailMarketingSystemPackage.RESPONSE_TYPE:
 				return convertResponseTypeToString(eDataType, instanceValue);
-			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN_STATUS:
-				return convertEmailCampaignStatusToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -257,26 +253,6 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	 * @generated
 	 */
 	public String convertResponseTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EmailCampaignStatus createEmailCampaignStatusFromString(EDataType eDataType, String initialValue) {
-		EmailCampaignStatus result = EmailCampaignStatus.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertEmailCampaignStatusToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

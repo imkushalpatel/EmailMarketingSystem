@@ -209,10 +209,34 @@ public interface Campaign extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model kind="operation" required="true" ordered="false"
 	 * @generated
 	 */
-	void getAnalyticsDetails();
+	CampaignAnalytics getAnalyticsDetails();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" nameRequired="true" nameOrdered="false"
+	 * @generated
+	 */
+	Segment addSegment(String name);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model segmentIdRequired="true" segmentIdOrdered="false"
+	 * @generated
+	 */
+	void removeSegment(String segmentId);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" segmentIdRequired="true" segmentIdOrdered="false"
+	 * @generated
+	 */
+	Segment viewSegmentDetails(String segmentId);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,7 +244,7 @@ public interface Campaign extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void addSegment();
+	void pauseCampaign();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -228,14 +252,6 @@ public interface Campaign extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void removeSegment();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void viewSegmentDetails();
+	void cancelCampaign();
 
 } // Campaign

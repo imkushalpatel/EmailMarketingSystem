@@ -104,9 +104,9 @@ public interface Preference extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model preferenceIdRequired="true" preferenceIdOrdered="false" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
-	void updatePreference();
+	void updatePreference(String preferenceId, String value);
 
 } // Preference

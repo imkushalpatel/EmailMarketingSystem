@@ -357,7 +357,7 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addEmailCampaign() {
+	public void addEmailCampaign(String emailCampaignId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -368,7 +368,7 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeEmailCampaign() {
+	public void removeEmailCampaign(String emailCampaignId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -379,7 +379,7 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void updatePreferences() {
+	public void updatePreferences(String subscriberId, Preference preferences) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -390,7 +390,7 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addSegment() {
+	public Segment addSegment(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -401,7 +401,7 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeSegment() {
+	public void removeSegment(String segmentId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -412,7 +412,7 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void viewSegmentDetails() {
+	public Segment viewSegmentDetails(String segmentId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -587,24 +587,22 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailMarketingSystemPackage.SUBSCRIBER___ADD_EMAIL_CAMPAIGN:
-				addEmailCampaign();
+			case EmailMarketingSystemPackage.SUBSCRIBER___ADD_EMAIL_CAMPAIGN__STRING:
+				addEmailCampaign((String)arguments.get(0));
 				return null;
-			case EmailMarketingSystemPackage.SUBSCRIBER___REMOVE_EMAIL_CAMPAIGN:
-				removeEmailCampaign();
+			case EmailMarketingSystemPackage.SUBSCRIBER___REMOVE_EMAIL_CAMPAIGN__STRING:
+				removeEmailCampaign((String)arguments.get(0));
 				return null;
-			case EmailMarketingSystemPackage.SUBSCRIBER___UPDATE_PREFERENCES:
-				updatePreferences();
+			case EmailMarketingSystemPackage.SUBSCRIBER___UPDATE_PREFERENCES__STRING_PREFERENCE:
+				updatePreferences((String)arguments.get(0), (Preference)arguments.get(1));
 				return null;
-			case EmailMarketingSystemPackage.SUBSCRIBER___ADD_SEGMENT:
-				addSegment();
+			case EmailMarketingSystemPackage.SUBSCRIBER___ADD_SEGMENT__STRING:
+				return addSegment((String)arguments.get(0));
+			case EmailMarketingSystemPackage.SUBSCRIBER___REMOVE_SEGMENT__STRING:
+				removeSegment((String)arguments.get(0));
 				return null;
-			case EmailMarketingSystemPackage.SUBSCRIBER___REMOVE_SEGMENT:
-				removeSegment();
-				return null;
-			case EmailMarketingSystemPackage.SUBSCRIBER___VIEW_SEGMENT_DETAILS:
-				viewSegmentDetails();
-				return null;
+			case EmailMarketingSystemPackage.SUBSCRIBER___VIEW_SEGMENT_DETAILS__STRING:
+				return viewSegmentDetails((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
