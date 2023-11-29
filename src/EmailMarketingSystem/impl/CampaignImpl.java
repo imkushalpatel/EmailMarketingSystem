@@ -8,13 +8,18 @@ import EmailMarketingSystem.CampaignStatus;
 import EmailMarketingSystem.EmailMarketingSystemPackage;
 import EmailMarketingSystem.Segment;
 
+import EmailMarketingSystem.util.EmailMarketingSystemValidator;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 import java.util.Date;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -23,7 +28,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectValidator;
 
 /**
  * <!-- begin-user-doc -->
@@ -357,6 +364,81 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean Constraint7(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT7,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint7", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Constraint8(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT8,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint8", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Constraint9(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT9,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint9", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CampaignAnalytics getAnalyticsDetails() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -545,8 +627,15 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case EmailMarketingSystemPackage.CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP:
+				return Constraint7((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailMarketingSystemPackage.CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP:
+				return Constraint8((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailMarketingSystemPackage.CAMPAIGN___CONSTRAINT9__DIAGNOSTICCHAIN_MAP:
+				return Constraint9((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailMarketingSystemPackage.CAMPAIGN___GET_ANALYTICS_DETAILS:
 				return getAnalyticsDetails();
 			case EmailMarketingSystemPackage.CAMPAIGN___ADD_SEGMENT__STRING:

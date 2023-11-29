@@ -9,14 +9,19 @@ import EmailMarketingSystem.EmailResponse;
 import EmailMarketingSystem.EmailTemplate;
 import EmailMarketingSystem.Subscriber;
 
+import EmailMarketingSystem.util.EmailMarketingSystemValidator;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 import java.util.Date;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -24,6 +29,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -229,6 +236,31 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean Constraint10(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.EMAIL_CAMPAIGN__CONSTRAINT10,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint10", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void sendEmail() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -394,8 +426,11 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___CONSTRAINT10__DIAGNOSTICCHAIN_MAP:
+				return Constraint10((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN___SEND_EMAIL:
 				sendEmail();
 				return null;

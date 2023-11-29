@@ -4,6 +4,8 @@ package EmailMarketingSystem;
 
 import java.util.Date;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -115,6 +117,19 @@ public interface EmailCampaign extends Campaign {
 	 * @generated
 	 */
 	EList<Subscriber> getRecipients();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 *  self.sendDate.toString() > DateTime.now().toString()
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean Constraint10(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->

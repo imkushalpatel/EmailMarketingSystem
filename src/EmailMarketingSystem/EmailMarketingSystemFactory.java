@@ -112,6 +112,15 @@ public interface EmailMarketingSystemFactory extends EFactory {
 	EmailResponse createEmailResponse();
 
 	/**
+	 * Returns a new object of class '<em>Date Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Date Time</em>'.
+	 * @generated
+	 */
+	DateTime createDateTime();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -67,6 +67,7 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 			case EmailMarketingSystemPackage.EMAIL_CAMPAIGN: return createEmailCampaign();
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE: return createEmailTemplate();
 			case EmailMarketingSystemPackage.EMAIL_RESPONSE: return createEmailResponse();
+			case EmailMarketingSystemPackage.DATE_TIME: return createDateTime();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -214,6 +215,17 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	public EmailResponse createEmailResponse() {
 		EmailResponseImpl emailResponse = new EmailResponseImpl();
 		return emailResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DateTime createDateTime() {
+		DateTimeImpl dateTime = new DateTimeImpl();
+		return dateTime;
 	}
 
 	/**

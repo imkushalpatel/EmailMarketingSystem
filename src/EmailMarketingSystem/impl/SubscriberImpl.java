@@ -8,14 +8,19 @@ import EmailMarketingSystem.Preference;
 import EmailMarketingSystem.Segment;
 import EmailMarketingSystem.Subscriber;
 
+import EmailMarketingSystem.util.EmailMarketingSystemValidator;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 import java.util.Date;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -24,7 +29,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -357,6 +364,131 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean Constraint1(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT1,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint1", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Constraint2(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT2,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint2", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Constraint3(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT3,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint3", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Constraint4(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT4,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint4", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Constraint5(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT5,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint5", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void addEmailCampaign(String emailCampaignId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -585,8 +717,19 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case EmailMarketingSystemPackage.SUBSCRIBER___CONSTRAINT1__DIAGNOSTICCHAIN_MAP:
+				return Constraint1((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailMarketingSystemPackage.SUBSCRIBER___CONSTRAINT2__DIAGNOSTICCHAIN_MAP:
+				return Constraint2((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailMarketingSystemPackage.SUBSCRIBER___CONSTRAINT3__DIAGNOSTICCHAIN_MAP:
+				return Constraint3((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailMarketingSystemPackage.SUBSCRIBER___CONSTRAINT4__DIAGNOSTICCHAIN_MAP:
+				return Constraint4((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailMarketingSystemPackage.SUBSCRIBER___CONSTRAINT5__DIAGNOSTICCHAIN_MAP:
+				return Constraint5((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailMarketingSystemPackage.SUBSCRIBER___ADD_EMAIL_CAMPAIGN__STRING:
 				addEmailCampaign((String)arguments.get(0));
 				return null;

@@ -6,14 +6,19 @@ import EmailMarketingSystem.EmailCampaign;
 import EmailMarketingSystem.EmailMarketingSystemPackage;
 import EmailMarketingSystem.EmailTemplate;
 
+import EmailMarketingSystem.util.EmailMarketingSystemValidator;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 import java.util.Date;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -22,6 +27,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -35,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link EmailMarketingSystem.impl.EmailTemplateImpl#getTemplateId <em>Template Id</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailTemplateImpl#getName <em>Name</em>}</li>
+ *   <li>{@link EmailMarketingSystem.impl.EmailTemplateImpl#getSubject <em>Subject</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailTemplateImpl#getContent <em>Content</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailTemplateImpl#getCreatedDate <em>Created Date</em>}</li>
  *   <li>{@link EmailMarketingSystem.impl.EmailTemplateImpl#getEmailCampaigns <em>Email Campaigns</em>}</li>
@@ -82,6 +90,26 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSubject() <em>Subject</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubject()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SUBJECT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSubject() <em>Subject</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubject()
+	 * @generated
+	 * @ordered
+	 */
+	protected String subject = SUBJECT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getContent() <em>Content</em>}' attribute.
@@ -204,6 +232,29 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 	 * @generated
 	 */
 	@Override
+	public String getSubject() {
+		return subject;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSubject(String newSubject) {
+		String oldSubject = subject;
+		subject = newSubject;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EmailMarketingSystemPackage.EMAIL_TEMPLATE__SUBJECT, oldSubject, subject));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getContent() {
 		return content;
 	}
@@ -255,6 +306,31 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 			emailCampaigns = new EObjectWithInverseResolvingEList<EmailCampaign>(EmailCampaign.class, this, EmailMarketingSystemPackage.EMAIL_TEMPLATE__EMAIL_CAMPAIGNS, EmailMarketingSystemPackage.EMAIL_CAMPAIGN__TEMPLATE);
 		}
 		return emailCampaigns;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Constraint13(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+						 EmailMarketingSystemValidator.EMAIL_TEMPLATE__CONSTRAINT13,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint13", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
 	}
 
 	/**
@@ -320,6 +396,8 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 				return getTemplateId();
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__NAME:
 				return getName();
+			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__SUBJECT:
+				return getSubject();
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__CONTENT:
 				return getContent();
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__CREATED_DATE:
@@ -344,6 +422,9 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 				return;
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__NAME:
 				setName((String)newValue);
+				return;
+			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__SUBJECT:
+				setSubject((String)newValue);
 				return;
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__CONTENT:
 				setContent((String)newValue);
@@ -373,6 +454,9 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__SUBJECT:
+				setSubject(SUBJECT_EDEFAULT);
+				return;
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__CONTENT:
 				setContent(CONTENT_EDEFAULT);
 				return;
@@ -398,6 +482,8 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 				return TEMPLATE_ID_EDEFAULT == null ? templateId != null : !TEMPLATE_ID_EDEFAULT.equals(templateId);
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__SUBJECT:
+				return SUBJECT_EDEFAULT == null ? subject != null : !SUBJECT_EDEFAULT.equals(subject);
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__CONTENT:
 				return CONTENT_EDEFAULT == null ? content != null : !CONTENT_EDEFAULT.equals(content);
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE__CREATED_DATE:
@@ -414,8 +500,11 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case EmailMarketingSystemPackage.EMAIL_TEMPLATE___CONSTRAINT13__DIAGNOSTICCHAIN_MAP:
+				return Constraint13((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE___ADD_EMAIL_CAMPAIGN__STRING:
 				addEmailCampaign((String)arguments.get(0));
 				return null;
@@ -440,6 +529,8 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 		result.append(templateId);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", subject: ");
+		result.append(subject);
 		result.append(", content: ");
 		result.append(content);
 		result.append(", createdDate: ");

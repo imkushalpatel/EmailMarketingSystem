@@ -108,6 +108,10 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 				return createEmailResponseAdapter();
 			}
 			@Override
+			public Adapter caseDateTime(DateTime object) {
+				return createDateTimeAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -264,6 +268,20 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEmailResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.DateTime <em>Date Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EmailMarketingSystem.DateTime
+	 * @generated
+	 */
+	public Adapter createDateTimeAdapter() {
 		return null;
 	}
 

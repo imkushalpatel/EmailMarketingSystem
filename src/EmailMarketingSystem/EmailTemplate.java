@@ -4,6 +4,8 @@ package EmailMarketingSystem;
 
 import java.util.Date;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -19,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link EmailMarketingSystem.EmailTemplate#getTemplateId <em>Template Id</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailTemplate#getName <em>Name</em>}</li>
+ *   <li>{@link EmailMarketingSystem.EmailTemplate#getSubject <em>Subject</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailTemplate#getContent <em>Content</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailTemplate#getCreatedDate <em>Created Date</em>}</li>
  *   <li>{@link EmailMarketingSystem.EmailTemplate#getEmailCampaigns <em>Email Campaigns</em>}</li>
@@ -80,6 +83,32 @@ public interface EmailTemplate extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Subject</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Subject</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subject</em>' attribute.
+	 * @see #setSubject(String)
+	 * @see EmailMarketingSystem.EmailMarketingSystemPackage#getEmailTemplate_Subject()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	String getSubject();
+
+	/**
+	 * Sets the value of the '{@link EmailMarketingSystem.EmailTemplate#getSubject <em>Subject</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Subject</em>' attribute.
+	 * @see #getSubject()
+	 * @generated
+	 */
+	void setSubject(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Content</b></em>' attribute.
@@ -150,6 +179,19 @@ public interface EmailTemplate extends EObject {
 	 * @generated
 	 */
 	EList<EmailCampaign> getEmailCampaigns();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.subject <> null and self.content <> null
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean Constraint13(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
