@@ -188,7 +188,7 @@ public interface EmailTemplate extends EObject {
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.subject &lt;&gt; null and self.content &lt;&gt; null'"
 	 * @generated
 	 */
 	boolean Constraint13(DiagnosticChain diagnostics, Map<Object, Object> context);

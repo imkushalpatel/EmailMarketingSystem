@@ -17,8 +17,6 @@ import java.util.Date;
 import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
@@ -28,10 +26,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -360,29 +355,44 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	}
 
 	/**
+	 * The cached validation expression for the '{@link #Constraint1(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint1</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint1(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT1_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "Subscriber.allInstances()->forAll(u1, u2 | u1 <> u2 implies u1.email <> u2.email)";
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean Constraint1(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT1,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint1", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.SUBSCRIBER,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.SUBSCRIBER___CONSTRAINT1__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT1_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT1);
 	}
+
+	/**
+	 * The cached validation expression for the '{@link #Constraint2(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint2</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint2(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT2_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.email<>null";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -390,24 +400,29 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * @generated
 	 */
 	public boolean Constraint2(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT2,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint2", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.SUBSCRIBER,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.SUBSCRIBER___CONSTRAINT2__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT2_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT2);
 	}
+
+	/**
+	 * The cached validation expression for the '{@link #Constraint3(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint3</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint3(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT3_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$')";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -415,24 +430,29 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * @generated
 	 */
 	public boolean Constraint3(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT3,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint3", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.SUBSCRIBER,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.SUBSCRIBER___CONSTRAINT3__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT3_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT3);
 	}
+
+	/**
+	 * The cached validation expression for the '{@link #Constraint4(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint4</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint4(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT4_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() <= 1)";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -440,24 +460,29 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * @generated
 	 */
 	public boolean Constraint4(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT4,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint4", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.SUBSCRIBER,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.SUBSCRIBER___CONSTRAINT4__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT4_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT4);
 	}
+
+	/**
+	 * The cached validation expression for the '{@link #Constraint5(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint5</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint5(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT5_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.firstName  <> null and self.lastName <> null";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -465,23 +490,18 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	 * @generated
 	 */
 	public boolean Constraint5(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT5,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint5", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.SUBSCRIBER,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.SUBSCRIBER___CONSTRAINT5__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT5_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.SUBSCRIBER__CONSTRAINT5);
 	}
 
 	/**

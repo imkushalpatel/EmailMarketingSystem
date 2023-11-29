@@ -2,9 +2,15 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="EmailMarketingSystem" nsURI="http:///EmailMarketingSystem.ecore"
     nsPrefix="EmailMarketingSystem">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="StateMachine1"/>
   <eClassifiers xsi:type="ecore:EClass" name="Campaign">
     <eOperations name="Constraint7" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.name&lt;>null"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.name&lt;>null"/>
       </eAnnotations>
@@ -24,6 +30,9 @@
       </eParameters>
     </eOperations>
     <eOperations name="Constraint8" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="Campaign.allInstances()->forAll(c1, c2 | c1 &lt;> c2 implies c1.name &lt;> c2.name)"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Campaign.allInstances()->forAll(c1, c2 | c1 &lt;> c2 implies c1.name &lt;> c2.name)"/>
       </eAnnotations>
@@ -43,6 +52,9 @@
       </eParameters>
     </eOperations>
     <eOperations name="Constraint9" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.startDate.toString() &lt; self.endDate.toString()"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.startDate.toString() &lt; self.endDate.toString()"/>
       </eAnnotations>
@@ -107,6 +119,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Segment">
     <eOperations name="Constraint11" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="Segment.allInstances()->forAll(s1, s2 | s1 &lt;> s2 implies s1.name &lt;> s2.name)"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Segment.allInstances()->forAll(s1, s2 | s1 &lt;> s2 implies s1.name &lt;> s2.name)"/>
       </eAnnotations>
@@ -126,6 +141,9 @@
       </eParameters>
     </eOperations>
     <eOperations name="Constraint12" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value=" self.subscribers->size() > 0"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" self.subscribers->size() > 0"/>
       </eAnnotations>
@@ -162,6 +180,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SegmentCondition">
     <eOperations name="Constraint14" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.operator &lt;>null and self.attribute &lt;>null"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.operator &lt;>null and self.attribute &lt;>null"/>
       </eAnnotations>
@@ -181,6 +202,9 @@
       </eParameters>
     </eOperations>
     <eOperations name="Constraint6" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.operator = 'greaterThan' or self.operator = 'lessThan' or self.operator = 'equalTo'  or self.operator = 'contains'"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.operator = 'greaterThan' or self.operator = 'lessThan' or self.operator = 'equalTo'  or self.operator = 'contains'"/>
       </eAnnotations>
@@ -208,6 +232,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Subscriber">
     <eOperations name="Constraint1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="Subscriber.allInstances()->forAll(u1, u2 | u1 &lt;> u2 implies u1.email &lt;> u2.email)"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Subscriber.allInstances()->forAll(u1, u2 | u1 &lt;> u2 implies u1.email &lt;> u2.email)"/>
       </eAnnotations>
@@ -227,6 +254,9 @@
       </eParameters>
     </eOperations>
     <eOperations name="Constraint2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.email&lt;>null"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.email&lt;>null"/>
       </eAnnotations>
@@ -246,6 +276,9 @@
       </eParameters>
     </eOperations>
     <eOperations name="Constraint3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')"/>
       </eAnnotations>
@@ -265,6 +298,9 @@
       </eParameters>
     </eOperations>
     <eOperations name="Constraint4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() &lt;= 1)"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() &lt;= 1)"/>
       </eAnnotations>
@@ -284,6 +320,9 @@
       </eParameters>
     </eOperations>
     <eOperations name="Constraint5" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.firstName  &lt;> null and self.lastName &lt;> null"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.firstName  &lt;> null and self.lastName &lt;> null"/>
       </eAnnotations>
@@ -352,6 +391,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EmailCampaign" eSuperTypes="#//Campaign">
     <eOperations name="Constraint10" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value=" self.sendDate.toString() > DateTime.now().toString()"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" self.sendDate.toString() > DateTime.now().toString()"/>
       </eAnnotations>
@@ -386,6 +428,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EmailTemplate">
     <eOperations name="Constraint13" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.subject &lt;> null and self.content &lt;> null"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.subject &lt;> null and self.content &lt;> null"/>
       </eAnnotations>

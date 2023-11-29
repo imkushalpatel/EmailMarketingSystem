@@ -111,7 +111,7 @@ public interface SegmentCondition extends EObject {
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.operator &lt;&gt;null and self.attribute &lt;&gt;null'"
 	 * @generated
 	 */
 	boolean Constraint14(DiagnosticChain diagnostics, Map<Object, Object> context);
@@ -124,7 +124,7 @@ public interface SegmentCondition extends EObject {
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.operator = \'greaterThan\' or self.operator = \'lessThan\' or self.operator = \'equalTo\'  or self.operator = \'contains\''"
 	 * @generated
 	 */
 	boolean Constraint6(DiagnosticChain diagnostics, Map<Object, Object> context);

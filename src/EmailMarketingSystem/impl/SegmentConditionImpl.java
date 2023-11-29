@@ -9,8 +9,6 @@ import EmailMarketingSystem.util.EmailMarketingSystemValidator;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
@@ -18,8 +16,6 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.emf.ecore.util.EObjectValidator;
 
 /**
  * <!-- begin-user-doc -->
@@ -186,29 +182,44 @@ public class SegmentConditionImpl extends MinimalEObjectImpl.Container implement
 	}
 
 	/**
+	 * The cached validation expression for the '{@link #Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint14</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT14_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.operator <>null and self.attribute <>null";
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean Constraint14(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.SEGMENT_CONDITION__CONSTRAINT14,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint14", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.SEGMENT_CONDITION,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT14_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.SEGMENT_CONDITION__CONSTRAINT14);
 	}
+
+	/**
+	 * The cached validation expression for the '{@link #Constraint6(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint6</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint6(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT6_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.operator = 'greaterThan' or self.operator = 'lessThan' or self.operator = 'equalTo'  or self.operator = 'contains'";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,23 +227,18 @@ public class SegmentConditionImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public boolean Constraint6(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.SEGMENT_CONDITION__CONSTRAINT6,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint6", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.SEGMENT_CONDITION,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT6_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.SEGMENT_CONDITION__CONSTRAINT6);
 	}
 
 	/**

@@ -1595,8 +1595,122 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		createResource(eNS_URI);
 
 		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 		// http://www.eclipse.org/uml2/2.0.0/UML
 		createUMLAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createOCLAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+		addAnnotation
+		  (getCampaign__Constraint7__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.name<>null"
+		   });
+		addAnnotation
+		  (getCampaign__Constraint8__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Campaign.allInstances()->forAll(c1, c2 | c1 <> c2 implies c1.name <> c2.name)"
+		   });
+		addAnnotation
+		  (getCampaign__Constraint9__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.startDate.toString() < self.endDate.toString()"
+		   });
+		addAnnotation
+		  (getSegment__Constraint11__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Segment.allInstances()->forAll(s1, s2 | s1 <> s2 implies s1.name <> s2.name)"
+		   });
+		addAnnotation
+		  (getSegment__Constraint12__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", " self.subscribers->size() > 0"
+		   });
+		addAnnotation
+		  (getSegmentCondition__Constraint14__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.operator <>null and self.attribute <>null"
+		   });
+		addAnnotation
+		  (getSegmentCondition__Constraint6__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.operator = \'greaterThan\' or self.operator = \'lessThan\' or self.operator = \'equalTo\'  or self.operator = \'contains\'"
+		   });
+		addAnnotation
+		  (getSubscriber__Constraint1__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Subscriber.allInstances()->forAll(u1, u2 | u1 <> u2 implies u1.email <> u2.email)"
+		   });
+		addAnnotation
+		  (getSubscriber__Constraint2__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.email<>null"
+		   });
+		addAnnotation
+		  (getSubscriber__Constraint3__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.email.matches(\'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$\')"
+		   });
+		addAnnotation
+		  (getSubscriber__Constraint4__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() <= 1)"
+		   });
+		addAnnotation
+		  (getSubscriber__Constraint5__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.firstName  <> null and self.lastName <> null"
+		   });
+		addAnnotation
+		  (getEmailCampaign__Constraint10__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", " self.sendDate.toString() > DateTime.now().toString()"
+		   });
+		addAnnotation
+		  (getEmailTemplate__Constraint13__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.subject <> null and self.content <> null"
+		   });
 	}
 
 	/**
