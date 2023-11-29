@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3Tc48H8CEe6NmLc2hrX90w" name="EmailMarketingSystem">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3Tc48H8CEe6NmLc2hrX90w" name="EmailMarketingSystem" visibility="public">
   <packagedElement xmi:type="uml:StateMachine" xmi:id="_3Tf8QH8CEe6NmLc2hrX90w" name="StateMachine1">
     <region xmi:type="uml:Region" xmi:id="_3ThKYH8CEe6NmLc2hrX90w" name="Region1"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_-BeQIH8CEe6NmLc2hrX90w" name="Campaign">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_MwRqkI7gEe6BHOusRuNBKQ" name="Constraint7">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_MwSRoI7gEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.name&lt;>null</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_0Xd3MI7gEe6BHOusRuNBKQ" name="Constraint8">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_0XeeQI7gEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>Campaign.allInstances()->forAll(c1, c2 | c1 &lt;> c2 implies c1.name &lt;> c2.name)</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_bXPegI7hEe6BHOusRuNBKQ" name="Constraint9">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_bXQFkI7hEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.startDate.toString() &lt; self.endDate.toString()</body>
+      </specification>
+    </ownedRule>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_f0SqYH8DEe6NmLc2hrX90w" name="campaignId" visibility="protected">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
@@ -16,12 +34,12 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_DuHeUH8NEe6NmLc2hrX90w" name="endDate" visibility="protected">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_n77qA44kEe6-oaP_z5FOCQ" name="status" type="_2v4qIH8IEe6NmLc2hrX90w" association="_n77qAI4kEe6-oaP_z5FOCQ"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_Iebr444lEe6-oaP_z5FOCQ" name="analytics" type="_okg-UH8NEe6NmLc2hrX90w" association="_Iebr4I4lEe6-oaP_z5FOCQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_n77qA44kEe6-oaP_z5FOCQ" name="status" visibility="protected" type="_2v4qIH8IEe6NmLc2hrX90w" association="_n77qAI4kEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Iebr444lEe6-oaP_z5FOCQ" name="analytics" visibility="protected" type="_okg-UH8NEe6NmLc2hrX90w" association="_Iebr4I4lEe6-oaP_z5FOCQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IeiZkI4lEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IejnsI4lEe6-oaP_z5FOCQ" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_qstBI44nEe6-oaP_z5FOCQ" name="segments" type="_x5meYH8NEe6NmLc2hrX90w" association="_qstBII4nEe6-oaP_z5FOCQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qstBI44nEe6-oaP_z5FOCQ" name="segments" visibility="protected" type="_x5meYH8NEe6NmLc2hrX90w" association="_qstBII4nEe6-oaP_z5FOCQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qstoMI4nEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qstoMY4nEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
@@ -49,6 +67,36 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_dRPoYH8PEe6NmLc2hrX90w" name="cancelCampaign"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_YTwmQH8FEe6NmLc2hrX90w" name="Subscriber">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_IJwaII7aEe6BHOusRuNBKQ" name="Constraint1">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_IJ6LII7aEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>Subscriber.allInstances()->forAll(u1, u2 | u1 &lt;> u2 implies u1.email &lt;> u2.email)</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_Pohm4I7cEe6BHOusRuNBKQ" name="Constraint2">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_PoiN8I7cEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.email&lt;>null</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_7GVfwI7cEe6BHOusRuNBKQ" name="Constraint3">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_7GVfwY7cEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_oiYm8I7dEe6BHOusRuNBKQ" name="Constraint4">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_oiZOAI7dEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() &lt;= 1)</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_-c0BcI7eEe6BHOusRuNBKQ" name="Constraint5">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_-c0ogI7eEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.firstName  &lt;> null and self.lastName &lt;> null</body>
+      </specification>
+    </ownedRule>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_dK3yQH8dEe6NmLc2hrX90w" name="subscriberId" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
@@ -64,15 +112,15 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_dwoxwH8dEe6NmLc2hrX90w" name="firstName" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_DQbrE44nEe6-oaP_z5FOCQ" name="preferences" type="_a6F44H8REe6NmLc2hrX90w" association="_DQbrEI4nEe6-oaP_z5FOCQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DQbrE44nEe6-oaP_z5FOCQ" name="preferences" visibility="private" type="_a6F44H8REe6NmLc2hrX90w" association="_DQbrEI4nEe6-oaP_z5FOCQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DQcSII4nEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DQcSIY4nEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_JwOZA44nEe6-oaP_z5FOCQ" name="segments" type="_x5meYH8NEe6NmLc2hrX90w" association="_JwOZAI4nEe6-oaP_z5FOCQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JwOZA44nEe6-oaP_z5FOCQ" name="segments" visibility="private" type="_x5meYH8NEe6NmLc2hrX90w" association="_JwOZAI4nEe6-oaP_z5FOCQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JwOZBI4nEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JwOZBY4nEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_Vk82Mo4lEe6-oaP_z5FOCQ" name="emailCampaigns" type="_UXWhcH8NEe6NmLc2hrX90w" association="_Vk8PII4lEe6-oaP_z5FOCQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Vk82Mo4lEe6-oaP_z5FOCQ" name="emailCampaigns" visibility="private" type="_UXWhcH8NEe6NmLc2hrX90w" association="_Vk8PII4lEe6-oaP_z5FOCQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HqpsQI4qEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HrOUAI4qEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
@@ -117,16 +165,22 @@
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_VVm2QH8JEe6NmLc2hrX90w" name="Expired"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_UXWhcH8NEe6NmLc2hrX90w" name="EmailCampaign">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_iW5YQI7hEe6BHOusRuNBKQ" name="Constraint10">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_iW5_UI7hEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body> self.sendDate.toString() > DateTime.now().toString()</body>
+      </specification>
+    </ownedRule>
     <generalization xmi:type="uml:Generalization" xmi:id="_izCtgI44Ee6-oaP_z5FOCQ" general="_-BeQIH8CEe6NmLc2hrX90w"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_bKGLIH8OEe6NmLc2hrX90w" name="sendDate" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_Vk8PI44lEe6-oaP_z5FOCQ" name="recipients" type="_YTwmQH8FEe6NmLc2hrX90w" association="_Vk8PII4lEe6-oaP_z5FOCQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Vk8PI44lEe6-oaP_z5FOCQ" name="recipients" visibility="private" type="_YTwmQH8FEe6NmLc2hrX90w" association="_Vk8PII4lEe6-oaP_z5FOCQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vk82MI4lEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vk82MY4lEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_zL0NYY4lEe6-oaP_z5FOCQ" name="template" type="_zy33sH8OEe6NmLc2hrX90w" association="_zLzmUI4lEe6-oaP_z5FOCQ"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_tg9KFY4qEe6-oaP_z5FOCQ" name="emailResponses" type="_6iJIEH86Ee6NmLc2hrX90w" association="_tg8jAI4qEe6-oaP_z5FOCQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zL0NYY4lEe6-oaP_z5FOCQ" name="template" visibility="private" type="_zy33sH8OEe6NmLc2hrX90w" association="_zLzmUI4lEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tg9KFY4qEe6-oaP_z5FOCQ" name="emailResponses" visibility="private" type="_6iJIEH86Ee6NmLc2hrX90w" association="_tg8jAI4qEe6-oaP_z5FOCQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5EQOII4qEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5EpPsI4qEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
@@ -153,13 +207,25 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="__gL98H8PEe6NmLc2hrX90w" name="trackConversion"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_x5meYH8NEe6NmLc2hrX90w" name="Segment">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_jADqAI7hEe6BHOusRuNBKQ" name="Constraint11">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_jAEREI7hEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>Segment.allInstances()->forAll(s1, s2 | s1 &lt;> s2 implies s1.name &lt;> s2.name)</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_l_i58I7hEe6BHOusRuNBKQ" name="Constraint12">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_l_jhAI7hEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body> self.subscribers->size() > 0</body>
+      </specification>
+    </ownedRule>
     <ownedAttribute xmi:type="uml:Property" xmi:id="__BbnkH8eEe6NmLc2hrX90w" name="segmentId" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_AZGlIH8fEe6NmLc2hrX90w" name="name" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_VZlo0o4nEe6-oaP_z5FOCQ" name="conditions" type="_QJ69EH8gEe6NmLc2hrX90w" association="_VZlBwI4nEe6-oaP_z5FOCQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_VZlo0o4nEe6-oaP_z5FOCQ" name="conditions" visibility="private" type="_QJ69EH8gEe6NmLc2hrX90w" association="_VZlBwI4nEe6-oaP_z5FOCQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VZneAI4nEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VZosII4nEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
@@ -187,10 +253,19 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_zy33sH8OEe6NmLc2hrX90w" name="EmailTemplate">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_tdAKAI7hEe6BHOusRuNBKQ" name="Constraint13">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_tdAxEI7hEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.subject &lt;> null and self.content &lt;> null</body>
+      </specification>
+    </ownedRule>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_lQGf4H8QEe6NmLc2hrX90w" name="templateId" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_loB3sH8QEe6NmLc2hrX90w" name="name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NK9zwI7mEe6BHOusRuNBKQ" name="subject" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_l75O4H8QEe6NmLc2hrX90w" name="content" visibility="private">
@@ -199,7 +274,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_mVnWcH8QEe6NmLc2hrX90w" name="createdDate" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_zL4e0I4lEe6-oaP_z5FOCQ" name="emailCampaigns" type="_UXWhcH8NEe6NmLc2hrX90w" association="_zLzmUI4lEe6-oaP_z5FOCQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zL4e0I4lEe6-oaP_z5FOCQ" name="emailCampaigns" visibility="private" type="_UXWhcH8NEe6NmLc2hrX90w" association="_zLzmUI4lEe6-oaP_z5FOCQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PGTQYI4oEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PGePgI4oEe6-oaP_z5FOCQ" value="*"/>
     </ownedAttribute>
@@ -234,6 +309,18 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_QJ69EH8gEe6NmLc2hrX90w" name="SegmentCondition">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_x6qoII7hEe6BHOusRuNBKQ" name="Constraint14">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_x6qoIY7hEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.operator &lt;>null and self.attribute &lt;>null</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_v0U_AI7nEe6BHOusRuNBKQ" name="Constraint6">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_v0VmEI7nEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.operator = 'greaterThan' or self.operator = 'lessThan' or self.operator = 'equalTo'  or self.operator = 'contains'</body>
+      </specification>
+    </ownedRule>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_m0c0QH8gEe6NmLc2hrX90w" name="attribute" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
@@ -257,9 +344,9 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_wTE2kH87Ee6NmLc2hrX90w" name="timestamp" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_c3blU44lEe6-oaP_z5FOCQ" name="responseType" type="_FspuIH86Ee6NmLc2hrX90w" association="_c3blUI4lEe6-oaP_z5FOCQ"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_tg9KEo4qEe6-oaP_z5FOCQ" name="campaign" type="_UXWhcH8NEe6NmLc2hrX90w" association="_tg8jAI4qEe6-oaP_z5FOCQ"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_EO0pIo4rEe6-oaP_z5FOCQ" name="subscriber" type="_YTwmQH8FEe6NmLc2hrX90w" association="_EO0CEI4rEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_c3blU44lEe6-oaP_z5FOCQ" name="responseType" visibility="private" type="_FspuIH86Ee6NmLc2hrX90w" association="_c3blUI4lEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tg9KEo4qEe6-oaP_z5FOCQ" name="campaign" visibility="private" type="_UXWhcH8NEe6NmLc2hrX90w" association="_tg8jAI4qEe6-oaP_z5FOCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EO0pIo4rEe6-oaP_z5FOCQ" name="subscriber" visibility="private" type="_YTwmQH8FEe6NmLc2hrX90w" association="_EO0CEI4rEe6-oaP_z5FOCQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_QCSPwH87Ee6NmLc2hrX90w" name="getResponseTypeDetail">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_cEH3EI47Ee6-oaP_z5FOCQ" type="_FspuIH86Ee6NmLc2hrX90w" direction="return"/>
     </ownedOperation>
@@ -298,11 +385,13 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_DQcSIo4nEe6-oaP_z5FOCQ" name="subscriber" type="_YTwmQH8FEe6NmLc2hrX90w" association="_DQbrEI4nEe6-oaP_z5FOCQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_JwOZAI4nEe6-oaP_z5FOCQ" memberEnd="_JwOZA44nEe6-oaP_z5FOCQ _JwOZBo4nEe6-oaP_z5FOCQ">
+  <packagedElement xmi:type="uml:Association" xmi:id="_JwOZAI4nEe6-oaP_z5FOCQ" memberEnd="_JwOZA44nEe6-oaP_z5FOCQ _JwOZBo4nEe6-oaP_z5FOCQ" navigableOwnedEnd="_JwOZBo4nEe6-oaP_z5FOCQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JwOZAY4nEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JwOZAo4nEe6-oaP_z5FOCQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_JwOZBo4nEe6-oaP_z5FOCQ" name="subscriber" type="_YTwmQH8FEe6NmLc2hrX90w" association="_JwOZAI4nEe6-oaP_z5FOCQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JwOZBo4nEe6-oaP_z5FOCQ" name="subscribers" type="_YTwmQH8FEe6NmLc2hrX90w" association="_JwOZAI4nEe6-oaP_z5FOCQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tB6zsI7lEe6BHOusRuNBKQ" value="*"/>
+    </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_VZlBwI4nEe6-oaP_z5FOCQ" memberEnd="_VZlo0o4nEe6-oaP_z5FOCQ _VZp6QI4nEe6-oaP_z5FOCQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VZlo0I4nEe6-oaP_z5FOCQ" source="org.eclipse.papyrus">
@@ -329,5 +418,12 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EO0pII4rEe6-oaP_z5FOCQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EO0pIY4rEe6-oaP_z5FOCQ" value="*"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2i7sYI7kEe6BHOusRuNBKQ" name="DateTime">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_6W00wI7kEe6BHOusRuNBKQ" name="now" isStatic="true">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ai-1AI7lEe6BHOusRuNBKQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
 </uml:Model>
