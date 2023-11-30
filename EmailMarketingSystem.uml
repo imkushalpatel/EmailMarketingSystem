@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3Tc48H8CEe6NmLc2hrX90w" name="EmailMarketingSystem" visibility="public">
-  <packagedElement xmi:type="uml:StateMachine" xmi:id="_3Tf8QH8CEe6NmLc2hrX90w" name="StateMachine1">
-    <region xmi:type="uml:Region" xmi:id="_3ThKYH8CEe6NmLc2hrX90w" name="Region1"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_3Tf8QH8CEe6NmLc2hrX90w" name="Campaign State Machine">
+    <region xmi:type="uml:Region" xmi:id="_3ThKYH8CEe6NmLc2hrX90w" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_lrIzkI8KEe6_WbcOIqFOvQ" name="Draft Email Campaign" source="_dqog0I8KEe6_WbcOIqFOvQ" target="_iJGQMI8KEe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_4IanMI8KEe6_WbcOIqFOvQ" source="_Yhy-wI8KEe6_WbcOIqFOvQ" target="_dqog0I8KEe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Oi2z8I8LEe6_WbcOIqFOvQ" name="[startDate &lt; currentDate &amp;&amp; endDate > currentDate]" source="_FSS8oI8NEe6_WbcOIqFOvQ" target="_MTVBUI8LEe6_WbcOIqFOvQ">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_iz2A4I8LEe6_WbcOIqFOvQ"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_-vS_II8LEe6_WbcOIqFOvQ" name="Add Email List" source="_MTVBUI8LEe6_WbcOIqFOvQ" target="_8tDakI8LEe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_KKW3wI8NEe6_WbcOIqFOvQ" name="[sendDate != null &amp;&amp; sendDate > currentDate]" source="_iJGQMI8KEe6_WbcOIqFOvQ" target="_FSS8oI8NEe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_lxTloI8NEe6_WbcOIqFOvQ" name="[currentDate = sendDate]" source="_8tDakI8LEe6_WbcOIqFOvQ" target="_d0dD0I8NEe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_o9nwoI8NEe6_WbcOIqFOvQ" name="[currentDate > endDate]" source="_8tDakI8LEe6_WbcOIqFOvQ" target="_hPGlwI8NEe6_WbcOIqFOvQ"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_Yhy-wI8KEe6_WbcOIqFOvQ"/>
+      <subvertex xmi:type="uml:State" xmi:id="_dqog0I8KEe6_WbcOIqFOvQ" name="No campaign"/>
+      <subvertex xmi:type="uml:State" xmi:id="_iJGQMI8KEe6_WbcOIqFOvQ" name="Campaign in drafts"/>
+      <subvertex xmi:type="uml:State" xmi:id="_MTVBUI8LEe6_WbcOIqFOvQ" name="Campaign Active"/>
+      <subvertex xmi:type="uml:State" xmi:id="_8tDakI8LEe6_WbcOIqFOvQ" name="Email List Added"/>
+      <subvertex xmi:type="uml:State" xmi:id="_FSS8oI8NEe6_WbcOIqFOvQ" name="Campaign Scheduled"/>
+      <subvertex xmi:type="uml:State" xmi:id="_d0dD0I8NEe6_WbcOIqFOvQ" name="Campaign Email Sent"/>
+      <subvertex xmi:type="uml:State" xmi:id="_hPGlwI8NEe6_WbcOIqFOvQ" name="Campaign Disabled"/>
+    </region>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_-BeQIH8CEe6NmLc2hrX90w" name="Campaign">
     <ownedRule xmi:type="uml:Constraint" xmi:id="_MwRqkI7gEe6BHOusRuNBKQ" name="Constraint7">
@@ -426,4 +444,30 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_BFujoI8PEe6_WbcOIqFOvQ" name="User Flow State Machine">
+    <region xmi:type="uml:Region" xmi:id="_Zj1RQI8PEe6_WbcOIqFOvQ" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_9NuFYI8QEe6_WbcOIqFOvQ" source="_6MizYI8QEe6_WbcOIqFOvQ" target="_pmjG8I8PEe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_CYW-QI8REe6_WbcOIqFOvQ" name="Sign up for campaign" source="_pmjG8I8PEe6_WbcOIqFOvQ" target="_-xQUsI8QEe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_MVUWoI8REe6_WbcOIqFOvQ" name="Open Email" source="_-xQUsI8QEe6_WbcOIqFOvQ" target="_GtqxoI8REe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Rn-4MI8TEe6_WbcOIqFOvQ" source="_GtqxoI8REe6_WbcOIqFOvQ" target="_3WtZQI8REe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_TLCmYI8TEe6_WbcOIqFOvQ" name="Click email link" source="_3WtZQI8REe6_WbcOIqFOvQ" target="_pZIEEI8REe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_cY4O8I8TEe6_WbcOIqFOvQ" name="Click Unsubscribe option" source="_3WtZQI8REe6_WbcOIqFOvQ" target="_XMIdQI8TEe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_sgbhUI8TEe6_WbcOIqFOvQ" source="_XMIdQI8TEe6_WbcOIqFOvQ" target="_og1fQI8TEe6_WbcOIqFOvQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_xiDBEI8TEe6_WbcOIqFOvQ" source="_pZIEEI8REe6_WbcOIqFOvQ" target="_-xQUsI8QEe6_WbcOIqFOvQ"/>
+      <subvertex xmi:type="uml:State" xmi:id="_pmjG8I8PEe6_WbcOIqFOvQ" name="User Profile Created"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_6MizYI8QEe6_WbcOIqFOvQ"/>
+      <subvertex xmi:type="uml:State" xmi:id="_-xQUsI8QEe6_WbcOIqFOvQ" name="Signed Up"/>
+      <subvertex xmi:type="uml:State" xmi:id="_GtqxoI8REe6_WbcOIqFOvQ" name="Reading Email"/>
+      <subvertex xmi:type="uml:State" xmi:id="_pZIEEI8REe6_WbcOIqFOvQ" name="Checking Website"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_3WtZQI8REe6_WbcOIqFOvQ" name="" kind="fork"/>
+      <subvertex xmi:type="uml:State" xmi:id="_XMIdQI8TEe6_WbcOIqFOvQ" name="Unsubscribed from Campaign"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_og1fQI8TEe6_WbcOIqFOvQ"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_RiBwQI8KEe6_WbcOIqFOvQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RiFaoI8KEe6_WbcOIqFOvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
 </uml:Model>
