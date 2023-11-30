@@ -16,8 +16,6 @@ import java.util.Date;
 
 import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
@@ -27,10 +25,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.EObjectValidator;
 
 /**
  * <!-- begin-user-doc -->
@@ -360,29 +355,44 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	}
 
 	/**
+	 * The cached validation expression for the '{@link #Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint7</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT7_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.name<>null";
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean Constraint7(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT7,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint7", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.CAMPAIGN,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT7_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT7);
 	}
+
+	/**
+	 * The cached validation expression for the '{@link #Constraint8(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint8</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint8(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT8_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "Campaign.allInstances()->forAll(c1, c2 | c1 <> c2 implies c1.name <> c2.name)";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -390,24 +400,29 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * @generated
 	 */
 	public boolean Constraint8(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT8,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint8", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.CAMPAIGN,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT8_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT8);
 	}
+
+	/**
+	 * The cached validation expression for the '{@link #Constraint9(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint9</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint9(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT9_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.startDate.toString() < self.endDate.toString()";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -415,23 +430,18 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	 * @generated
 	 */
 	public boolean Constraint9(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT9,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint9", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.CAMPAIGN,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.CAMPAIGN___CONSTRAINT9__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT9_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT9);
 	}
 
 	/**

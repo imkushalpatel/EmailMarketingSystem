@@ -15,8 +15,6 @@ import java.util.Date;
 import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
@@ -26,9 +24,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -309,28 +304,33 @@ public class EmailTemplateImpl extends MinimalEObjectImpl.Container implements E
 	}
 
 	/**
+	 * The cached validation expression for the '{@link #Constraint13(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint13</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint13(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT13_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.subject <> null and self.content <> null";
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean Constraint13(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-						 EmailMarketingSystemValidator.EMAIL_TEMPLATE__CONSTRAINT13,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Constraint13", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.EMAIL_TEMPLATE,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.EMAIL_TEMPLATE___CONSTRAINT13__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT13_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.EMAIL_TEMPLATE__CONSTRAINT13);
 	}
 
 	/**

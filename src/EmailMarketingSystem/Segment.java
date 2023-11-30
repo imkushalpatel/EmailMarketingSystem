@@ -103,7 +103,7 @@ public interface Segment extends EObject {
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='Segment.allInstances()-&gt;forAll(s1, s2 | s1 &lt;&gt; s2 implies s1.name &lt;&gt; s2.name)'"
 	 * @generated
 	 */
 	boolean Constraint11(DiagnosticChain diagnostics, Map<Object, Object> context);
@@ -116,7 +116,7 @@ public interface Segment extends EObject {
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body=' self.subscribers-&gt;size() &gt; 0'"
 	 * @generated
 	 */
 	boolean Constraint12(DiagnosticChain diagnostics, Map<Object, Object> context);

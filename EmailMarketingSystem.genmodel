@@ -27,7 +27,7 @@
     <details key="UNTYPED_PROPERTIES" value="REPORT"/>
     <details key="REDEFINING_PROPERTIES" value="REPORT"/>
     <details key="INVOCATION_DELEGATES" value="IGNORE"/>
-    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="PROCESS"/>
   </genAnnotations>
   <foreignModel>EmailMarketingSystem.uml</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="EmailMarketingSystem" disposableProviderFactory="true"

@@ -216,7 +216,7 @@ public interface Campaign extends EObject {
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.name&lt;&gt;null'"
 	 * @generated
 	 */
 	boolean Constraint7(DiagnosticChain diagnostics, Map<Object, Object> context);
@@ -229,7 +229,7 @@ public interface Campaign extends EObject {
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='Campaign.allInstances()-&gt;forAll(c1, c2 | c1 &lt;&gt; c2 implies c1.name &lt;&gt; c2.name)'"
 	 * @generated
 	 */
 	boolean Constraint8(DiagnosticChain diagnostics, Map<Object, Object> context);
@@ -242,7 +242,7 @@ public interface Campaign extends EObject {
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
-	 * @model
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.startDate.toString() &lt; self.endDate.toString()'"
 	 * @generated
 	 */
 	boolean Constraint9(DiagnosticChain diagnostics, Map<Object, Object> context);
