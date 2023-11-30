@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3Tc48H8CEe6NmLc2hrX90w" name="EmailMarketingSystem" visibility="public">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_3Tc48H8CEe6NmLc2hrX90w" name="emailmarketingsystem" visibility="public">
   <packagedElement xmi:type="uml:StateMachine" xmi:id="_3Tf8QH8CEe6NmLc2hrX90w" name="Campaign State Machine">
     <region xmi:type="uml:Region" xmi:id="_3ThKYH8CEe6NmLc2hrX90w" name="Region1">
       <transition xmi:type="uml:Transition" xmi:id="_lrIzkI8KEe6_WbcOIqFOvQ" name="Draft Email Campaign" source="_dqog0I8KEe6_WbcOIqFOvQ" target="_iJGQMI8KEe6_WbcOIqFOvQ"/>

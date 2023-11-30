@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated EmailMarketingSystem -->
       <package
-            uri="http:///EmailMarketingSystem.ecore"
-            class="EmailMarketingSystem.EmailMarketingSystemPackage"
+            uri="http:///emailmarketingsystem.ecore"
+            class="emailmarketingsystem.EmailmarketingsystemPackage"
             genModel="EmailMarketingSystem.genmodel"/>
    </extension>
 
