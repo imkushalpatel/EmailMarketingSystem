@@ -57,7 +57,7 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case EmailMarketingSystemPackage.STATE_MACHINE1: return createStateMachine1();
+			case EmailMarketingSystemPackage.CAMPAIGN_STATE_MACHINE: return createCampaignStateMachine();
 			case EmailMarketingSystemPackage.CAMPAIGN: return createCampaign();
 			case EmailMarketingSystemPackage.CAMPAIGN_ANALYTICS: return createCampaignAnalytics();
 			case EmailMarketingSystemPackage.SEGMENT: return createSegment();
@@ -68,6 +68,7 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 			case EmailMarketingSystemPackage.EMAIL_TEMPLATE: return createEmailTemplate();
 			case EmailMarketingSystemPackage.EMAIL_RESPONSE: return createEmailResponse();
 			case EmailMarketingSystemPackage.DATE_TIME: return createDateTime();
+			case EmailMarketingSystemPackage.USER_FLOW_STATE_MACHINE: return createUserFlowStateMachine();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -113,9 +114,9 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public StateMachine1 createStateMachine1() {
-		StateMachine1Impl stateMachine1 = new StateMachine1Impl();
-		return stateMachine1;
+	public CampaignStateMachine createCampaignStateMachine() {
+		CampaignStateMachineImpl campaignStateMachine = new CampaignStateMachineImpl();
+		return campaignStateMachine;
 	}
 
 	/**
@@ -226,6 +227,17 @@ public class EmailMarketingSystemFactoryImpl extends EFactoryImpl implements Ema
 	public DateTime createDateTime() {
 		DateTimeImpl dateTime = new DateTimeImpl();
 		return dateTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UserFlowStateMachine createUserFlowStateMachine() {
+		UserFlowStateMachineImpl userFlowStateMachine = new UserFlowStateMachineImpl();
+		return userFlowStateMachine;
 	}
 
 	/**

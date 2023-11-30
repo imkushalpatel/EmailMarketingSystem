@@ -22,13 +22,13 @@ public interface EmailMarketingSystemFactory extends EFactory {
 	EmailMarketingSystemFactory eINSTANCE = EmailMarketingSystem.impl.EmailMarketingSystemFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>State Machine1</em>'.
+	 * Returns a new object of class '<em>Campaign State Machine</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>State Machine1</em>'.
+	 * @return a new object of class '<em>Campaign State Machine</em>'.
 	 * @generated
 	 */
-	StateMachine1 createStateMachine1();
+	CampaignStateMachine createCampaignStateMachine();
 
 	/**
 	 * Returns a new object of class '<em>Campaign</em>'.
@@ -119,6 +119,15 @@ public interface EmailMarketingSystemFactory extends EFactory {
 	 * @generated
 	 */
 	DateTime createDateTime();
+
+	/**
+	 * Returns a new object of class '<em>User Flow State Machine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>User Flow State Machine</em>'.
+	 * @generated
+	 */
+	UserFlowStateMachine createUserFlowStateMachine();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -3,7 +3,9 @@
 package EmailMarketingSystem;
 
 import java.util.Map;
+
 import org.eclipse.emf.common.util.DiagnosticChain;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -107,19 +109,6 @@ public interface SegmentCondition extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.operator <>null and self.attribute <>null
-	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
-	 * @param context The cache of context-specific information.
-	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.operator &lt;&gt;null and self.attribute &lt;&gt;null'"
-	 * @generated
-	 */
-	boolean Constraint14(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
 	 * self.operator = 'greaterThan' or self.operator = 'lessThan' or self.operator = 'equalTo'  or self.operator = 'contains'
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
@@ -128,5 +117,18 @@ public interface SegmentCondition extends EObject {
 	 * @generated
 	 */
 	boolean Constraint6(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.operator <>null and self.attribute <>null
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.operator &lt;&gt;null and self.attribute &lt;&gt;null'"
+	 * @generated
+	 */
+	boolean Constraint14(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // SegmentCondition

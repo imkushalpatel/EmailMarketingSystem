@@ -2,8 +2,8 @@
  */
 package EmailMarketingSystem.impl;
 
+import EmailMarketingSystem.CampaignStateMachine;
 import EmailMarketingSystem.EmailMarketingSystemPackage;
-import EmailMarketingSystem.StateMachine1;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -11,18 +11,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>State Machine1</b></em>'.
+ * An implementation of the model object '<em><b>Campaign State Machine</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class StateMachine1Impl extends MinimalEObjectImpl.Container implements StateMachine1 {
+public class CampaignStateMachineImpl extends MinimalEObjectImpl.Container implements CampaignStateMachine {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StateMachine1Impl() {
+	protected CampaignStateMachineImpl() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public class StateMachine1Impl extends MinimalEObjectImpl.Container implements S
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EmailMarketingSystemPackage.Literals.STATE_MACHINE1;
+		return EmailMarketingSystemPackage.Literals.CAMPAIGN_STATE_MACHINE;
 	}
 
-} //StateMachine1Impl
+} //CampaignStateMachineImpl

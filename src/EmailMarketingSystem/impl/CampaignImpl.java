@@ -9,13 +9,15 @@ import EmailMarketingSystem.EmailMarketingSystemPackage;
 import EmailMarketingSystem.Segment;
 
 import EmailMarketingSystem.util.EmailMarketingSystemValidator;
+
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 import java.util.Date;
-
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
@@ -25,6 +27,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -355,36 +358,6 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint7</em>}' invariant operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONSTRAINT7_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.name<>null";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean Constraint7(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			EmailMarketingSystemValidator.validate
-				(EmailMarketingSystemPackage.Literals.CAMPAIGN,
-				 this,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailMarketingSystemPackage.Literals.CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT7_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT7);
-	}
-
-	/**
 	 * The cached validation expression for the '{@link #Constraint8(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint8</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -415,21 +388,21 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint9(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint9</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint7</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint9(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT9_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.startDate.toString() < self.endDate.toString()";
+	protected static final String CONSTRAINT7_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.name<>null";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint9(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean Constraint7(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailMarketingSystemValidator.validate
 				(EmailMarketingSystemPackage.Literals.CAMPAIGN,
@@ -437,11 +410,11 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailMarketingSystemPackage.Literals.CAMPAIGN___CONSTRAINT9__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT9_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailMarketingSystemPackage.Literals.CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT7_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT9);
+				 EmailMarketingSystemValidator.CAMPAIGN__CONSTRAINT7);
 	}
 
 	/**
@@ -640,12 +613,10 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailMarketingSystemPackage.CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP:
-				return Constraint7((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailMarketingSystemPackage.CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP:
 				return Constraint8((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case EmailMarketingSystemPackage.CAMPAIGN___CONSTRAINT9__DIAGNOSTICCHAIN_MAP:
-				return Constraint9((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailMarketingSystemPackage.CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP:
+				return Constraint7((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailMarketingSystemPackage.CAMPAIGN___GET_ANALYTICS_DETAILS:
 				return getAnalyticsDetails();
 			case EmailMarketingSystemPackage.CAMPAIGN___ADD_SEGMENT__STRING:

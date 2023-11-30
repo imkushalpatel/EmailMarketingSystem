@@ -4,6 +4,7 @@ package EmailMarketingSystem.impl;
 
 import EmailMarketingSystem.Campaign;
 import EmailMarketingSystem.CampaignAnalytics;
+import EmailMarketingSystem.CampaignStateMachine;
 import EmailMarketingSystem.CampaignStatus;
 import EmailMarketingSystem.DateTime;
 import EmailMarketingSystem.EmailCampaign;
@@ -15,10 +16,11 @@ import EmailMarketingSystem.Preference;
 import EmailMarketingSystem.ResponseType;
 import EmailMarketingSystem.Segment;
 import EmailMarketingSystem.SegmentCondition;
-import EmailMarketingSystem.StateMachine1;
 import EmailMarketingSystem.Subscriber;
+import EmailMarketingSystem.UserFlowStateMachine;
 
 import EmailMarketingSystem.util.EmailMarketingSystemValidator;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -26,8 +28,8 @@ import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -42,7 +44,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stateMachine1EClass = null;
+	private EClass campaignStateMachineEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,6 +115,13 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	private EClass dateTimeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass userFlowStateMachineEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -204,8 +213,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EClass getStateMachine1() {
-		return stateMachine1EClass;
+	public EClass getCampaignStateMachine() {
+		return campaignStateMachineEClass;
 	}
 
 	/**
@@ -294,7 +303,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__Constraint7__DiagnosticChain_Map() {
+	public EOperation getCampaign__Constraint8__DiagnosticChain_Map() {
 		return campaignEClass.getEOperations().get(0);
 	}
 
@@ -304,7 +313,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__Constraint8__DiagnosticChain_Map() {
+	public EOperation getCampaign__Constraint7__DiagnosticChain_Map() {
 		return campaignEClass.getEOperations().get(1);
 	}
 
@@ -314,7 +323,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__Constraint9__DiagnosticChain_Map() {
+	public EOperation getCampaign__GetAnalyticsDetails() {
 		return campaignEClass.getEOperations().get(2);
 	}
 
@@ -324,7 +333,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__GetAnalyticsDetails() {
+	public EOperation getCampaign__AddSegment__String() {
 		return campaignEClass.getEOperations().get(3);
 	}
 
@@ -334,7 +343,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__AddSegment__String() {
+	public EOperation getCampaign__RemoveSegment__String() {
 		return campaignEClass.getEOperations().get(4);
 	}
 
@@ -344,7 +353,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__RemoveSegment__String() {
+	public EOperation getCampaign__ViewSegmentDetails__String() {
 		return campaignEClass.getEOperations().get(5);
 	}
 
@@ -354,7 +363,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__ViewSegmentDetails__String() {
+	public EOperation getCampaign__PauseCampaign() {
 		return campaignEClass.getEOperations().get(6);
 	}
 
@@ -364,18 +373,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__PauseCampaign() {
-		return campaignEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EOperation getCampaign__CancelCampaign() {
-		return campaignEClass.getEOperations().get(8);
+		return campaignEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -584,7 +583,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSegmentCondition__Constraint14__DiagnosticChain_Map() {
+	public EOperation getSegmentCondition__Constraint6__DiagnosticChain_Map() {
 		return segmentConditionEClass.getEOperations().get(0);
 	}
 
@@ -594,7 +593,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSegmentCondition__Constraint6__DiagnosticChain_Map() {
+	public EOperation getSegmentCondition__Constraint14__DiagnosticChain_Map() {
 		return segmentConditionEClass.getEOperations().get(1);
 	}
 
@@ -1134,6 +1133,16 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
+	public EClass getUserFlowStateMachine() {
+		return userFlowStateMachineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getCampaignStatus() {
 		return campaignStatusEEnum;
 	}
@@ -1177,7 +1186,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		isCreated = true;
 
 		// Create classes and their features
-		stateMachine1EClass = createEClass(STATE_MACHINE1);
+		campaignStateMachineEClass = createEClass(CAMPAIGN_STATE_MACHINE);
 
 		campaignEClass = createEClass(CAMPAIGN);
 		createEAttribute(campaignEClass, CAMPAIGN__CAMPAIGN_ID);
@@ -1187,9 +1196,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		createEAttribute(campaignEClass, CAMPAIGN__STATUS);
 		createEReference(campaignEClass, CAMPAIGN__ANALYTICS);
 		createEReference(campaignEClass, CAMPAIGN__SEGMENTS);
-		createEOperation(campaignEClass, CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP);
 		createEOperation(campaignEClass, CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP);
-		createEOperation(campaignEClass, CAMPAIGN___CONSTRAINT9__DIAGNOSTICCHAIN_MAP);
+		createEOperation(campaignEClass, CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP);
 		createEOperation(campaignEClass, CAMPAIGN___GET_ANALYTICS_DETAILS);
 		createEOperation(campaignEClass, CAMPAIGN___ADD_SEGMENT__STRING);
 		createEOperation(campaignEClass, CAMPAIGN___REMOVE_SEGMENT__STRING);
@@ -1219,8 +1227,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__ATTRIBUTE);
 		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__OPERATOR);
 		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__VALUE);
-		createEOperation(segmentConditionEClass, SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP);
 		createEOperation(segmentConditionEClass, SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP);
+		createEOperation(segmentConditionEClass, SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP);
 
 		subscriberEClass = createEClass(SUBSCRIBER);
 		createEAttribute(subscriberEClass, SUBSCRIBER__SUBSCRIBER_ID);
@@ -1281,6 +1289,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		dateTimeEClass = createEClass(DATE_TIME);
 		createEOperation(dateTimeEClass, DATE_TIME___NOW);
 
+		userFlowStateMachineEClass = createEClass(USER_FLOW_STATE_MACHINE);
+
 		// Create enums
 		campaignStatusEEnum = createEEnum(CAMPAIGN_STATUS);
 		responseTypeEEnum = createEEnum(RESPONSE_TYPE);
@@ -1317,7 +1327,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		emailCampaignEClass.getESuperTypes().add(this.getCampaign());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(stateMachine1EClass, StateMachine1.class, "StateMachine1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(campaignStateMachineEClass, CampaignStateMachine.class, "CampaignStateMachine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(campaignEClass, Campaign.class, "Campaign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCampaign_CampaignId(), ecorePackage.getEString(), "campaignId", null, 1, 1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1328,7 +1338,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		initEReference(getCampaign_Analytics(), this.getCampaignAnalytics(), null, "analytics", null, 0, 1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCampaign_Segments(), this.getSegment(), null, "segments", null, 0, -1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		EOperation op = initEOperation(getCampaign__Constraint7__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint7", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getCampaign__Constraint8__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint8", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
 		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1337,16 +1347,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getCampaign__Constraint8__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint8", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getCampaign__Constraint9__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint9", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getCampaign__Constraint7__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint7", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1419,7 +1420,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		initEAttribute(getSegmentCondition_Operator(), ecorePackage.getEString(), "operator", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getSegmentCondition_Value(), ecorePackage.getEString(), "value", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getSegmentCondition__Constraint14__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint14", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSegmentCondition__Constraint6__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint6", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1428,7 +1429,7 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSegmentCondition__Constraint6__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint6", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSegmentCondition__Constraint14__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint14", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1578,6 +1579,8 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 
 		initEOperation(getDateTime__Now(), ecorePackage.getEDate(), "now", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		initEClass(userFlowStateMachineEClass, UserFlowStateMachine.class, "UserFlowStateMachine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(campaignStatusEEnum, CampaignStatus.class, "CampaignStatus");
 		addEEnumLiteral(campaignStatusEEnum, CampaignStatus.ACTIVE);
@@ -1597,10 +1600,10 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
-		// http://www.eclipse.org/emf/2002/Ecore/OCL
-		createOCLAnnotations();
 		// http://www.eclipse.org/uml2/2.0.0/UML
 		createUMLAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 	}
 
 	/**
@@ -1620,6 +1623,34 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	}
 
 	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createUMLAnnotations() {
+		String source = "http://www.eclipse.org/uml2/2.0.0/UML";
+		addAnnotation
+		  (campaignStateMachineEClass,
+		   source,
+		   new String[] {
+			   "originalName", "Campaign State Machine"
+		   });
+		addAnnotation
+		  (responseTypeEEnum.getELiterals().get(3),
+		   source,
+		   new String[] {
+			   "originalName", " BOUNCED"
+		   });
+		addAnnotation
+		  (userFlowStateMachineEClass,
+		   source,
+		   new String[] {
+			   "originalName", "User Flow State Machine"
+		   });
+	}
+
+	/**
 	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1628,22 +1659,16 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 	protected void createOCLAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
 		addAnnotation
-		  (getCampaign__Constraint7__DiagnosticChain_Map(),
-		   source,
-		   new String[] {
-			   "body", "self.name<>null"
-		   });
-		addAnnotation
 		  (getCampaign__Constraint8__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "Campaign.allInstances()->forAll(c1, c2 | c1 <> c2 implies c1.name <> c2.name)"
 		   });
 		addAnnotation
-		  (getCampaign__Constraint9__DiagnosticChain_Map(),
+		  (getCampaign__Constraint7__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "self.startDate.toString() < self.endDate.toString()"
+			   "body", "self.name<>null"
 		   });
 		addAnnotation
 		  (getSegment__Constraint11__DiagnosticChain_Map(),
@@ -1658,16 +1683,16 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 			   "body", " self.subscribers->size() > 0"
 		   });
 		addAnnotation
-		  (getSegmentCondition__Constraint14__DiagnosticChain_Map(),
-		   source,
-		   new String[] {
-			   "body", "self.operator <>null and self.attribute <>null"
-		   });
-		addAnnotation
 		  (getSegmentCondition__Constraint6__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "self.operator = \'greaterThan\' or self.operator = \'lessThan\' or self.operator = \'equalTo\'  or self.operator = \'contains\'"
+		   });
+		addAnnotation
+		  (getSegmentCondition__Constraint14__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.operator <>null and self.attribute <>null"
 		   });
 		addAnnotation
 		  (getSubscriber__Constraint1__DiagnosticChain_Map(),
@@ -1710,22 +1735,6 @@ public class EmailMarketingSystemPackageImpl extends EPackageImpl implements Ema
 		   source,
 		   new String[] {
 			   "body", "self.subject <> null and self.content <> null"
-		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/uml2/2.0.0/UML</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createUMLAnnotations() {
-		String source = "http://www.eclipse.org/uml2/2.0.0/UML";
-		addAnnotation
-		  (responseTypeEEnum.getELiterals().get(3),
-		   source,
-		   new String[] {
-			   "originalName", " BOUNCED"
 		   });
 	}
 

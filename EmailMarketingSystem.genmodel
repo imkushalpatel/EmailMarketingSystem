@@ -44,7 +44,7 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//ResponseType/UNSUBSCRIBED"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="EmailMarketingSystem.ecore#//ResponseType/_BOUNCED"/>
     </genEnums>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//StateMachine1"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//CampaignStateMachine"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//Campaign">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Campaign/campaignId"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//Campaign/name"/>
@@ -55,17 +55,13 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//Campaign/analytics"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference EmailMarketingSystem.ecore#//Campaign/segments"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/Constraint7">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//Campaign/Constraint7/diagnostics"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//Campaign/Constraint7/context"/>
-      </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/Constraint8">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//Campaign/Constraint8/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//Campaign/Constraint8/context"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/Constraint9">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//Campaign/Constraint9/diagnostics"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//Campaign/Constraint9/context"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/Constraint7">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//Campaign/Constraint7/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//Campaign/Constraint7/context"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/getAnalyticsDetails"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//Campaign/addSegment">
@@ -115,13 +111,13 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//SegmentCondition/attribute"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//SegmentCondition/operator"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute EmailMarketingSystem.ecore#//SegmentCondition/value"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//SegmentCondition/Constraint14">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//SegmentCondition/Constraint14/diagnostics"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//SegmentCondition/Constraint14/context"/>
-      </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//SegmentCondition/Constraint6">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//SegmentCondition/Constraint6/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//SegmentCondition/Constraint6/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//SegmentCondition/Constraint14">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//SegmentCondition/Constraint14/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="EmailMarketingSystem.ecore#//SegmentCondition/Constraint14/context"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//Subscriber">
@@ -235,5 +231,6 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//DateTime">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="EmailMarketingSystem.ecore#//DateTime/now"/>
     </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="EmailMarketingSystem.ecore#//UserFlowStateMachine"/>
   </genPackages>
 </genmodel:GenModel>

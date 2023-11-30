@@ -3,8 +3,8 @@
 package EmailMarketingSystem;
 
 import java.util.Date;
-
 import java.util.Map;
+
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
@@ -212,19 +212,6 @@ public interface Campaign extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.name<>null
-	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
-	 * @param context The cache of context-specific information.
-	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.name&lt;&gt;null'"
-	 * @generated
-	 */
-	boolean Constraint7(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
 	 * Campaign.allInstances()->forAll(c1, c2 | c1 <> c2 implies c1.name <> c2.name)
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
@@ -238,14 +225,14 @@ public interface Campaign extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.startDate.toString() < self.endDate.toString()
+	 * self.name<>null
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.startDate.toString() &lt; self.endDate.toString()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.name&lt;&gt;null'"
 	 * @generated
 	 */
-	boolean Constraint9(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean Constraint7(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -282,6 +269,9 @@ public interface Campaign extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.startDate.toString() < self.endDate.toString()
+	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */

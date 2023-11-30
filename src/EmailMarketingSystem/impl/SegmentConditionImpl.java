@@ -6,12 +6,17 @@ import EmailMarketingSystem.EmailMarketingSystemPackage;
 import EmailMarketingSystem.SegmentCondition;
 
 import EmailMarketingSystem.util.EmailMarketingSystemValidator;
+
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -182,36 +187,6 @@ public class SegmentConditionImpl extends MinimalEObjectImpl.Container implement
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint14</em>}' invariant operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONSTRAINT14_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.operator <>null and self.attribute <>null";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean Constraint14(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			EmailMarketingSystemValidator.validate
-				(EmailMarketingSystemPackage.Literals.SEGMENT_CONDITION,
-				 this,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailMarketingSystemPackage.Literals.SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT14_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailMarketingSystemValidator.SEGMENT_CONDITION__CONSTRAINT14);
-	}
-
-	/**
 	 * The cached validation expression for the '{@link #Constraint6(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint6</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -239,6 +214,36 @@ public class SegmentConditionImpl extends MinimalEObjectImpl.Container implement
 				 Diagnostic.ERROR,
 				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
 				 EmailMarketingSystemValidator.SEGMENT_CONDITION__CONSTRAINT6);
+	}
+
+	/**
+	 * The cached validation expression for the '{@link #Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint14</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONSTRAINT14_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.operator <>null and self.attribute <>null";
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Constraint14(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			EmailMarketingSystemValidator.validate
+				(EmailMarketingSystemPackage.Literals.SEGMENT_CONDITION,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailMarketingSystemPackage.Literals.SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP,
+				 CONSTRAINT14_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailMarketingSystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailMarketingSystemValidator.SEGMENT_CONDITION__CONSTRAINT14);
 	}
 
 	/**
@@ -328,10 +333,10 @@ public class SegmentConditionImpl extends MinimalEObjectImpl.Container implement
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailMarketingSystemPackage.SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP:
-				return Constraint14((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailMarketingSystemPackage.SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP:
 				return Constraint6((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailMarketingSystemPackage.SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP:
+				return Constraint14((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

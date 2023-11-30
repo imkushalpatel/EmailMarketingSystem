@@ -68,8 +68,8 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 	protected EmailMarketingSystemSwitch<Adapter> modelSwitch =
 		new EmailMarketingSystemSwitch<Adapter>() {
 			@Override
-			public Adapter caseStateMachine1(StateMachine1 object) {
-				return createStateMachine1Adapter();
+			public Adapter caseCampaignStateMachine(CampaignStateMachine object) {
+				return createCampaignStateMachineAdapter();
 			}
 			@Override
 			public Adapter caseCampaign(Campaign object) {
@@ -112,6 +112,10 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 				return createDateTimeAdapter();
 			}
 			@Override
+			public Adapter caseUserFlowStateMachine(UserFlowStateMachine object) {
+				return createUserFlowStateMachineAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -132,16 +136,16 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.StateMachine1 <em>State Machine1</em>}'.
+	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.CampaignStateMachine <em>Campaign State Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see EmailMarketingSystem.StateMachine1
+	 * @see EmailMarketingSystem.CampaignStateMachine
 	 * @generated
 	 */
-	public Adapter createStateMachine1Adapter() {
+	public Adapter createCampaignStateMachineAdapter() {
 		return null;
 	}
 
@@ -282,6 +286,20 @@ public class EmailMarketingSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDateTimeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EmailMarketingSystem.UserFlowStateMachine <em>User Flow State Machine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EmailMarketingSystem.UserFlowStateMachine
+	 * @generated
+	 */
+	public Adapter createUserFlowStateMachineAdapter() {
 		return null;
 	}
 

@@ -43,28 +43,20 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	public static final String DIAGNOSTIC_SOURCE = "EmailMarketingSystem";
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint7' of 'Campaign'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int CAMPAIGN__CONSTRAINT7 = 1;
-
-	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint8' of 'Campaign'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CAMPAIGN__CONSTRAINT8 = 2;
+	public static final int CAMPAIGN__CONSTRAINT8 = 1;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint9' of 'Campaign'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint7' of 'Campaign'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CAMPAIGN__CONSTRAINT9 = 3;
+	public static final int CAMPAIGN__CONSTRAINT7 = 2;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint11' of 'Segment'.
@@ -72,7 +64,7 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SEGMENT__CONSTRAINT11 = 4;
+	public static final int SEGMENT__CONSTRAINT11 = 3;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint12' of 'Segment'.
@@ -80,7 +72,15 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SEGMENT__CONSTRAINT12 = 5;
+	public static final int SEGMENT__CONSTRAINT12 = 4;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint6' of 'Segment Condition'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int SEGMENT_CONDITION__CONSTRAINT6 = 5;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint14' of 'Segment Condition'.
@@ -91,20 +91,12 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	public static final int SEGMENT_CONDITION__CONSTRAINT14 = 6;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint6' of 'Segment Condition'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int SEGMENT_CONDITION__CONSTRAINT6 = 7;
-
-	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint1' of 'Subscriber'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT1 = 8;
+	public static final int SUBSCRIBER__CONSTRAINT1 = 7;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint2' of 'Subscriber'.
@@ -112,7 +104,7 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT2 = 9;
+	public static final int SUBSCRIBER__CONSTRAINT2 = 8;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint3' of 'Subscriber'.
@@ -120,7 +112,7 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT3 = 10;
+	public static final int SUBSCRIBER__CONSTRAINT3 = 9;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint4' of 'Subscriber'.
@@ -128,7 +120,7 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT4 = 11;
+	public static final int SUBSCRIBER__CONSTRAINT4 = 10;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint5' of 'Subscriber'.
@@ -136,7 +128,7 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT5 = 12;
+	public static final int SUBSCRIBER__CONSTRAINT5 = 11;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint10' of 'Email Campaign'.
@@ -144,7 +136,7 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int EMAIL_CAMPAIGN__CONSTRAINT10 = 13;
+	public static final int EMAIL_CAMPAIGN__CONSTRAINT10 = 12;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint13' of 'Email Template'.
@@ -152,7 +144,7 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int EMAIL_TEMPLATE__CONSTRAINT13 = 14;
+	public static final int EMAIL_TEMPLATE__CONSTRAINT13 = 13;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -160,7 +152,7 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 14;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 13;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -210,8 +202,8 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
-			case EmailMarketingSystemPackage.STATE_MACHINE1:
-				return validateStateMachine1((StateMachine1)value, diagnostics, context);
+			case EmailMarketingSystemPackage.CAMPAIGN_STATE_MACHINE:
+				return validateCampaignStateMachine((CampaignStateMachine)value, diagnostics, context);
 			case EmailMarketingSystemPackage.CAMPAIGN:
 				return validateCampaign((Campaign)value, diagnostics, context);
 			case EmailMarketingSystemPackage.CAMPAIGN_ANALYTICS:
@@ -232,6 +224,8 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 				return validateEmailResponse((EmailResponse)value, diagnostics, context);
 			case EmailMarketingSystemPackage.DATE_TIME:
 				return validateDateTime((DateTime)value, diagnostics, context);
+			case EmailMarketingSystemPackage.USER_FLOW_STATE_MACHINE:
+				return validateUserFlowStateMachine((UserFlowStateMachine)value, diagnostics, context);
 			case EmailMarketingSystemPackage.CAMPAIGN_STATUS:
 				return validateCampaignStatus((CampaignStatus)value, diagnostics, context);
 			case EmailMarketingSystemPackage.RESPONSE_TYPE:
@@ -246,8 +240,8 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateStateMachine1(StateMachine1 stateMachine1, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(stateMachine1, diagnostics, context);
+	public boolean validateCampaignStateMachine(CampaignStateMachine campaignStateMachine, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(campaignStateMachine, diagnostics, context);
 	}
 
 	/**
@@ -265,20 +259,9 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(campaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(campaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(campaign, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCampaign_Constraint7(campaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCampaign_Constraint8(campaign, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCampaign_Constraint9(campaign, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCampaign_Constraint7(campaign, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * Validates the Constraint7 constraint of '<em>Campaign</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateCampaign_Constraint7(Campaign campaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return campaign.Constraint7(diagnostics, context);
 	}
 
 	/**
@@ -292,13 +275,13 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	}
 
 	/**
-	 * Validates the Constraint9 constraint of '<em>Campaign</em>'.
+	 * Validates the Constraint7 constraint of '<em>Campaign</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCampaign_Constraint9(Campaign campaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return campaign.Constraint9(diagnostics, context);
+	public boolean validateCampaign_Constraint7(Campaign campaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return campaign.Constraint7(diagnostics, context);
 	}
 
 	/**
@@ -365,19 +348,9 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(segmentCondition, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(segmentCondition, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(segmentCondition, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSegmentCondition_Constraint14(segmentCondition, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSegmentCondition_Constraint6(segmentCondition, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSegmentCondition_Constraint14(segmentCondition, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * Validates the Constraint14 constraint of '<em>Segment Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateSegmentCondition_Constraint14(SegmentCondition segmentCondition, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return segmentCondition.Constraint14(diagnostics, context);
 	}
 
 	/**
@@ -388,6 +361,16 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 */
 	public boolean validateSegmentCondition_Constraint6(SegmentCondition segmentCondition, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return segmentCondition.Constraint6(diagnostics, context);
+	}
+
+	/**
+	 * Validates the Constraint14 constraint of '<em>Segment Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSegmentCondition_Constraint14(SegmentCondition segmentCondition, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return segmentCondition.Constraint14(diagnostics, context);
 	}
 
 	/**
@@ -487,9 +470,8 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(emailCampaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(emailCampaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(emailCampaign, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCampaign_Constraint7(emailCampaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCampaign_Constraint8(emailCampaign, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCampaign_Constraint9(emailCampaign, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCampaign_Constraint7(emailCampaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEmailCampaign_Constraint10(emailCampaign, diagnostics, context);
 		return result;
 	}
@@ -549,6 +531,15 @@ public class EmailMarketingSystemValidator extends EObjectValidator {
 	 */
 	public boolean validateDateTime(DateTime dateTime, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(dateTime, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUserFlowStateMachine(UserFlowStateMachine userFlowStateMachine, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(userFlowStateMachine, diagnostics, context);
 	}
 
 	/**

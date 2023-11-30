@@ -60,32 +60,32 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EmailMarketingSystemPackage eINSTANCE = EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link EmailMarketingSystem.impl.StateMachine1Impl <em>State Machine1</em>}' class.
+	 * The meta object id for the '{@link EmailMarketingSystem.impl.CampaignStateMachineImpl <em>Campaign State Machine</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see EmailMarketingSystem.impl.StateMachine1Impl
-	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getStateMachine1()
+	 * @see EmailMarketingSystem.impl.CampaignStateMachineImpl
+	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getCampaignStateMachine()
 	 * @generated
 	 */
-	int STATE_MACHINE1 = 0;
+	int CAMPAIGN_STATE_MACHINE = 0;
 
 	/**
-	 * The number of structural features of the '<em>State Machine1</em>' class.
+	 * The number of structural features of the '<em>Campaign State Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_MACHINE1_FEATURE_COUNT = 0;
+	int CAMPAIGN_STATE_MACHINE_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>State Machine1</em>' class.
+	 * The number of operations of the '<em>Campaign State Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_MACHINE1_OPERATION_COUNT = 0;
+	int CAMPAIGN_STATE_MACHINE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link EmailMarketingSystem.impl.CampaignImpl <em>Campaign</em>}' class.
@@ -170,31 +170,22 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int CAMPAIGN_FEATURE_COUNT = 7;
 
 	/**
-	 * The operation id for the '<em>Constraint7</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
 	 * The operation id for the '<em>Constraint8</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP = 1;
+	int CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>Constraint9</em>' operation.
+	 * The operation id for the '<em>Constraint7</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___CONSTRAINT9__DIAGNOSTICCHAIN_MAP = 2;
+	int CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The operation id for the '<em>Get Analytics Details</em>' operation.
@@ -203,7 +194,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___GET_ANALYTICS_DETAILS = 3;
+	int CAMPAIGN___GET_ANALYTICS_DETAILS = 2;
 
 	/**
 	 * The operation id for the '<em>Add Segment</em>' operation.
@@ -212,7 +203,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___ADD_SEGMENT__STRING = 4;
+	int CAMPAIGN___ADD_SEGMENT__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Remove Segment</em>' operation.
@@ -221,7 +212,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___REMOVE_SEGMENT__STRING = 5;
+	int CAMPAIGN___REMOVE_SEGMENT__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>View Segment Details</em>' operation.
@@ -230,7 +221,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___VIEW_SEGMENT_DETAILS__STRING = 6;
+	int CAMPAIGN___VIEW_SEGMENT_DETAILS__STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Pause Campaign</em>' operation.
@@ -239,7 +230,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___PAUSE_CAMPAIGN = 7;
+	int CAMPAIGN___PAUSE_CAMPAIGN = 6;
 
 	/**
 	 * The operation id for the '<em>Cancel Campaign</em>' operation.
@@ -248,7 +239,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___CANCEL_CAMPAIGN = 8;
+	int CAMPAIGN___CANCEL_CAMPAIGN = 7;
 
 	/**
 	 * The number of operations of the '<em>Campaign</em>' class.
@@ -257,7 +248,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN_OPERATION_COUNT = 9;
+	int CAMPAIGN_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link EmailMarketingSystem.impl.CampaignAnalyticsImpl <em>Campaign Analytics</em>}' class.
@@ -488,22 +479,22 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int SEGMENT_CONDITION_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Constraint14</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
 	 * The operation id for the '<em>Constraint6</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP = 1;
+	int SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Constraint14</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The number of operations of the '<em>Segment Condition</em>' class.
@@ -896,15 +887,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int EMAIL_CAMPAIGN_FEATURE_COUNT = CAMPAIGN_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Constraint7</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMAIL_CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP = CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP;
-
-	/**
 	 * The operation id for the '<em>Constraint8</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -914,13 +896,13 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int EMAIL_CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP = CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP;
 
 	/**
-	 * The operation id for the '<em>Constraint9</em>' operation.
+	 * The operation id for the '<em>Constraint7</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN___CONSTRAINT9__DIAGNOSTICCHAIN_MAP = CAMPAIGN___CONSTRAINT9__DIAGNOSTICCHAIN_MAP;
+	int EMAIL_CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP = CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The operation id for the '<em>Get Analytics Details</em>' operation.
@@ -1250,6 +1232,34 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	int DATE_TIME_OPERATION_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link EmailMarketingSystem.impl.UserFlowStateMachineImpl <em>User Flow State Machine</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EmailMarketingSystem.impl.UserFlowStateMachineImpl
+	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getUserFlowStateMachine()
+	 * @generated
+	 */
+	int USER_FLOW_STATE_MACHINE = 11;
+
+	/**
+	 * The number of structural features of the '<em>User Flow State Machine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_FLOW_STATE_MACHINE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>User Flow State Machine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_FLOW_STATE_MACHINE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link EmailMarketingSystem.CampaignStatus <em>Campaign Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1257,7 +1267,7 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getCampaignStatus()
 	 * @generated
 	 */
-	int CAMPAIGN_STATUS = 11;
+	int CAMPAIGN_STATUS = 12;
 
 	/**
 	 * The meta object id for the '{@link EmailMarketingSystem.ResponseType <em>Response Type</em>}' enum.
@@ -1267,18 +1277,18 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getResponseType()
 	 * @generated
 	 */
-	int RESPONSE_TYPE = 12;
+	int RESPONSE_TYPE = 13;
 
 
 	/**
-	 * Returns the meta object for class '{@link EmailMarketingSystem.StateMachine1 <em>State Machine1</em>}'.
+	 * Returns the meta object for class '{@link EmailMarketingSystem.CampaignStateMachine <em>Campaign State Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>State Machine1</em>'.
-	 * @see EmailMarketingSystem.StateMachine1
+	 * @return the meta object for class '<em>Campaign State Machine</em>'.
+	 * @see EmailMarketingSystem.CampaignStateMachine
 	 * @generated
 	 */
-	EClass getStateMachine1();
+	EClass getCampaignStateMachine();
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.Campaign <em>Campaign</em>}'.
@@ -1368,16 +1378,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EReference getCampaign_Segments();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint7</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint7</em>' operation.
-	 * @see EmailMarketingSystem.Campaign#Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getCampaign__Constraint7__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#Constraint8(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint8</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1388,14 +1388,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EOperation getCampaign__Constraint8__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#Constraint9(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint9</em>}' operation.
+	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint7</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint9</em>' operation.
-	 * @see EmailMarketingSystem.Campaign#Constraint9(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Constraint7</em>' operation.
+	 * @see EmailMarketingSystem.Campaign#Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getCampaign__Constraint9__DiagnosticChain_Map();
+	EOperation getCampaign__Constraint7__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for the '{@link EmailMarketingSystem.Campaign#getAnalyticsDetails() <em>Get Analytics Details</em>}' operation.
@@ -1667,16 +1667,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EAttribute getSegmentCondition_Value();
 
 	/**
-	 * Returns the meta object for the '{@link EmailMarketingSystem.SegmentCondition#Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint14</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint14</em>' operation.
-	 * @see EmailMarketingSystem.SegmentCondition#Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getSegmentCondition__Constraint14__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for the '{@link EmailMarketingSystem.SegmentCondition#Constraint6(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint6</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1685,6 +1675,16 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSegmentCondition__Constraint6__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link EmailMarketingSystem.SegmentCondition#Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint14</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Constraint14</em>' operation.
+	 * @see EmailMarketingSystem.SegmentCondition#Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getSegmentCondition__Constraint14__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link EmailMarketingSystem.Subscriber <em>Subscriber</em>}'.
@@ -2243,6 +2243,16 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	EOperation getDateTime__Now();
 
 	/**
+	 * Returns the meta object for class '{@link EmailMarketingSystem.UserFlowStateMachine <em>User Flow State Machine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>User Flow State Machine</em>'.
+	 * @see EmailMarketingSystem.UserFlowStateMachine
+	 * @generated
+	 */
+	EClass getUserFlowStateMachine();
+
+	/**
 	 * Returns the meta object for enum '{@link EmailMarketingSystem.CampaignStatus <em>Campaign Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2286,14 +2296,14 @@ public interface EmailMarketingSystemPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link EmailMarketingSystem.impl.StateMachine1Impl <em>State Machine1</em>}' class.
+		 * The meta object literal for the '{@link EmailMarketingSystem.impl.CampaignStateMachineImpl <em>Campaign State Machine</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see EmailMarketingSystem.impl.StateMachine1Impl
-		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getStateMachine1()
+		 * @see EmailMarketingSystem.impl.CampaignStateMachineImpl
+		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getCampaignStateMachine()
 		 * @generated
 		 */
-		EClass STATE_MACHINE1 = eINSTANCE.getStateMachine1();
+		EClass CAMPAIGN_STATE_MACHINE = eINSTANCE.getCampaignStateMachine();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.CampaignImpl <em>Campaign</em>}' class.
@@ -2362,14 +2372,6 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		EReference CAMPAIGN__SEGMENTS = eINSTANCE.getCampaign_Segments();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint7</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCampaign__Constraint7__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '<em><b>Constraint8</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2378,12 +2380,12 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		EOperation CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCampaign__Constraint8__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint9</b></em>' operation.
+		 * The meta object literal for the '<em><b>Constraint7</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CAMPAIGN___CONSTRAINT9__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCampaign__Constraint9__DiagnosticChain_Map();
+		EOperation CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCampaign__Constraint7__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Analytics Details</b></em>' operation.
@@ -2600,20 +2602,20 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		EAttribute SEGMENT_CONDITION__VALUE = eINSTANCE.getSegmentCondition_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint14</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegmentCondition__Constraint14__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '<em><b>Constraint6</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegmentCondition__Constraint6__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Constraint14</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegmentCondition__Constraint14__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.impl.SubscriberImpl <em>Subscriber</em>}' class.
@@ -3050,6 +3052,16 @@ public interface EmailMarketingSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation DATE_TIME___NOW = eINSTANCE.getDateTime__Now();
+
+		/**
+		 * The meta object literal for the '{@link EmailMarketingSystem.impl.UserFlowStateMachineImpl <em>User Flow State Machine</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see EmailMarketingSystem.impl.UserFlowStateMachineImpl
+		 * @see EmailMarketingSystem.impl.EmailMarketingSystemPackageImpl#getUserFlowStateMachine()
+		 * @generated
+		 */
+		EClass USER_FLOW_STATE_MACHINE = eINSTANCE.getUserFlowStateMachine();
 
 		/**
 		 * The meta object literal for the '{@link EmailMarketingSystem.CampaignStatus <em>Campaign Status</em>}' enum.

@@ -66,9 +66,9 @@ public class EmailMarketingSystemSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case EmailMarketingSystemPackage.STATE_MACHINE1: {
-				StateMachine1 stateMachine1 = (StateMachine1)theEObject;
-				T result = caseStateMachine1(stateMachine1);
+			case EmailMarketingSystemPackage.CAMPAIGN_STATE_MACHINE: {
+				CampaignStateMachine campaignStateMachine = (CampaignStateMachine)theEObject;
+				T result = caseCampaignStateMachine(campaignStateMachine);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -133,22 +133,28 @@ public class EmailMarketingSystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case EmailMarketingSystemPackage.USER_FLOW_STATE_MACHINE: {
+				UserFlowStateMachine userFlowStateMachine = (UserFlowStateMachine)theEObject;
+				T result = caseUserFlowStateMachine(userFlowStateMachine);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>State Machine1</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Campaign State Machine</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>State Machine1</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Campaign State Machine</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStateMachine1(StateMachine1 object) {
+	public T caseCampaignStateMachine(CampaignStateMachine object) {
 		return null;
 	}
 
@@ -299,6 +305,21 @@ public class EmailMarketingSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDateTime(DateTime object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>User Flow State Machine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>User Flow State Machine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUserFlowStateMachine(UserFlowStateMachine object) {
 		return null;
 	}
 
