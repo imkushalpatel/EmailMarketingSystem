@@ -22,16 +22,22 @@
     </region>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_-BeQIH8CEe6NmLc2hrX90w" name="Campaign">
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_CYw40I8PEe6BHOusRuNBKQ" name="Constraint8">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_CYw40I8PEe6BHOusRuNBKQ" name="campaignDuplicateNameCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_CYw40Y8PEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>Campaign.allInstances()->forAll(c1, c2 | c1 &lt;> c2 implies c1.name &lt;> c2.name)</body>
       </specification>
     </ownedRule>
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_G2XskI8PEe6BHOusRuNBKQ" name="Constraint7">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_G2XskI8PEe6BHOusRuNBKQ" name="campaignNameCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_G2XskY8PEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>self.name&lt;>null</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_Ik-jcI8PEe6BHOusRuNBKQ" name="campaignStartEndDateCheck">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ik-jcY8PEe6BHOusRuNBKQ" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.startDate.toString() &lt; self.endDate.toString()</body>
       </specification>
     </ownedRule>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_f0SqYH8DEe6NmLc2hrX90w" name="campaignId" visibility="protected">
@@ -75,42 +81,35 @@
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_IP7S0I5GEe6-oaP_z5FOCQ" type="_x5meYH8NEe6NmLc2hrX90w" direction="return"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_dJASYH8PEe6NmLc2hrX90w" name="pauseCampaign">
-      <ownedRule xmi:type="uml:Constraint" xmi:id="_Ik-jcI8PEe6BHOusRuNBKQ" name="Constraint9">
-        <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ik-jcY8PEe6BHOusRuNBKQ" name="constraintSpec">
-          <language>OCL</language>
-          <body>self.startDate.toString() &lt; self.endDate.toString()</body>
-        </specification>
-      </ownedRule>
-    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_dJASYH8PEe6NmLc2hrX90w" name="pauseCampaign"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_dRPoYH8PEe6NmLc2hrX90w" name="cancelCampaign"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_YTwmQH8FEe6NmLc2hrX90w" name="Subscriber">
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_IJwaII7aEe6BHOusRuNBKQ" name="Constraint1">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_IJwaII7aEe6BHOusRuNBKQ" name="subscriberDuplicateEmailCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_IJ6LII7aEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>Subscriber.allInstances()->forAll(u1, u2 | u1 &lt;> u2 implies u1.email &lt;> u2.email)</body>
       </specification>
     </ownedRule>
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_Pohm4I7cEe6BHOusRuNBKQ" name="Constraint2">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_Pohm4I7cEe6BHOusRuNBKQ" name="subscriberEmailCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_PoiN8I7cEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>self.email&lt;>null</body>
       </specification>
     </ownedRule>
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_7GVfwI7cEe6BHOusRuNBKQ" name="Constraint3">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_7GVfwI7cEe6BHOusRuNBKQ" name="subscriberEmailRegexCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_7GVfwY7cEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>self.email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')</body>
       </specification>
     </ownedRule>
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_oiYm8I7dEe6BHOusRuNBKQ" name="Constraint4">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_oiYm8I7dEe6BHOusRuNBKQ" name="subscriberCampaignsSegmentCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_oiZOAI7dEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() &lt;= 1)</body>
       </specification>
     </ownedRule>
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_-c0BcI7eEe6BHOusRuNBKQ" name="Constraint5">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_-c0BcI7eEe6BHOusRuNBKQ" name="subscriberNameCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_-c0ogI7eEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>self.firstName  &lt;> null and self.lastName &lt;> null</body>
@@ -184,7 +183,7 @@
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_VVm2QH8JEe6NmLc2hrX90w" name="Expired"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_UXWhcH8NEe6NmLc2hrX90w" name="EmailCampaign">
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_Sj3OcI8PEe6BHOusRuNBKQ" name="Constraint10">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_Sj3OcI8PEe6BHOusRuNBKQ" name="emailCampaingSendDateCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_Sj3OcY8PEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body> self.sendDate.toString() > DateTime.now().toString()</body>
@@ -226,13 +225,13 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="__gL98H8PEe6NmLc2hrX90w" name="trackConversion"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_x5meYH8NEe6NmLc2hrX90w" name="Segment">
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_TxffMI8PEe6BHOusRuNBKQ" name="Constraint11">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_TxffMI8PEe6BHOusRuNBKQ" name="segmentDuplicateNameCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_TxffMY8PEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>Segment.allInstances()->forAll(s1, s2 | s1 &lt;> s2 implies s1.name &lt;> s2.name)</body>
       </specification>
     </ownedRule>
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_arfc4I8PEe6BHOusRuNBKQ" name="Constraint12">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_arfc4I8PEe6BHOusRuNBKQ" name="segmentSubsribersSizeCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_arfc4Y8PEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body> self.subscribers->size() > 0</body>
@@ -328,13 +327,13 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_QJ69EH8gEe6NmLc2hrX90w" name="SegmentCondition">
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_v0U_AI7nEe6BHOusRuNBKQ" name="Constraint6">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_v0U_AI7nEe6BHOusRuNBKQ" name="segmentConditionOperaterCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_v0VmEI7nEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>self.operator = 'greaterThan' or self.operator = 'lessThan' or self.operator = 'equalTo'  or self.operator = 'contains'</body>
       </specification>
     </ownedRule>
-    <ownedRule xmi:type="uml:Constraint" xmi:id="_YiP4cI8PEe6BHOusRuNBKQ" name="Constraint14">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_YiP4cI8PEe6BHOusRuNBKQ" name="segmentConditionNullCheck">
       <specification xmi:type="uml:OpaqueExpression" xmi:id="_YiP4cY8PEe6BHOusRuNBKQ" name="constraintSpec">
         <language>OCL</language>
         <body>self.operator &lt;>null and self.attribute &lt;>null</body>

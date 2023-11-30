@@ -187,21 +187,21 @@ public class SegmentConditionImpl extends MinimalEObjectImpl.Container implement
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint6(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint6</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #segmentConditionOperaterCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Segment Condition Operater Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint6(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #segmentConditionOperaterCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT6_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.operator = 'greaterThan' or self.operator = 'lessThan' or self.operator = 'equalTo'  or self.operator = 'contains'";
+	protected static final String SEGMENT_CONDITION_OPERATER_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.operator = 'greaterThan' or self.operator = 'lessThan' or self.operator = 'equalTo'  or self.operator = 'contains'";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint6(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean segmentConditionOperaterCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.SEGMENT_CONDITION,
@@ -209,29 +209,29 @@ public class SegmentConditionImpl extends MinimalEObjectImpl.Container implement
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT6_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.SEGMENT_CONDITION___SEGMENT_CONDITION_OPERATER_CHECK__DIAGNOSTICCHAIN_MAP,
+				 SEGMENT_CONDITION_OPERATER_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.SEGMENT_CONDITION__CONSTRAINT6);
+				 EmailmarketingsystemValidator.SEGMENT_CONDITION__SEGMENT_CONDITION_OPERATER_CHECK);
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint14</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #segmentConditionNullCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Segment Condition Null Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #segmentConditionNullCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT14_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.operator <>null and self.attribute <>null";
+	protected static final String SEGMENT_CONDITION_NULL_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.operator <>null and self.attribute <>null";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint14(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean segmentConditionNullCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.SEGMENT_CONDITION,
@@ -239,11 +239,11 @@ public class SegmentConditionImpl extends MinimalEObjectImpl.Container implement
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT14_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.SEGMENT_CONDITION___SEGMENT_CONDITION_NULL_CHECK__DIAGNOSTICCHAIN_MAP,
+				 SEGMENT_CONDITION_NULL_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.SEGMENT_CONDITION__CONSTRAINT14);
+				 EmailmarketingsystemValidator.SEGMENT_CONDITION__SEGMENT_CONDITION_NULL_CHECK);
 	}
 
 	/**
@@ -333,10 +333,10 @@ public class SegmentConditionImpl extends MinimalEObjectImpl.Container implement
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailmarketingsystemPackage.SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP:
-				return Constraint6((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case EmailmarketingsystemPackage.SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP:
-				return Constraint14((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.SEGMENT_CONDITION___SEGMENT_CONDITION_OPERATER_CHECK__DIAGNOSTICCHAIN_MAP:
+				return segmentConditionOperaterCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.SEGMENT_CONDITION___SEGMENT_CONDITION_NULL_CHECK__DIAGNOSTICCHAIN_MAP:
+				return segmentConditionNullCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

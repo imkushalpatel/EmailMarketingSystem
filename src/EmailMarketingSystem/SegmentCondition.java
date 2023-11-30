@@ -116,7 +116,7 @@ public interface SegmentCondition extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.operator = \'greaterThan\' or self.operator = \'lessThan\' or self.operator = \'equalTo\'  or self.operator = \'contains\''"
 	 * @generated
 	 */
-	boolean Constraint6(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean segmentConditionOperaterCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,6 +129,6 @@ public interface SegmentCondition extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.operator &lt;&gt;null and self.attribute &lt;&gt;null'"
 	 * @generated
 	 */
-	boolean Constraint14(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean segmentConditionNullCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // SegmentCondition

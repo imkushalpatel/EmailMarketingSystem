@@ -358,21 +358,21 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint8(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint8</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #campaignDuplicateNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Campaign Duplicate Name Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint8(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #campaignDuplicateNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT8_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "Campaign.allInstances()->forAll(c1, c2 | c1 <> c2 implies c1.name <> c2.name)";
+	protected static final String CAMPAIGN_DUPLICATE_NAME_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "Campaign.allInstances()->forAll(c1, c2 | c1 <> c2 implies c1.name <> c2.name)";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint8(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean campaignDuplicateNameCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.CAMPAIGN,
@@ -380,29 +380,29 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT8_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.CAMPAIGN___CAMPAIGN_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP,
+				 CAMPAIGN_DUPLICATE_NAME_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.CAMPAIGN__CONSTRAINT8);
+				 EmailmarketingsystemValidator.CAMPAIGN__CAMPAIGN_DUPLICATE_NAME_CHECK);
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint7</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #campaignNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Campaign Name Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #campaignNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT7_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.name<>null";
+	protected static final String CAMPAIGN_NAME_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.name<>null";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint7(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean campaignNameCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.CAMPAIGN,
@@ -410,11 +410,41 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT7_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.CAMPAIGN___CAMPAIGN_NAME_CHECK__DIAGNOSTICCHAIN_MAP,
+				 CAMPAIGN_NAME_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.CAMPAIGN__CONSTRAINT7);
+				 EmailmarketingsystemValidator.CAMPAIGN__CAMPAIGN_NAME_CHECK);
+	}
+
+	/**
+	 * The cached validation expression for the '{@link #campaignStartEndDateCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Campaign Start End Date Check</em>}' invariant operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #campaignStartEndDateCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CAMPAIGN_START_END_DATE_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.startDate.toString() < self.endDate.toString()";
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean campaignStartEndDateCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			EmailmarketingsystemValidator.validate
+				(EmailmarketingsystemPackage.Literals.CAMPAIGN,
+				 this,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 EmailmarketingsystemPackage.Literals.CAMPAIGN___CAMPAIGN_START_END_DATE_CHECK__DIAGNOSTICCHAIN_MAP,
+				 CAMPAIGN_START_END_DATE_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
+				 EmailmarketingsystemValidator.CAMPAIGN__CAMPAIGN_START_END_DATE_CHECK);
 	}
 
 	/**
@@ -613,10 +643,12 @@ public class CampaignImpl extends MinimalEObjectImpl.Container implements Campai
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailmarketingsystemPackage.CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP:
-				return Constraint8((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case EmailmarketingsystemPackage.CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP:
-				return Constraint7((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.CAMPAIGN___CAMPAIGN_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP:
+				return campaignDuplicateNameCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.CAMPAIGN___CAMPAIGN_NAME_CHECK__DIAGNOSTICCHAIN_MAP:
+				return campaignNameCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.CAMPAIGN___CAMPAIGN_START_END_DATE_CHECK__DIAGNOSTICCHAIN_MAP:
+				return campaignStartEndDateCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailmarketingsystemPackage.CAMPAIGN___GET_ANALYTICS_DETAILS:
 				return getAnalyticsDetails();
 			case EmailmarketingsystemPackage.CAMPAIGN___ADD_SEGMENT__STRING:

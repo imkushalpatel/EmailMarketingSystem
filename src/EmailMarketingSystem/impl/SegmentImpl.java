@@ -171,21 +171,21 @@ public class SegmentImpl extends MinimalEObjectImpl.Container implements Segment
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint11(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint11</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #segmentDuplicateNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Segment Duplicate Name Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint11(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #segmentDuplicateNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT11_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "Segment.allInstances()->forAll(s1, s2 | s1 <> s2 implies s1.name <> s2.name)";
+	protected static final String SEGMENT_DUPLICATE_NAME_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "Segment.allInstances()->forAll(s1, s2 | s1 <> s2 implies s1.name <> s2.name)";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint11(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean segmentDuplicateNameCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.SEGMENT,
@@ -193,29 +193,29 @@ public class SegmentImpl extends MinimalEObjectImpl.Container implements Segment
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.SEGMENT___CONSTRAINT11__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT11_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.SEGMENT___SEGMENT_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP,
+				 SEGMENT_DUPLICATE_NAME_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.SEGMENT__CONSTRAINT11);
+				 EmailmarketingsystemValidator.SEGMENT__SEGMENT_DUPLICATE_NAME_CHECK);
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint12(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint12</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #segmentSubsribersSizeCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Segment Subsribers Size Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint12(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #segmentSubsribersSizeCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT12_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = " self.subscribers->size() > 0";
+	protected static final String SEGMENT_SUBSRIBERS_SIZE_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = " self.subscribers->size() > 0";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint12(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean segmentSubsribersSizeCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.SEGMENT,
@@ -223,11 +223,11 @@ public class SegmentImpl extends MinimalEObjectImpl.Container implements Segment
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.SEGMENT___CONSTRAINT12__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT12_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.SEGMENT___SEGMENT_SUBSRIBERS_SIZE_CHECK__DIAGNOSTICCHAIN_MAP,
+				 SEGMENT_SUBSRIBERS_SIZE_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.SEGMENT__CONSTRAINT12);
+				 EmailmarketingsystemValidator.SEGMENT__SEGMENT_SUBSRIBERS_SIZE_CHECK);
 	}
 
 	/**
@@ -352,10 +352,10 @@ public class SegmentImpl extends MinimalEObjectImpl.Container implements Segment
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailmarketingsystemPackage.SEGMENT___CONSTRAINT11__DIAGNOSTICCHAIN_MAP:
-				return Constraint11((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case EmailmarketingsystemPackage.SEGMENT___CONSTRAINT12__DIAGNOSTICCHAIN_MAP:
-				return Constraint12((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.SEGMENT___SEGMENT_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP:
+				return segmentDuplicateNameCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.SEGMENT___SEGMENT_SUBSRIBERS_SIZE_CHECK__DIAGNOSTICCHAIN_MAP:
+				return segmentSubsribersSizeCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailmarketingsystemPackage.SEGMENT___ADD_CONDITION__STRING_STRING_STRING:
 				addCondition((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;

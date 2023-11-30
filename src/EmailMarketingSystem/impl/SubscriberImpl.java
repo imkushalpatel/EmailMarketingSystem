@@ -358,21 +358,21 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint1(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint1</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #subscriberDuplicateEmailCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Duplicate Email Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint1(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #subscriberDuplicateEmailCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT1_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "Subscriber.allInstances()->forAll(u1, u2 | u1 <> u2 implies u1.email <> u2.email)";
+	protected static final String SUBSCRIBER_DUPLICATE_EMAIL_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "Subscriber.allInstances()->forAll(u1, u2 | u1 <> u2 implies u1.email <> u2.email)";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint1(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean subscriberDuplicateEmailCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.SUBSCRIBER,
@@ -380,29 +380,29 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___CONSTRAINT1__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT1_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___SUBSCRIBER_DUPLICATE_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP,
+				 SUBSCRIBER_DUPLICATE_EMAIL_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.SUBSCRIBER__CONSTRAINT1);
+				 EmailmarketingsystemValidator.SUBSCRIBER__SUBSCRIBER_DUPLICATE_EMAIL_CHECK);
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint2(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint2</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #subscriberEmailCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Email Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint2(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #subscriberEmailCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT2_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.email<>null";
+	protected static final String SUBSCRIBER_EMAIL_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.email<>null";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint2(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean subscriberEmailCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.SUBSCRIBER,
@@ -410,29 +410,29 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___CONSTRAINT2__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT2_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___SUBSCRIBER_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP,
+				 SUBSCRIBER_EMAIL_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.SUBSCRIBER__CONSTRAINT2);
+				 EmailmarketingsystemValidator.SUBSCRIBER__SUBSCRIBER_EMAIL_CHECK);
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint3(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint3</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #subscriberEmailRegexCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Email Regex Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint3(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #subscriberEmailRegexCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT3_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$')";
+	protected static final String SUBSCRIBER_EMAIL_REGEX_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$')";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint3(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean subscriberEmailRegexCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.SUBSCRIBER,
@@ -440,29 +440,29 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___CONSTRAINT3__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT3_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___SUBSCRIBER_EMAIL_REGEX_CHECK__DIAGNOSTICCHAIN_MAP,
+				 SUBSCRIBER_EMAIL_REGEX_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.SUBSCRIBER__CONSTRAINT3);
+				 EmailmarketingsystemValidator.SUBSCRIBER__SUBSCRIBER_EMAIL_REGEX_CHECK);
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint4(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint4</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #subscriberCampaignsSegmentCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Campaigns Segment Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint4(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #subscriberCampaignsSegmentCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT4_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() <= 1)";
+	protected static final String SUBSCRIBER_CAMPAIGNS_SEGMENT_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() <= 1)";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint4(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean subscriberCampaignsSegmentCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.SUBSCRIBER,
@@ -470,29 +470,29 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___CONSTRAINT4__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT4_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___SUBSCRIBER_CAMPAIGNS_SEGMENT_CHECK__DIAGNOSTICCHAIN_MAP,
+				 SUBSCRIBER_CAMPAIGNS_SEGMENT_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.SUBSCRIBER__CONSTRAINT4);
+				 EmailmarketingsystemValidator.SUBSCRIBER__SUBSCRIBER_CAMPAIGNS_SEGMENT_CHECK);
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint5(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint5</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #subscriberNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Name Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint5(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #subscriberNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT5_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.firstName  <> null and self.lastName <> null";
+	protected static final String SUBSCRIBER_NAME_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = "self.firstName  <> null and self.lastName <> null";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint5(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean subscriberNameCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.SUBSCRIBER,
@@ -500,11 +500,11 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___CONSTRAINT5__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT5_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.SUBSCRIBER___SUBSCRIBER_NAME_CHECK__DIAGNOSTICCHAIN_MAP,
+				 SUBSCRIBER_NAME_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.SUBSCRIBER__CONSTRAINT5);
+				 EmailmarketingsystemValidator.SUBSCRIBER__SUBSCRIBER_NAME_CHECK);
 	}
 
 	/**
@@ -743,16 +743,16 @@ public class SubscriberImpl extends MinimalEObjectImpl.Container implements Subs
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailmarketingsystemPackage.SUBSCRIBER___CONSTRAINT1__DIAGNOSTICCHAIN_MAP:
-				return Constraint1((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case EmailmarketingsystemPackage.SUBSCRIBER___CONSTRAINT2__DIAGNOSTICCHAIN_MAP:
-				return Constraint2((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case EmailmarketingsystemPackage.SUBSCRIBER___CONSTRAINT3__DIAGNOSTICCHAIN_MAP:
-				return Constraint3((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case EmailmarketingsystemPackage.SUBSCRIBER___CONSTRAINT4__DIAGNOSTICCHAIN_MAP:
-				return Constraint4((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case EmailmarketingsystemPackage.SUBSCRIBER___CONSTRAINT5__DIAGNOSTICCHAIN_MAP:
-				return Constraint5((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.SUBSCRIBER___SUBSCRIBER_DUPLICATE_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP:
+				return subscriberDuplicateEmailCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.SUBSCRIBER___SUBSCRIBER_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP:
+				return subscriberEmailCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.SUBSCRIBER___SUBSCRIBER_EMAIL_REGEX_CHECK__DIAGNOSTICCHAIN_MAP:
+				return subscriberEmailRegexCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.SUBSCRIBER___SUBSCRIBER_CAMPAIGNS_SEGMENT_CHECK__DIAGNOSTICCHAIN_MAP:
+				return subscriberCampaignsSegmentCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.SUBSCRIBER___SUBSCRIBER_NAME_CHECK__DIAGNOSTICCHAIN_MAP:
+				return subscriberNameCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailmarketingsystemPackage.SUBSCRIBER___ADD_EMAIL_CAMPAIGN__STRING:
 				addEmailCampaign((String)arguments.get(0));
 				return null;

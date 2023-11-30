@@ -303,7 +303,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__Constraint8__DiagnosticChain_Map() {
+	public EOperation getCampaign__CampaignDuplicateNameCheck__DiagnosticChain_Map() {
 		return campaignEClass.getEOperations().get(0);
 	}
 
@@ -313,7 +313,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__Constraint7__DiagnosticChain_Map() {
+	public EOperation getCampaign__CampaignNameCheck__DiagnosticChain_Map() {
 		return campaignEClass.getEOperations().get(1);
 	}
 
@@ -323,7 +323,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__GetAnalyticsDetails() {
+	public EOperation getCampaign__CampaignStartEndDateCheck__DiagnosticChain_Map() {
 		return campaignEClass.getEOperations().get(2);
 	}
 
@@ -333,7 +333,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__AddSegment__String() {
+	public EOperation getCampaign__GetAnalyticsDetails() {
 		return campaignEClass.getEOperations().get(3);
 	}
 
@@ -343,7 +343,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__RemoveSegment__String() {
+	public EOperation getCampaign__AddSegment__String() {
 		return campaignEClass.getEOperations().get(4);
 	}
 
@@ -353,7 +353,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__ViewSegmentDetails__String() {
+	public EOperation getCampaign__RemoveSegment__String() {
 		return campaignEClass.getEOperations().get(5);
 	}
 
@@ -363,7 +363,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__PauseCampaign() {
+	public EOperation getCampaign__ViewSegmentDetails__String() {
 		return campaignEClass.getEOperations().get(6);
 	}
 
@@ -373,8 +373,18 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getCampaign__CancelCampaign() {
+	public EOperation getCampaign__PauseCampaign() {
 		return campaignEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getCampaign__CancelCampaign() {
+		return campaignEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -493,7 +503,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSegment__Constraint11__DiagnosticChain_Map() {
+	public EOperation getSegment__SegmentDuplicateNameCheck__DiagnosticChain_Map() {
 		return segmentEClass.getEOperations().get(0);
 	}
 
@@ -503,7 +513,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSegment__Constraint12__DiagnosticChain_Map() {
+	public EOperation getSegment__SegmentSubsribersSizeCheck__DiagnosticChain_Map() {
 		return segmentEClass.getEOperations().get(1);
 	}
 
@@ -583,7 +593,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSegmentCondition__Constraint6__DiagnosticChain_Map() {
+	public EOperation getSegmentCondition__SegmentConditionOperaterCheck__DiagnosticChain_Map() {
 		return segmentConditionEClass.getEOperations().get(0);
 	}
 
@@ -593,7 +603,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSegmentCondition__Constraint14__DiagnosticChain_Map() {
+	public EOperation getSegmentCondition__SegmentConditionNullCheck__DiagnosticChain_Map() {
 		return segmentConditionEClass.getEOperations().get(1);
 	}
 
@@ -693,7 +703,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSubscriber__Constraint1__DiagnosticChain_Map() {
+	public EOperation getSubscriber__SubscriberDuplicateEmailCheck__DiagnosticChain_Map() {
 		return subscriberEClass.getEOperations().get(0);
 	}
 
@@ -703,7 +713,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSubscriber__Constraint2__DiagnosticChain_Map() {
+	public EOperation getSubscriber__SubscriberEmailCheck__DiagnosticChain_Map() {
 		return subscriberEClass.getEOperations().get(1);
 	}
 
@@ -713,7 +723,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSubscriber__Constraint3__DiagnosticChain_Map() {
+	public EOperation getSubscriber__SubscriberEmailRegexCheck__DiagnosticChain_Map() {
 		return subscriberEClass.getEOperations().get(2);
 	}
 
@@ -723,7 +733,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSubscriber__Constraint4__DiagnosticChain_Map() {
+	public EOperation getSubscriber__SubscriberCampaignsSegmentCheck__DiagnosticChain_Map() {
 		return subscriberEClass.getEOperations().get(3);
 	}
 
@@ -733,7 +743,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getSubscriber__Constraint5__DiagnosticChain_Map() {
+	public EOperation getSubscriber__SubscriberNameCheck__DiagnosticChain_Map() {
 		return subscriberEClass.getEOperations().get(4);
 	}
 
@@ -903,7 +913,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	 * @generated
 	 */
 	@Override
-	public EOperation getEmailCampaign__Constraint10__DiagnosticChain_Map() {
+	public EOperation getEmailCampaign__EmailCampaingSendDateCheck__DiagnosticChain_Map() {
 		return emailCampaignEClass.getEOperations().get(0);
 	}
 
@@ -1196,8 +1206,9 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		createEAttribute(campaignEClass, CAMPAIGN__STATUS);
 		createEReference(campaignEClass, CAMPAIGN__ANALYTICS);
 		createEReference(campaignEClass, CAMPAIGN__SEGMENTS);
-		createEOperation(campaignEClass, CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP);
-		createEOperation(campaignEClass, CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP);
+		createEOperation(campaignEClass, CAMPAIGN___CAMPAIGN_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP);
+		createEOperation(campaignEClass, CAMPAIGN___CAMPAIGN_NAME_CHECK__DIAGNOSTICCHAIN_MAP);
+		createEOperation(campaignEClass, CAMPAIGN___CAMPAIGN_START_END_DATE_CHECK__DIAGNOSTICCHAIN_MAP);
 		createEOperation(campaignEClass, CAMPAIGN___GET_ANALYTICS_DETAILS);
 		createEOperation(campaignEClass, CAMPAIGN___ADD_SEGMENT__STRING);
 		createEOperation(campaignEClass, CAMPAIGN___REMOVE_SEGMENT__STRING);
@@ -1217,8 +1228,8 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		createEAttribute(segmentEClass, SEGMENT__SEGMENT_ID);
 		createEAttribute(segmentEClass, SEGMENT__NAME);
 		createEReference(segmentEClass, SEGMENT__CONDITIONS);
-		createEOperation(segmentEClass, SEGMENT___CONSTRAINT11__DIAGNOSTICCHAIN_MAP);
-		createEOperation(segmentEClass, SEGMENT___CONSTRAINT12__DIAGNOSTICCHAIN_MAP);
+		createEOperation(segmentEClass, SEGMENT___SEGMENT_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP);
+		createEOperation(segmentEClass, SEGMENT___SEGMENT_SUBSRIBERS_SIZE_CHECK__DIAGNOSTICCHAIN_MAP);
 		createEOperation(segmentEClass, SEGMENT___ADD_CONDITION__STRING_STRING_STRING);
 		createEOperation(segmentEClass, SEGMENT___REMOVE_CONDITION__INT);
 		createEOperation(segmentEClass, SEGMENT___VIEW_CONDITIONS);
@@ -1227,8 +1238,8 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__ATTRIBUTE);
 		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__OPERATOR);
 		createEAttribute(segmentConditionEClass, SEGMENT_CONDITION__VALUE);
-		createEOperation(segmentConditionEClass, SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP);
-		createEOperation(segmentConditionEClass, SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP);
+		createEOperation(segmentConditionEClass, SEGMENT_CONDITION___SEGMENT_CONDITION_OPERATER_CHECK__DIAGNOSTICCHAIN_MAP);
+		createEOperation(segmentConditionEClass, SEGMENT_CONDITION___SEGMENT_CONDITION_NULL_CHECK__DIAGNOSTICCHAIN_MAP);
 
 		subscriberEClass = createEClass(SUBSCRIBER);
 		createEAttribute(subscriberEClass, SUBSCRIBER__SUBSCRIBER_ID);
@@ -1239,11 +1250,11 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		createEReference(subscriberEClass, SUBSCRIBER__PREFERENCES);
 		createEReference(subscriberEClass, SUBSCRIBER__SEGMENTS);
 		createEReference(subscriberEClass, SUBSCRIBER__EMAIL_CAMPAIGNS);
-		createEOperation(subscriberEClass, SUBSCRIBER___CONSTRAINT1__DIAGNOSTICCHAIN_MAP);
-		createEOperation(subscriberEClass, SUBSCRIBER___CONSTRAINT2__DIAGNOSTICCHAIN_MAP);
-		createEOperation(subscriberEClass, SUBSCRIBER___CONSTRAINT3__DIAGNOSTICCHAIN_MAP);
-		createEOperation(subscriberEClass, SUBSCRIBER___CONSTRAINT4__DIAGNOSTICCHAIN_MAP);
-		createEOperation(subscriberEClass, SUBSCRIBER___CONSTRAINT5__DIAGNOSTICCHAIN_MAP);
+		createEOperation(subscriberEClass, SUBSCRIBER___SUBSCRIBER_DUPLICATE_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP);
+		createEOperation(subscriberEClass, SUBSCRIBER___SUBSCRIBER_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP);
+		createEOperation(subscriberEClass, SUBSCRIBER___SUBSCRIBER_EMAIL_REGEX_CHECK__DIAGNOSTICCHAIN_MAP);
+		createEOperation(subscriberEClass, SUBSCRIBER___SUBSCRIBER_CAMPAIGNS_SEGMENT_CHECK__DIAGNOSTICCHAIN_MAP);
+		createEOperation(subscriberEClass, SUBSCRIBER___SUBSCRIBER_NAME_CHECK__DIAGNOSTICCHAIN_MAP);
 		createEOperation(subscriberEClass, SUBSCRIBER___ADD_EMAIL_CAMPAIGN__STRING);
 		createEOperation(subscriberEClass, SUBSCRIBER___REMOVE_EMAIL_CAMPAIGN__STRING);
 		createEOperation(subscriberEClass, SUBSCRIBER___UPDATE_PREFERENCES__STRING_PREFERENCE);
@@ -1262,7 +1273,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__TEMPLATE);
 		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__EMAIL_RESPONSES);
 		createEReference(emailCampaignEClass, EMAIL_CAMPAIGN__RECIPIENTS);
-		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___CONSTRAINT10__DIAGNOSTICCHAIN_MAP);
+		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___EMAIL_CAMPAING_SEND_DATE_CHECK__DIAGNOSTICCHAIN_MAP);
 		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___SEND_EMAIL);
 		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___TRACK_CAMPAIGN);
 		createEOperation(emailCampaignEClass, EMAIL_CAMPAIGN___RECORD_EMAIL_RESPONSE__EMAILRESPONSE);
@@ -1338,7 +1349,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		initEReference(getCampaign_Analytics(), this.getCampaignAnalytics(), null, "analytics", null, 0, 1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCampaign_Segments(), this.getSegment(), null, "segments", null, 0, -1, Campaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		EOperation op = initEOperation(getCampaign__Constraint8__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint8", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getCampaign__CampaignDuplicateNameCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "campaignDuplicateNameCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
 		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1347,7 +1358,16 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getCampaign__Constraint7__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint7", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getCampaign__CampaignNameCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "campaignNameCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getCampaign__CampaignStartEndDateCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "campaignStartEndDateCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1387,7 +1407,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		initEAttribute(getSegment_Name(), ecorePackage.getEString(), "name", null, 1, 1, Segment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSegment_Conditions(), this.getSegmentCondition(), null, "conditions", null, 0, -1, Segment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getSegment__Constraint11__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint11", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSegment__SegmentDuplicateNameCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "segmentDuplicateNameCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1396,7 +1416,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSegment__Constraint12__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint12", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSegment__SegmentSubsribersSizeCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "segmentSubsribersSizeCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1420,7 +1440,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		initEAttribute(getSegmentCondition_Operator(), ecorePackage.getEString(), "operator", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getSegmentCondition_Value(), ecorePackage.getEString(), "value", null, 1, 1, SegmentCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getSegmentCondition__Constraint6__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint6", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSegmentCondition__SegmentConditionOperaterCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "segmentConditionOperaterCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1429,7 +1449,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSegmentCondition__Constraint14__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint14", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSegmentCondition__SegmentConditionNullCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "segmentConditionNullCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1448,7 +1468,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		initEReference(getSubscriber_Segments(), this.getSegment(), null, "segments", null, 0, -1, Subscriber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSubscriber_EmailCampaigns(), this.getEmailCampaign(), this.getEmailCampaign_Recipients(), "emailCampaigns", null, 0, -1, Subscriber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getSubscriber__Constraint1__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSubscriber__SubscriberDuplicateEmailCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "subscriberDuplicateEmailCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1457,7 +1477,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSubscriber__Constraint2__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint2", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSubscriber__SubscriberEmailCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "subscriberEmailCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1466,7 +1486,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSubscriber__Constraint3__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint3", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSubscriber__SubscriberEmailRegexCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "subscriberEmailRegexCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1475,7 +1495,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSubscriber__Constraint4__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint4", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSubscriber__SubscriberCampaignsSegmentCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "subscriberCampaignsSegmentCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1484,7 +1504,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSubscriber__Constraint5__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint5", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSubscriber__SubscriberNameCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "subscriberNameCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1527,7 +1547,7 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 		initEReference(getEmailCampaign_EmailResponses(), this.getEmailResponse(), this.getEmailResponse_Campaign(), "emailResponses", null, 0, -1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEmailCampaign_Recipients(), this.getSubscriber(), this.getSubscriber_EmailCampaigns(), "recipients", null, 0, -1, EmailCampaign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getEmailCampaign__Constraint10__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "Constraint10", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEmailCampaign__EmailCampaingSendDateCheck__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "emailCampaingSendDateCheck", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1659,73 +1679,79 @@ public class EmailmarketingsystemPackageImpl extends EPackageImpl implements Ema
 	protected void createOCLAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
 		addAnnotation
-		  (getCampaign__Constraint8__DiagnosticChain_Map(),
+		  (getCampaign__CampaignDuplicateNameCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "Campaign.allInstances()->forAll(c1, c2 | c1 <> c2 implies c1.name <> c2.name)"
 		   });
 		addAnnotation
-		  (getCampaign__Constraint7__DiagnosticChain_Map(),
+		  (getCampaign__CampaignNameCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "self.name<>null"
 		   });
 		addAnnotation
-		  (getSegment__Constraint11__DiagnosticChain_Map(),
+		  (getCampaign__CampaignStartEndDateCheck__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.startDate.toString() < self.endDate.toString()"
+		   });
+		addAnnotation
+		  (getSegment__SegmentDuplicateNameCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "Segment.allInstances()->forAll(s1, s2 | s1 <> s2 implies s1.name <> s2.name)"
 		   });
 		addAnnotation
-		  (getSegment__Constraint12__DiagnosticChain_Map(),
+		  (getSegment__SegmentSubsribersSizeCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", " self.subscribers->size() > 0"
 		   });
 		addAnnotation
-		  (getSegmentCondition__Constraint6__DiagnosticChain_Map(),
+		  (getSegmentCondition__SegmentConditionOperaterCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "self.operator = \'greaterThan\' or self.operator = \'lessThan\' or self.operator = \'equalTo\'  or self.operator = \'contains\'"
 		   });
 		addAnnotation
-		  (getSegmentCondition__Constraint14__DiagnosticChain_Map(),
+		  (getSegmentCondition__SegmentConditionNullCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "self.operator <>null and self.attribute <>null"
 		   });
 		addAnnotation
-		  (getSubscriber__Constraint1__DiagnosticChain_Map(),
+		  (getSubscriber__SubscriberDuplicateEmailCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "Subscriber.allInstances()->forAll(u1, u2 | u1 <> u2 implies u1.email <> u2.email)"
 		   });
 		addAnnotation
-		  (getSubscriber__Constraint2__DiagnosticChain_Map(),
+		  (getSubscriber__SubscriberEmailCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "self.email<>null"
 		   });
 		addAnnotation
-		  (getSubscriber__Constraint3__DiagnosticChain_Map(),
+		  (getSubscriber__SubscriberEmailRegexCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "self.email.matches(\'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$\')"
 		   });
 		addAnnotation
-		  (getSubscriber__Constraint4__DiagnosticChain_Map(),
+		  (getSubscriber__SubscriberCampaignsSegmentCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() <= 1)"
 		   });
 		addAnnotation
-		  (getSubscriber__Constraint5__DiagnosticChain_Map(),
+		  (getSubscriber__SubscriberNameCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "self.firstName  <> null and self.lastName <> null"
 		   });
 		addAnnotation
-		  (getEmailCampaign__Constraint10__DiagnosticChain_Map(),
+		  (getEmailCampaign__EmailCampaingSendDateCheck__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", " self.sendDate.toString() > DateTime.now().toString()"

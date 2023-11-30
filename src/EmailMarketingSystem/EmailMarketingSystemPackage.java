@@ -170,22 +170,31 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	int CAMPAIGN_FEATURE_COUNT = 7;
 
 	/**
-	 * The operation id for the '<em>Constraint8</em>' operation.
+	 * The operation id for the '<em>Campaign Duplicate Name Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP = 0;
+	int CAMPAIGN___CAMPAIGN_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>Constraint7</em>' operation.
+	 * The operation id for the '<em>Campaign Name Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP = 1;
+	int CAMPAIGN___CAMPAIGN_NAME_CHECK__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
+	 * The operation id for the '<em>Campaign Start End Date Check</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAMPAIGN___CAMPAIGN_START_END_DATE_CHECK__DIAGNOSTICCHAIN_MAP = 2;
 
 	/**
 	 * The operation id for the '<em>Get Analytics Details</em>' operation.
@@ -194,7 +203,7 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___GET_ANALYTICS_DETAILS = 2;
+	int CAMPAIGN___GET_ANALYTICS_DETAILS = 3;
 
 	/**
 	 * The operation id for the '<em>Add Segment</em>' operation.
@@ -203,7 +212,7 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___ADD_SEGMENT__STRING = 3;
+	int CAMPAIGN___ADD_SEGMENT__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Remove Segment</em>' operation.
@@ -212,7 +221,7 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___REMOVE_SEGMENT__STRING = 4;
+	int CAMPAIGN___REMOVE_SEGMENT__STRING = 5;
 
 	/**
 	 * The operation id for the '<em>View Segment Details</em>' operation.
@@ -221,7 +230,7 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___VIEW_SEGMENT_DETAILS__STRING = 5;
+	int CAMPAIGN___VIEW_SEGMENT_DETAILS__STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Pause Campaign</em>' operation.
@@ -230,7 +239,7 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___PAUSE_CAMPAIGN = 6;
+	int CAMPAIGN___PAUSE_CAMPAIGN = 7;
 
 	/**
 	 * The operation id for the '<em>Cancel Campaign</em>' operation.
@@ -239,7 +248,7 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN___CANCEL_CAMPAIGN = 7;
+	int CAMPAIGN___CANCEL_CAMPAIGN = 8;
 
 	/**
 	 * The number of operations of the '<em>Campaign</em>' class.
@@ -248,7 +257,7 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAMPAIGN_OPERATION_COUNT = 8;
+	int CAMPAIGN_OPERATION_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link emailmarketingsystem.impl.CampaignAnalyticsImpl <em>Campaign Analytics</em>}' class.
@@ -379,22 +388,22 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	int SEGMENT_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Constraint11</em>' operation.
+	 * The operation id for the '<em>Segment Duplicate Name Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENT___CONSTRAINT11__DIAGNOSTICCHAIN_MAP = 0;
+	int SEGMENT___SEGMENT_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>Constraint12</em>' operation.
+	 * The operation id for the '<em>Segment Subsribers Size Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENT___CONSTRAINT12__DIAGNOSTICCHAIN_MAP = 1;
+	int SEGMENT___SEGMENT_SUBSRIBERS_SIZE_CHECK__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The operation id for the '<em>Add Condition</em>' operation.
@@ -479,22 +488,22 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	int SEGMENT_CONDITION_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Constraint6</em>' operation.
+	 * The operation id for the '<em>Segment Condition Operater Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP = 0;
+	int SEGMENT_CONDITION___SEGMENT_CONDITION_OPERATER_CHECK__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>Constraint14</em>' operation.
+	 * The operation id for the '<em>Segment Condition Null Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP = 1;
+	int SEGMENT_CONDITION___SEGMENT_CONDITION_NULL_CHECK__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The number of operations of the '<em>Segment Condition</em>' class.
@@ -597,49 +606,49 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	int SUBSCRIBER_FEATURE_COUNT = 8;
 
 	/**
-	 * The operation id for the '<em>Constraint1</em>' operation.
+	 * The operation id for the '<em>Subscriber Duplicate Email Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___CONSTRAINT1__DIAGNOSTICCHAIN_MAP = 0;
+	int SUBSCRIBER___SUBSCRIBER_DUPLICATE_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>Constraint2</em>' operation.
+	 * The operation id for the '<em>Subscriber Email Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___CONSTRAINT2__DIAGNOSTICCHAIN_MAP = 1;
+	int SUBSCRIBER___SUBSCRIBER_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
-	 * The operation id for the '<em>Constraint3</em>' operation.
+	 * The operation id for the '<em>Subscriber Email Regex Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___CONSTRAINT3__DIAGNOSTICCHAIN_MAP = 2;
+	int SUBSCRIBER___SUBSCRIBER_EMAIL_REGEX_CHECK__DIAGNOSTICCHAIN_MAP = 2;
 
 	/**
-	 * The operation id for the '<em>Constraint4</em>' operation.
+	 * The operation id for the '<em>Subscriber Campaigns Segment Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___CONSTRAINT4__DIAGNOSTICCHAIN_MAP = 3;
+	int SUBSCRIBER___SUBSCRIBER_CAMPAIGNS_SEGMENT_CHECK__DIAGNOSTICCHAIN_MAP = 3;
 
 	/**
-	 * The operation id for the '<em>Constraint5</em>' operation.
+	 * The operation id for the '<em>Subscriber Name Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBER___CONSTRAINT5__DIAGNOSTICCHAIN_MAP = 4;
+	int SUBSCRIBER___SUBSCRIBER_NAME_CHECK__DIAGNOSTICCHAIN_MAP = 4;
 
 	/**
 	 * The operation id for the '<em>Add Email Campaign</em>' operation.
@@ -887,22 +896,31 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	int EMAIL_CAMPAIGN_FEATURE_COUNT = CAMPAIGN_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Constraint8</em>' operation.
+	 * The operation id for the '<em>Campaign Duplicate Name Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP = CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP;
+	int EMAIL_CAMPAIGN___CAMPAIGN_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP = CAMPAIGN___CAMPAIGN_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP;
 
 	/**
-	 * The operation id for the '<em>Constraint7</em>' operation.
+	 * The operation id for the '<em>Campaign Name Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP = CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP;
+	int EMAIL_CAMPAIGN___CAMPAIGN_NAME_CHECK__DIAGNOSTICCHAIN_MAP = CAMPAIGN___CAMPAIGN_NAME_CHECK__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Campaign Start End Date Check</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_CAMPAIGN___CAMPAIGN_START_END_DATE_CHECK__DIAGNOSTICCHAIN_MAP = CAMPAIGN___CAMPAIGN_START_END_DATE_CHECK__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The operation id for the '<em>Get Analytics Details</em>' operation.
@@ -959,13 +977,13 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	int EMAIL_CAMPAIGN___CANCEL_CAMPAIGN = CAMPAIGN___CANCEL_CAMPAIGN;
 
 	/**
-	 * The operation id for the '<em>Constraint10</em>' operation.
+	 * The operation id for the '<em>Email Campaing Send Date Check</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_CAMPAIGN___CONSTRAINT10__DIAGNOSTICCHAIN_MAP = CAMPAIGN_OPERATION_COUNT + 0;
+	int EMAIL_CAMPAIGN___EMAIL_CAMPAING_SEND_DATE_CHECK__DIAGNOSTICCHAIN_MAP = CAMPAIGN_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Send Email</em>' operation.
@@ -1378,24 +1396,34 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	EReference getCampaign_Segments();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.Campaign#Constraint8(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint8</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.Campaign#campaignDuplicateNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Campaign Duplicate Name Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint8</em>' operation.
-	 * @see emailmarketingsystem.Campaign#Constraint8(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Campaign Duplicate Name Check</em>' operation.
+	 * @see emailmarketingsystem.Campaign#campaignDuplicateNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getCampaign__Constraint8__DiagnosticChain_Map();
+	EOperation getCampaign__CampaignDuplicateNameCheck__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.Campaign#Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint7</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.Campaign#campaignNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Campaign Name Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint7</em>' operation.
-	 * @see emailmarketingsystem.Campaign#Constraint7(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Campaign Name Check</em>' operation.
+	 * @see emailmarketingsystem.Campaign#campaignNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getCampaign__Constraint7__DiagnosticChain_Map();
+	EOperation getCampaign__CampaignNameCheck__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link emailmarketingsystem.Campaign#campaignStartEndDateCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Campaign Start End Date Check</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Campaign Start End Date Check</em>' operation.
+	 * @see emailmarketingsystem.Campaign#campaignStartEndDateCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getCampaign__CampaignStartEndDateCheck__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for the '{@link emailmarketingsystem.Campaign#getAnalyticsDetails() <em>Get Analytics Details</em>}' operation.
@@ -1574,24 +1602,24 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	EReference getSegment_Conditions();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.Segment#Constraint11(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint11</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.Segment#segmentDuplicateNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Segment Duplicate Name Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint11</em>' operation.
-	 * @see emailmarketingsystem.Segment#Constraint11(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Segment Duplicate Name Check</em>' operation.
+	 * @see emailmarketingsystem.Segment#segmentDuplicateNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSegment__Constraint11__DiagnosticChain_Map();
+	EOperation getSegment__SegmentDuplicateNameCheck__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.Segment#Constraint12(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint12</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.Segment#segmentSubsribersSizeCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Segment Subsribers Size Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint12</em>' operation.
-	 * @see emailmarketingsystem.Segment#Constraint12(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Segment Subsribers Size Check</em>' operation.
+	 * @see emailmarketingsystem.Segment#segmentSubsribersSizeCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSegment__Constraint12__DiagnosticChain_Map();
+	EOperation getSegment__SegmentSubsribersSizeCheck__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for the '{@link emailmarketingsystem.Segment#addCondition(java.lang.String, java.lang.String, java.lang.String) <em>Add Condition</em>}' operation.
@@ -1667,24 +1695,24 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	EAttribute getSegmentCondition_Value();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.SegmentCondition#Constraint6(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint6</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.SegmentCondition#segmentConditionOperaterCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Segment Condition Operater Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint6</em>' operation.
-	 * @see emailmarketingsystem.SegmentCondition#Constraint6(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Segment Condition Operater Check</em>' operation.
+	 * @see emailmarketingsystem.SegmentCondition#segmentConditionOperaterCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSegmentCondition__Constraint6__DiagnosticChain_Map();
+	EOperation getSegmentCondition__SegmentConditionOperaterCheck__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.SegmentCondition#Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint14</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.SegmentCondition#segmentConditionNullCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Segment Condition Null Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint14</em>' operation.
-	 * @see emailmarketingsystem.SegmentCondition#Constraint14(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Segment Condition Null Check</em>' operation.
+	 * @see emailmarketingsystem.SegmentCondition#segmentConditionNullCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSegmentCondition__Constraint14__DiagnosticChain_Map();
+	EOperation getSegmentCondition__SegmentConditionNullCheck__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link emailmarketingsystem.Subscriber <em>Subscriber</em>}'.
@@ -1785,54 +1813,54 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	EReference getSubscriber_EmailCampaigns();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#Constraint1(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint1</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#subscriberDuplicateEmailCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Duplicate Email Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint1</em>' operation.
-	 * @see emailmarketingsystem.Subscriber#Constraint1(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Subscriber Duplicate Email Check</em>' operation.
+	 * @see emailmarketingsystem.Subscriber#subscriberDuplicateEmailCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSubscriber__Constraint1__DiagnosticChain_Map();
+	EOperation getSubscriber__SubscriberDuplicateEmailCheck__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#Constraint2(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint2</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#subscriberEmailCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Email Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint2</em>' operation.
-	 * @see emailmarketingsystem.Subscriber#Constraint2(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Subscriber Email Check</em>' operation.
+	 * @see emailmarketingsystem.Subscriber#subscriberEmailCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSubscriber__Constraint2__DiagnosticChain_Map();
+	EOperation getSubscriber__SubscriberEmailCheck__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#Constraint3(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint3</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#subscriberEmailRegexCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Email Regex Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint3</em>' operation.
-	 * @see emailmarketingsystem.Subscriber#Constraint3(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Subscriber Email Regex Check</em>' operation.
+	 * @see emailmarketingsystem.Subscriber#subscriberEmailRegexCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSubscriber__Constraint3__DiagnosticChain_Map();
+	EOperation getSubscriber__SubscriberEmailRegexCheck__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#Constraint4(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint4</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#subscriberCampaignsSegmentCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Campaigns Segment Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint4</em>' operation.
-	 * @see emailmarketingsystem.Subscriber#Constraint4(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Subscriber Campaigns Segment Check</em>' operation.
+	 * @see emailmarketingsystem.Subscriber#subscriberCampaignsSegmentCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSubscriber__Constraint4__DiagnosticChain_Map();
+	EOperation getSubscriber__SubscriberCampaignsSegmentCheck__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#Constraint5(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint5</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#subscriberNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscriber Name Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint5</em>' operation.
-	 * @see emailmarketingsystem.Subscriber#Constraint5(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Subscriber Name Check</em>' operation.
+	 * @see emailmarketingsystem.Subscriber#subscriberNameCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSubscriber__Constraint5__DiagnosticChain_Map();
+	EOperation getSubscriber__SubscriberNameCheck__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for the '{@link emailmarketingsystem.Subscriber#addEmailCampaign(java.lang.String) <em>Add Email Campaign</em>}' operation.
@@ -2002,14 +2030,14 @@ public interface EmailmarketingsystemPackage extends EPackage {
 	EReference getEmailCampaign_Recipients();
 
 	/**
-	 * Returns the meta object for the '{@link emailmarketingsystem.EmailCampaign#Constraint10(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint10</em>}' operation.
+	 * Returns the meta object for the '{@link emailmarketingsystem.EmailCampaign#emailCampaingSendDateCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Email Campaing Send Date Check</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Constraint10</em>' operation.
-	 * @see emailmarketingsystem.EmailCampaign#Constraint10(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Email Campaing Send Date Check</em>' operation.
+	 * @see emailmarketingsystem.EmailCampaign#emailCampaingSendDateCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getEmailCampaign__Constraint10__DiagnosticChain_Map();
+	EOperation getEmailCampaign__EmailCampaingSendDateCheck__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for the '{@link emailmarketingsystem.EmailCampaign#sendEmail() <em>Send Email</em>}' operation.
@@ -2372,20 +2400,28 @@ public interface EmailmarketingsystemPackage extends EPackage {
 		EReference CAMPAIGN__SEGMENTS = eINSTANCE.getCampaign_Segments();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint8</b></em>' operation.
+		 * The meta object literal for the '<em><b>Campaign Duplicate Name Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CAMPAIGN___CONSTRAINT8__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCampaign__Constraint8__DiagnosticChain_Map();
+		EOperation CAMPAIGN___CAMPAIGN_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCampaign__CampaignDuplicateNameCheck__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint7</b></em>' operation.
+		 * The meta object literal for the '<em><b>Campaign Name Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CAMPAIGN___CONSTRAINT7__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCampaign__Constraint7__DiagnosticChain_Map();
+		EOperation CAMPAIGN___CAMPAIGN_NAME_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCampaign__CampaignNameCheck__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Campaign Start End Date Check</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CAMPAIGN___CAMPAIGN_START_END_DATE_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCampaign__CampaignStartEndDateCheck__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Analytics Details</b></em>' operation.
@@ -2528,20 +2564,20 @@ public interface EmailmarketingsystemPackage extends EPackage {
 		EReference SEGMENT__CONDITIONS = eINSTANCE.getSegment_Conditions();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint11</b></em>' operation.
+		 * The meta object literal for the '<em><b>Segment Duplicate Name Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SEGMENT___CONSTRAINT11__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegment__Constraint11__DiagnosticChain_Map();
+		EOperation SEGMENT___SEGMENT_DUPLICATE_NAME_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegment__SegmentDuplicateNameCheck__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint12</b></em>' operation.
+		 * The meta object literal for the '<em><b>Segment Subsribers Size Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SEGMENT___CONSTRAINT12__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegment__Constraint12__DiagnosticChain_Map();
+		EOperation SEGMENT___SEGMENT_SUBSRIBERS_SIZE_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegment__SegmentSubsribersSizeCheck__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Condition</b></em>' operation.
@@ -2602,20 +2638,20 @@ public interface EmailmarketingsystemPackage extends EPackage {
 		EAttribute SEGMENT_CONDITION__VALUE = eINSTANCE.getSegmentCondition_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint6</b></em>' operation.
+		 * The meta object literal for the '<em><b>Segment Condition Operater Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SEGMENT_CONDITION___CONSTRAINT6__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegmentCondition__Constraint6__DiagnosticChain_Map();
+		EOperation SEGMENT_CONDITION___SEGMENT_CONDITION_OPERATER_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegmentCondition__SegmentConditionOperaterCheck__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint14</b></em>' operation.
+		 * The meta object literal for the '<em><b>Segment Condition Null Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SEGMENT_CONDITION___CONSTRAINT14__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegmentCondition__Constraint14__DiagnosticChain_Map();
+		EOperation SEGMENT_CONDITION___SEGMENT_CONDITION_NULL_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSegmentCondition__SegmentConditionNullCheck__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link emailmarketingsystem.impl.SubscriberImpl <em>Subscriber</em>}' class.
@@ -2692,44 +2728,44 @@ public interface EmailmarketingsystemPackage extends EPackage {
 		EReference SUBSCRIBER__EMAIL_CAMPAIGNS = eINSTANCE.getSubscriber_EmailCampaigns();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint1</b></em>' operation.
+		 * The meta object literal for the '<em><b>Subscriber Duplicate Email Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___CONSTRAINT1__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__Constraint1__DiagnosticChain_Map();
+		EOperation SUBSCRIBER___SUBSCRIBER_DUPLICATE_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__SubscriberDuplicateEmailCheck__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint2</b></em>' operation.
+		 * The meta object literal for the '<em><b>Subscriber Email Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___CONSTRAINT2__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__Constraint2__DiagnosticChain_Map();
+		EOperation SUBSCRIBER___SUBSCRIBER_EMAIL_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__SubscriberEmailCheck__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint3</b></em>' operation.
+		 * The meta object literal for the '<em><b>Subscriber Email Regex Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___CONSTRAINT3__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__Constraint3__DiagnosticChain_Map();
+		EOperation SUBSCRIBER___SUBSCRIBER_EMAIL_REGEX_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__SubscriberEmailRegexCheck__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint4</b></em>' operation.
+		 * The meta object literal for the '<em><b>Subscriber Campaigns Segment Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___CONSTRAINT4__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__Constraint4__DiagnosticChain_Map();
+		EOperation SUBSCRIBER___SUBSCRIBER_CAMPAIGNS_SEGMENT_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__SubscriberCampaignsSegmentCheck__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint5</b></em>' operation.
+		 * The meta object literal for the '<em><b>Subscriber Name Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBER___CONSTRAINT5__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__Constraint5__DiagnosticChain_Map();
+		EOperation SUBSCRIBER___SUBSCRIBER_NAME_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscriber__SubscriberNameCheck__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Email Campaign</b></em>' operation.
@@ -2864,12 +2900,12 @@ public interface EmailmarketingsystemPackage extends EPackage {
 		EReference EMAIL_CAMPAIGN__RECIPIENTS = eINSTANCE.getEmailCampaign_Recipients();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint10</b></em>' operation.
+		 * The meta object literal for the '<em><b>Email Campaing Send Date Check</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMAIL_CAMPAIGN___CONSTRAINT10__DIAGNOSTICCHAIN_MAP = eINSTANCE.getEmailCampaign__Constraint10__DiagnosticChain_Map();
+		EOperation EMAIL_CAMPAIGN___EMAIL_CAMPAING_SEND_DATE_CHECK__DIAGNOSTICCHAIN_MAP = eINSTANCE.getEmailCampaign__EmailCampaingSendDateCheck__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '<em><b>Send Email</b></em>' operation.

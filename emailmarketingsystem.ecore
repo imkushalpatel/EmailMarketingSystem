@@ -11,7 +11,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Campaign">
-    <eOperations name="Constraint8" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="campaignDuplicateNameCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="Campaign.allInstances()->forAll(c1, c2 | c1 &lt;> c2 implies c1.name &lt;> c2.name)"/>
       </eAnnotations>
@@ -33,12 +33,34 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="Constraint7" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="campaignNameCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="self.name&lt;>null"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="self.name&lt;>null"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="campaignStartEndDateCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="self.startDate.toString() &lt; self.endDate.toString()"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="self.startDate.toString() &lt; self.endDate.toString()"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -65,11 +87,7 @@
     <eOperations name="viewSegmentDetails" ordered="false" lowerBound="1" eType="#//Segment">
       <eParameters name="segmentId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
-    <eOperations name="pauseCampaign" ordered="false" lowerBound="1">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.startDate.toString() &lt; self.endDate.toString()"/>
-      </eAnnotations>
-    </eOperations>
+    <eOperations name="pauseCampaign" ordered="false" lowerBound="1"/>
     <eOperations name="cancelCampaign" ordered="false" lowerBound="1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="campaignId" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -104,7 +122,7 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Segment">
-    <eOperations name="Constraint11" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="segmentDuplicateNameCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="Segment.allInstances()->forAll(s1, s2 | s1 &lt;> s2 implies s1.name &lt;> s2.name)"/>
       </eAnnotations>
@@ -126,7 +144,7 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="Constraint12" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="segmentSubsribersSizeCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value=" self.subscribers->size() > 0"/>
       </eAnnotations>
@@ -165,7 +183,7 @@
         upperBound="-1" eType="#//SegmentCondition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SegmentCondition">
-    <eOperations name="Constraint6" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="segmentConditionOperaterCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="self.operator = 'greaterThan' or self.operator = 'lessThan' or self.operator = 'equalTo'  or self.operator = 'contains'"/>
       </eAnnotations>
@@ -187,7 +205,7 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="Constraint14" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="segmentConditionNullCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="self.operator &lt;>null and self.attribute &lt;>null"/>
       </eAnnotations>
@@ -217,7 +235,7 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Subscriber">
-    <eOperations name="Constraint1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="subscriberDuplicateEmailCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="Subscriber.allInstances()->forAll(u1, u2 | u1 &lt;> u2 implies u1.email &lt;> u2.email)"/>
       </eAnnotations>
@@ -239,7 +257,7 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="Constraint2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="subscriberEmailCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="self.email&lt;>null"/>
       </eAnnotations>
@@ -261,7 +279,7 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="Constraint3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="subscriberEmailRegexCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="self.email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')"/>
       </eAnnotations>
@@ -283,7 +301,7 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="Constraint4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="subscriberCampaignsSegmentCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="self.emailCampaigns->forAll(c | c.segments->select(s | s.subscribers->includes(self))->size() &lt;= 1)"/>
       </eAnnotations>
@@ -305,7 +323,7 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="Constraint5" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="subscriberNameCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value="self.firstName  &lt;> null and self.lastName &lt;> null"/>
       </eAnnotations>
@@ -376,7 +394,7 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EmailCampaign" eSuperTypes="#//Campaign">
-    <eOperations name="Constraint10" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="emailCampaingSendDateCheck" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="body" value=" self.sendDate.toString() > DateTime.now().toString()"/>
       </eAnnotations>

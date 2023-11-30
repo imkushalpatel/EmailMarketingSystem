@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <notation:Diagram xmi:id="_3ThKYX8CEe6NmLc2hrX90w" type="PapyrusUMLStateMachineDiagram" name="Campaign State Machine" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_3ThKYn8CEe6NmLc2hrX90w" type="StateMachine_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_3ThKY38CEe6NmLc2hrX90w" type="StateMachine_NameLabel">
@@ -1360,7 +1360,7 @@
       <element xsi:nil="true"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ImCTYo8PEe6BHOusRuNBKQ" points="[0, 0, -643984, -643984]$[160, 53, -643984, -643984]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JGRSoI8PEe6BHOusRuNBKQ" id="(0.5063291139240507,0.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JGRSoY8PEe6BHOusRuNBKQ" id="(0.0,0.5607476635514018)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JGRSoY8PEe6BHOusRuNBKQ" id="(0.0,0.6230529595015576)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_SlQ8po8PEe6BHOusRuNBKQ" type="Constraint_ContextEdge" source="_Sj31gI8PEe6BHOusRuNBKQ" target="_UXWhcX8NEe6NmLc2hrX90w">
       <children xmi:type="notation:DecorationNode" xmi:id="_SlQ8qY8PEe6BHOusRuNBKQ" type="Constraint_KeywordLabel">

@@ -107,7 +107,7 @@ public interface Segment extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='Segment.allInstances()-&gt;forAll(s1, s2 | s1 &lt;&gt; s2 implies s1.name &lt;&gt; s2.name)'"
 	 * @generated
 	 */
-	boolean Constraint11(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean segmentDuplicateNameCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,7 +120,7 @@ public interface Segment extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body=' self.subscribers-&gt;size() &gt; 0'"
 	 * @generated
 	 */
-	boolean Constraint12(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean segmentSubsribersSizeCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->

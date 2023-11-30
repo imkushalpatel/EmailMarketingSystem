@@ -2,5 +2,5 @@ projectKey=EmailMarketingSystem
 serverUrl=http://localhost:9000
 serverVersion=10.3.0.82913
 dashboardUrl=http://localhost:9000/dashboard?id=EmailMarketingSystem
-ceTaskId=AYwdLzSSM9yIL8AL7o4a
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYwdLzSSM9yIL8AL7o4a
+ceTaskId=AYwdwefsqit6EREUxx4o
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYwdwefsqit6EREUxx4o

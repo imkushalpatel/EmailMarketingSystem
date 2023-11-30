@@ -129,7 +129,7 @@ public interface EmailCampaign extends Campaign {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body=' self.sendDate.toString() &gt; DateTime.now().toString()'"
 	 * @generated
 	 */
-	boolean Constraint10(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean emailCampaingSendDateCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->

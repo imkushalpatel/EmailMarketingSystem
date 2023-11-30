@@ -225,7 +225,7 @@ public interface Subscriber extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='Subscriber.allInstances()-&gt;forAll(u1, u2 | u1 &lt;&gt; u2 implies u1.email &lt;&gt; u2.email)'"
 	 * @generated
 	 */
-	boolean Constraint1(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean subscriberDuplicateEmailCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -238,7 +238,7 @@ public interface Subscriber extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.email&lt;&gt;null'"
 	 * @generated
 	 */
-	boolean Constraint2(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean subscriberEmailCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -251,7 +251,7 @@ public interface Subscriber extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.email.matches(\'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$\')'"
 	 * @generated
 	 */
-	boolean Constraint3(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean subscriberEmailRegexCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -264,7 +264,7 @@ public interface Subscriber extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.emailCampaigns-&gt;forAll(c | c.segments-&gt;select(s | s.subscribers-&gt;includes(self))-&gt;size() &lt;= 1)'"
 	 * @generated
 	 */
-	boolean Constraint4(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean subscriberCampaignsSegmentCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -277,7 +277,7 @@ public interface Subscriber extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.firstName  &lt;&gt; null and self.lastName &lt;&gt; null'"
 	 * @generated
 	 */
-	boolean Constraint5(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean subscriberNameCheck(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->

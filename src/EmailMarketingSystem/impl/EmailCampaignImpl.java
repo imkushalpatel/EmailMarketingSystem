@@ -230,21 +230,21 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	}
 
 	/**
-	 * The cached validation expression for the '{@link #Constraint10(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Constraint10</em>}' invariant operation.
+	 * The cached validation expression for the '{@link #emailCampaingSendDateCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Email Campaing Send Date Check</em>}' invariant operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #Constraint10(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see #emailCampaingSendDateCheck(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT10_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = " self.sendDate.toString() > DateTime.now().toString()";
+	protected static final String EMAIL_CAMPAING_SEND_DATE_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION = " self.sendDate.toString() > DateTime.now().toString()";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean Constraint10(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean emailCampaingSendDateCheck(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			EmailmarketingsystemValidator.validate
 				(EmailmarketingsystemPackage.Literals.EMAIL_CAMPAIGN,
@@ -252,11 +252,11 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
-				 EmailmarketingsystemPackage.Literals.EMAIL_CAMPAIGN___CONSTRAINT10__DIAGNOSTICCHAIN_MAP,
-				 CONSTRAINT10_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
+				 EmailmarketingsystemPackage.Literals.EMAIL_CAMPAIGN___EMAIL_CAMPAING_SEND_DATE_CHECK__DIAGNOSTICCHAIN_MAP,
+				 EMAIL_CAMPAING_SEND_DATE_CHECK_DIAGNOSTIC_CHAIN_MAP__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 EmailmarketingsystemValidator.DIAGNOSTIC_SOURCE,
-				 EmailmarketingsystemValidator.EMAIL_CAMPAIGN__CONSTRAINT10);
+				 EmailmarketingsystemValidator.EMAIL_CAMPAIGN__EMAIL_CAMPAING_SEND_DATE_CHECK);
 	}
 
 	/**
@@ -432,8 +432,8 @@ public class EmailCampaignImpl extends CampaignImpl implements EmailCampaign {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EmailmarketingsystemPackage.EMAIL_CAMPAIGN___CONSTRAINT10__DIAGNOSTICCHAIN_MAP:
-				return Constraint10((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case EmailmarketingsystemPackage.EMAIL_CAMPAIGN___EMAIL_CAMPAING_SEND_DATE_CHECK__DIAGNOSTICCHAIN_MAP:
+				return emailCampaingSendDateCheck((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case EmailmarketingsystemPackage.EMAIL_CAMPAIGN___SEND_EMAIL:
 				sendEmail();
 				return null;

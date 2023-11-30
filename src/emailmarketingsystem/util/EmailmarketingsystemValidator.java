@@ -43,100 +43,108 @@ public class EmailmarketingsystemValidator extends EObjectValidator {
 	public static final String DIAGNOSTIC_SOURCE = "emailmarketingsystem";
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint8' of 'Campaign'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Campaign Duplicate Name Check' of 'Campaign'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CAMPAIGN__CONSTRAINT8 = 1;
+	public static final int CAMPAIGN__CAMPAIGN_DUPLICATE_NAME_CHECK = 1;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint7' of 'Campaign'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Campaign Name Check' of 'Campaign'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CAMPAIGN__CONSTRAINT7 = 2;
+	public static final int CAMPAIGN__CAMPAIGN_NAME_CHECK = 2;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint11' of 'Segment'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Campaign Start End Date Check' of 'Campaign'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SEGMENT__CONSTRAINT11 = 3;
+	public static final int CAMPAIGN__CAMPAIGN_START_END_DATE_CHECK = 3;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint12' of 'Segment'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Segment Duplicate Name Check' of 'Segment'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SEGMENT__CONSTRAINT12 = 4;
+	public static final int SEGMENT__SEGMENT_DUPLICATE_NAME_CHECK = 4;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint6' of 'Segment Condition'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Segment Subsribers Size Check' of 'Segment'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SEGMENT_CONDITION__CONSTRAINT6 = 5;
+	public static final int SEGMENT__SEGMENT_SUBSRIBERS_SIZE_CHECK = 5;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint14' of 'Segment Condition'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Segment Condition Operater Check' of 'Segment Condition'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SEGMENT_CONDITION__CONSTRAINT14 = 6;
+	public static final int SEGMENT_CONDITION__SEGMENT_CONDITION_OPERATER_CHECK = 6;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint1' of 'Subscriber'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Segment Condition Null Check' of 'Segment Condition'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT1 = 7;
+	public static final int SEGMENT_CONDITION__SEGMENT_CONDITION_NULL_CHECK = 7;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint2' of 'Subscriber'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Subscriber Duplicate Email Check' of 'Subscriber'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT2 = 8;
+	public static final int SUBSCRIBER__SUBSCRIBER_DUPLICATE_EMAIL_CHECK = 8;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint3' of 'Subscriber'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Subscriber Email Check' of 'Subscriber'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT3 = 9;
+	public static final int SUBSCRIBER__SUBSCRIBER_EMAIL_CHECK = 9;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint4' of 'Subscriber'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Subscriber Email Regex Check' of 'Subscriber'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT4 = 10;
+	public static final int SUBSCRIBER__SUBSCRIBER_EMAIL_REGEX_CHECK = 10;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint5' of 'Subscriber'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Subscriber Campaigns Segment Check' of 'Subscriber'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBER__CONSTRAINT5 = 11;
+	public static final int SUBSCRIBER__SUBSCRIBER_CAMPAIGNS_SEGMENT_CHECK = 11;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint10' of 'Email Campaign'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Subscriber Name Check' of 'Subscriber'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int EMAIL_CAMPAIGN__CONSTRAINT10 = 12;
+	public static final int SUBSCRIBER__SUBSCRIBER_NAME_CHECK = 12;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Email Campaing Send Date Check' of 'Email Campaign'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int EMAIL_CAMPAIGN__EMAIL_CAMPAING_SEND_DATE_CHECK = 13;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Constraint13' of 'Email Template'.
@@ -144,7 +152,7 @@ public class EmailmarketingsystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int EMAIL_TEMPLATE__CONSTRAINT13 = 13;
+	public static final int EMAIL_TEMPLATE__CONSTRAINT13 = 14;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -152,7 +160,7 @@ public class EmailmarketingsystemValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 13;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 14;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -259,29 +267,40 @@ public class EmailmarketingsystemValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(campaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(campaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(campaign, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCampaign_Constraint8(campaign, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCampaign_Constraint7(campaign, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCampaign_campaignDuplicateNameCheck(campaign, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCampaign_campaignNameCheck(campaign, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCampaign_campaignStartEndDateCheck(campaign, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the Constraint8 constraint of '<em>Campaign</em>'.
+	 * Validates the campaignDuplicateNameCheck constraint of '<em>Campaign</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCampaign_Constraint8(Campaign campaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return campaign.Constraint8(diagnostics, context);
+	public boolean validateCampaign_campaignDuplicateNameCheck(Campaign campaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return campaign.campaignDuplicateNameCheck(diagnostics, context);
 	}
 
 	/**
-	 * Validates the Constraint7 constraint of '<em>Campaign</em>'.
+	 * Validates the campaignNameCheck constraint of '<em>Campaign</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCampaign_Constraint7(Campaign campaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return campaign.Constraint7(diagnostics, context);
+	public boolean validateCampaign_campaignNameCheck(Campaign campaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return campaign.campaignNameCheck(diagnostics, context);
+	}
+
+	/**
+	 * Validates the campaignStartEndDateCheck constraint of '<em>Campaign</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCampaign_campaignStartEndDateCheck(Campaign campaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return campaign.campaignStartEndDateCheck(diagnostics, context);
 	}
 
 	/**
@@ -308,29 +327,29 @@ public class EmailmarketingsystemValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(segment, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(segment, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(segment, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSegment_Constraint11(segment, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSegment_Constraint12(segment, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSegment_segmentDuplicateNameCheck(segment, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSegment_segmentSubsribersSizeCheck(segment, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the Constraint11 constraint of '<em>Segment</em>'.
+	 * Validates the segmentDuplicateNameCheck constraint of '<em>Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSegment_Constraint11(Segment segment, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return segment.Constraint11(diagnostics, context);
+	public boolean validateSegment_segmentDuplicateNameCheck(Segment segment, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return segment.segmentDuplicateNameCheck(diagnostics, context);
 	}
 
 	/**
-	 * Validates the Constraint12 constraint of '<em>Segment</em>'.
+	 * Validates the segmentSubsribersSizeCheck constraint of '<em>Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSegment_Constraint12(Segment segment, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return segment.Constraint12(diagnostics, context);
+	public boolean validateSegment_segmentSubsribersSizeCheck(Segment segment, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return segment.segmentSubsribersSizeCheck(diagnostics, context);
 	}
 
 	/**
@@ -348,29 +367,29 @@ public class EmailmarketingsystemValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(segmentCondition, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(segmentCondition, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(segmentCondition, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSegmentCondition_Constraint6(segmentCondition, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSegmentCondition_Constraint14(segmentCondition, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSegmentCondition_segmentConditionOperaterCheck(segmentCondition, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSegmentCondition_segmentConditionNullCheck(segmentCondition, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the Constraint6 constraint of '<em>Segment Condition</em>'.
+	 * Validates the segmentConditionOperaterCheck constraint of '<em>Segment Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSegmentCondition_Constraint6(SegmentCondition segmentCondition, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return segmentCondition.Constraint6(diagnostics, context);
+	public boolean validateSegmentCondition_segmentConditionOperaterCheck(SegmentCondition segmentCondition, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return segmentCondition.segmentConditionOperaterCheck(diagnostics, context);
 	}
 
 	/**
-	 * Validates the Constraint14 constraint of '<em>Segment Condition</em>'.
+	 * Validates the segmentConditionNullCheck constraint of '<em>Segment Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSegmentCondition_Constraint14(SegmentCondition segmentCondition, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return segmentCondition.Constraint14(diagnostics, context);
+	public boolean validateSegmentCondition_segmentConditionNullCheck(SegmentCondition segmentCondition, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return segmentCondition.segmentConditionNullCheck(diagnostics, context);
 	}
 
 	/**
@@ -388,62 +407,62 @@ public class EmailmarketingsystemValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(subscriber, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(subscriber, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(subscriber, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSubscriber_Constraint1(subscriber, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSubscriber_Constraint2(subscriber, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSubscriber_Constraint3(subscriber, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSubscriber_Constraint4(subscriber, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSubscriber_Constraint5(subscriber, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSubscriber_subscriberDuplicateEmailCheck(subscriber, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSubscriber_subscriberEmailCheck(subscriber, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSubscriber_subscriberEmailRegexCheck(subscriber, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSubscriber_subscriberCampaignsSegmentCheck(subscriber, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSubscriber_subscriberNameCheck(subscriber, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the Constraint1 constraint of '<em>Subscriber</em>'.
+	 * Validates the subscriberDuplicateEmailCheck constraint of '<em>Subscriber</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSubscriber_Constraint1(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return subscriber.Constraint1(diagnostics, context);
+	public boolean validateSubscriber_subscriberDuplicateEmailCheck(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return subscriber.subscriberDuplicateEmailCheck(diagnostics, context);
 	}
 
 	/**
-	 * Validates the Constraint2 constraint of '<em>Subscriber</em>'.
+	 * Validates the subscriberEmailCheck constraint of '<em>Subscriber</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSubscriber_Constraint2(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return subscriber.Constraint2(diagnostics, context);
+	public boolean validateSubscriber_subscriberEmailCheck(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return subscriber.subscriberEmailCheck(diagnostics, context);
 	}
 
 	/**
-	 * Validates the Constraint3 constraint of '<em>Subscriber</em>'.
+	 * Validates the subscriberEmailRegexCheck constraint of '<em>Subscriber</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSubscriber_Constraint3(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return subscriber.Constraint3(diagnostics, context);
+	public boolean validateSubscriber_subscriberEmailRegexCheck(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return subscriber.subscriberEmailRegexCheck(diagnostics, context);
 	}
 
 	/**
-	 * Validates the Constraint4 constraint of '<em>Subscriber</em>'.
+	 * Validates the subscriberCampaignsSegmentCheck constraint of '<em>Subscriber</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSubscriber_Constraint4(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return subscriber.Constraint4(diagnostics, context);
+	public boolean validateSubscriber_subscriberCampaignsSegmentCheck(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return subscriber.subscriberCampaignsSegmentCheck(diagnostics, context);
 	}
 
 	/**
-	 * Validates the Constraint5 constraint of '<em>Subscriber</em>'.
+	 * Validates the subscriberNameCheck constraint of '<em>Subscriber</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSubscriber_Constraint5(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return subscriber.Constraint5(diagnostics, context);
+	public boolean validateSubscriber_subscriberNameCheck(Subscriber subscriber, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return subscriber.subscriberNameCheck(diagnostics, context);
 	}
 
 	/**
@@ -470,20 +489,21 @@ public class EmailmarketingsystemValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(emailCampaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(emailCampaign, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(emailCampaign, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCampaign_Constraint8(emailCampaign, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCampaign_Constraint7(emailCampaign, diagnostics, context);
-		if (result || diagnostics != null) result &= validateEmailCampaign_Constraint10(emailCampaign, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCampaign_campaignDuplicateNameCheck(emailCampaign, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCampaign_campaignNameCheck(emailCampaign, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCampaign_campaignStartEndDateCheck(emailCampaign, diagnostics, context);
+		if (result || diagnostics != null) result &= validateEmailCampaign_emailCampaingSendDateCheck(emailCampaign, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the Constraint10 constraint of '<em>Email Campaign</em>'.
+	 * Validates the emailCampaingSendDateCheck constraint of '<em>Email Campaign</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEmailCampaign_Constraint10(EmailCampaign emailCampaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return emailCampaign.Constraint10(diagnostics, context);
+	public boolean validateEmailCampaign_emailCampaingSendDateCheck(EmailCampaign emailCampaign, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return emailCampaign.emailCampaingSendDateCheck(diagnostics, context);
 	}
 
 	/**
